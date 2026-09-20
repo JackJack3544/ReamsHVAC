@@ -102,6 +102,7 @@ export function Layout() {
               </div>
 
               <Link to="/about" className="text-blue-900 hover:text-blue-800 font-medium">Why Us</Link>
+              <Link to="/gallery" className="text-blue-900 hover:text-blue-800 font-medium">Gallery</Link>
               <Link to="/contact" className="text-blue-900 hover:text-blue-800 font-medium">Contact</Link>
               <a href="tel:1-800-555-0199" aria-label="Call ReamsHVAC dispatch at 1-800-555-0199" className="text-blue-900 font-bold flex items-center hover:text-blue-700 ml-4">
                 <Phone className="h-5 w-5 mr-2" />
@@ -144,6 +145,7 @@ export function Layout() {
             </div>
 
             <Link to="/about" className="block px-3 py-3 text-base font-medium text-slate-800 border-b border-slate-100">Why ReamsHVAC</Link>
+            <Link to="/gallery" className="block px-3 py-3 text-base font-medium text-slate-800 border-b border-slate-100">Project Gallery</Link>
             <Link to="/contact" className="block px-3 py-3 text-base font-medium text-slate-800">Contact</Link>
           </div>
         )}
@@ -208,6 +210,7 @@ export function Layout() {
               <h3 className="text-lg font-bold text-white mb-6 tracking-tight">Why ReamsHVAC</h3>
               <ul className="space-y-3 text-sm mb-6">
                 <li><Link to="/about" className="text-slate-200 hover:text-white transition-colors">Our Story & Craft</Link></li>
+                <li><Link to="/gallery" className="text-slate-200 hover:text-white transition-colors">Project Gallery</Link></li>
                 <li><Link to="/authorized-dealer" className="text-slate-200 hover:text-white transition-colors">Authorized Dealer</Link></li>
                 <li><Link to="/financing-rebates" className="text-slate-200 hover:text-white transition-colors">Rebates & Financing</Link></li>
                 <li><Link to="/emergency" className="text-slate-200 hover:text-white transition-colors">24/7 Emergency Service</Link></li>

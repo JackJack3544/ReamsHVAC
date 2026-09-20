@@ -24,6 +24,7 @@ import { FinancingRebates } from './pages/FinancingRebates.tsx';
 import { About } from './pages/About.tsx';
 import { AuthorizedDealer } from './pages/AuthorizedDealer.tsx';
 import { Contact } from './pages/Contact.tsx';
+import { Gallery } from './pages/Gallery.tsx';
 import { Placeholder } from './pages/Placeholder.tsx';
 import './index.css';
 
@@ -71,7 +72,7 @@ createRoot(document.getElementById('root')!).render(
           <Route path="/reviews" element={<Placeholder title="Reviews" />} />
           <Route path="/financing-rebates" element={<FinancingRebates />} />
           <Route path="/specials" element={<Placeholder title="Specials & Coupons" />} />
-          <Route path="/gallery" element={<Placeholder title="Gallery" />} />
+          <Route path="/gallery" element={<Gallery />} />
           <Route path="/blog" element={<Placeholder title="Blog Hub" />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/faq" element={<Placeholder title="FAQ" />} />

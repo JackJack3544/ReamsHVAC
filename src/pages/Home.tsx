@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, type FormEvent } from "react";
 import { Link } from "react-router-dom";
 import { PageHero } from "../components/PageHero";
 import { TrustBar } from "../components/TrustBar";
@@ -7,6 +7,7 @@ import { ReviewsSection } from "../components/ReviewsSection";
 import { SEO } from "../components/SEO";
 import { getLocalBusinessSchema } from "../utils/seoSchemas";
 import { ArrowRight, ArrowDown, ArrowUpRight, CheckCircle2, Phone, MapPin, Wrench, ShieldCheck, Zap, ThermometerSnowflake, Droplet, Star, AlertTriangle, Award, Shield, Clock, Banknote, Settings, ClipboardCheck, Globe, User, Mail, PenLine, ChevronDown, ChevronUp, Flame, Wind, Sparkles, Check, Quote, ChevronLeft, ChevronRight } from "lucide-react";
+import { galleryItems } from "../data/galleryData";
 
 const REVIEWS = [
   {
@@ -180,7 +181,7 @@ export function Home() {
   const [estimateSubmitted, setEstimateSubmitted] = useState(false);
   const [isSubmittingEstimate, setIsSubmittingEstimate] = useState(false);
 
-  const handleEstimateSubmit = async (e: React.FormEvent) => {
+  const handleEstimateSubmit = async (e: FormEvent) => {
     e.preventDefault();
     setIsSubmittingEstimate(true);
     try {
@@ -583,62 +584,32 @@ export function Home() {
             </div>
           </div>
           
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
-            {/* Card 1 */}
-            <div className="group relative rounded-lg md:rounded-none overflow-hidden aspect-square sm:aspect-square md:aspect-[4/5] bg-slate-200 shadow-md border border-slate-200/80">
-               <img 
-                 src="https://res.cloudinary.com/dbdrkehcp/image/upload/f_auto,q_auto,w_800/v1783379168/IMG_7164_svmck2.jpg" 
-                 alt="Residential heat pump and outdoor condenser precision installation on vibration pad in San Jose" 
-                 width={400}
-                 height={500}
-                 loading="lazy"
-                 decoding="async"
-                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" 
-               />
-               <div className="absolute inset-0 bg-slate-900/10 group-hover:bg-transparent transition-colors duration-500"></div>
-            </div>
-
-            {/* Card 2 */}
-            <div className="group relative rounded-lg md:rounded-none overflow-hidden aspect-square sm:aspect-square md:aspect-[4/5] bg-slate-200 shadow-md border border-slate-200/80">
-               <img 
-                 src="https://res.cloudinary.com/dbdrkehcp/image/upload/f_auto,q_auto,w_800/v1783379173/IMG_0404_ub3hh7.jpg" 
-                 alt="Certified air handler and nitrogen-purged refrigerant line set install in Santa Clara home" 
-                 width={400}
-                 height={500}
-                 loading="lazy"
-                 decoding="async"
-                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" 
-               />
-               <div className="absolute inset-0 bg-slate-900/10 group-hover:bg-transparent transition-colors duration-500"></div>
-            </div>
-
-            {/* Card 3 */}
-            <div className="group relative rounded-lg md:rounded-none overflow-hidden aspect-square sm:aspect-square md:aspect-[4/5] bg-slate-200 shadow-md border border-slate-200/80">
-               <img 
-                 src="https://res.cloudinary.com/dbdrkehcp/image/upload/f_auto,q_auto,w_800/v1784697274/istockphoto-586935098-612x612_jugerk.jpg" 
-                 alt="Master HVAC technician inspecting electrical contactors and capacitor during Sunnyvale emergency AC repair" 
-                 width={400}
-                 height={500}
-                 loading="lazy"
-                 decoding="async"
-                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" 
-               />
-               <div className="absolute inset-0 bg-slate-900/10 group-hover:bg-transparent transition-colors duration-500"></div>
-            </div>
-
-            {/* Card 4 */}
-            <div className="group relative rounded-lg md:rounded-none overflow-hidden aspect-square sm:aspect-square md:aspect-[4/5] bg-slate-200 shadow-md border border-slate-200/80">
-               <img 
-                 src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=800&auto=format&fit=crop&fm=webp" 
-                 alt="Multi-zone ductless mini-split wall unit providing high-efficiency zoned cooling for Bay Area home" 
-                 width={400}
-                 height={500}
-                 loading="lazy"
-                 decoding="async"
-                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" 
-               />
-               <div className="absolute inset-0 bg-slate-900/10 group-hover:bg-transparent transition-colors duration-500"></div>
-            </div>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
+            {galleryItems.slice(0, 8).map((item, index) => (
+              <Link
+                to="/gallery"
+                key={item.id}
+                className={`group relative rounded-lg md:rounded-none overflow-hidden aspect-square sm:aspect-square md:aspect-[4/5] bg-slate-200 shadow-md border border-slate-200/80 block ${
+                  index >= 4 ? "hidden sm:block" : ""
+                }`}
+                title={item.title}
+              >
+                <img
+                  src={item.src}
+                  alt={item.alt}
+                  width={400}
+                  height={500}
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                />
+                <div className="absolute inset-0 bg-slate-900/10 group-hover:bg-transparent transition-colors duration-500"></div>
+                <div className="absolute inset-x-0 bottom-0 p-2.5 sm:p-3 bg-gradient-to-t from-slate-950/85 via-slate-950/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                  <span className="text-[10px] font-bold text-sky-300 uppercase tracking-wider block mb-0.5">{item.location}</span>
+                  <p className="text-xs sm:text-sm font-semibold text-white leading-tight line-clamp-1">{item.title}</p>
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
