@@ -123,7 +123,7 @@ export function GasFurnaces() {
         "provider": {
           "@type": "HomeAndConstructionBusiness",
           "name": "ReamsHVAC",
-          "telephone": "1-800-555-0199",
+          "telephone": "(408) 320-3288",
           "license": "CA C-20 #1048291",
           "address": {
             "@type": "PostalAddress",
@@ -182,7 +182,7 @@ export function GasFurnaces() {
     <div className="bg-slate-50 min-h-screen text-slate-800">
       <SEO
         title="Furnace Repair & Installation in San Jose | ReamsHVAC"
-        description="Expert gas furnace repair, 24/7 heating emergency service & high-efficiency furnace replacements in San Jose & South Bay. Call 1-800-555-0199."
+        description="Expert gas furnace repair, 24/7 heating emergency service & high-efficiency furnace replacements in San Jose & South Bay. Call (408) 320-3288."
         canonical="/services/gas-furnaces"
         schema={schemaData}
       />
@@ -203,8 +203,8 @@ export function GasFurnaces() {
           icon: <Wrench className="w-5 h-5 text-blue-900" />,
         }}
         secondaryCta={{
-          text: "1-800-555-0199",
-          href: "tel:1-800-555-0199",
+          text: "(408) 320-3288",
+          href: "tel:4083203288",
           icon: <Phone className="w-5 h-5 text-white" />,
         }}
       />

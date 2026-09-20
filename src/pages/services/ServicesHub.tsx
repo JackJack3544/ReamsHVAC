@@ -285,7 +285,7 @@ export function ServicesHub() {
         "provider": {
           "@type": "HomeAndConstructionBusiness",
           "name": "ReamsHVAC",
-          "telephone": "1-800-555-0199",
+          "telephone": "(408) 320-3288",
           "license": "CA C-20 #1048291",
           "address": {
             "@type": "PostalAddress",
@@ -348,7 +348,7 @@ export function ServicesHub() {
     <div className="bg-slate-50 min-h-screen text-slate-800">
       <SEO
         title="Heating, AC & Heat Pump Services in San Jose | ReamsHVAC"
-        description="Full-service HVAC contractor in San Jose: AC repair, furnace maintenance, ductless mini-splits, heat pumps & 24/7 emergency service. Call 1-800-555-0199."
+        description="Full-service HVAC contractor in San Jose: AC repair, furnace maintenance, ductless mini-splits, heat pumps & 24/7 emergency service. Call (408) 320-3288."
         canonical="/services"
         schema={schemaData}
       />
@@ -365,8 +365,8 @@ export function ServicesHub() {
           icon: <Wrench className="w-5 h-5 text-blue-900" />,
         }}
         secondaryCta={{
-          text: "1-800-555-0199",
-          href: "tel:1-800-555-0199",
+          text: "(408) 320-3288",
+          href: "tel:4083203288",
         }}
       />
 
@@ -501,7 +501,7 @@ export function ServicesHub() {
           )}
 
           <div className="max-w-4xl mx-auto bg-white border border-slate-200/80 rounded-xl p-3.5 sm:p-5 text-center text-xs sm:text-sm text-slate-700 font-medium shadow-xs">
-            Not sure which service fits your situation? Call our technical dispatchers at <a href="tel:1-800-555-0199" className="text-blue-700 font-bold underline hover:text-blue-900">1-800-555-0199</a> for immediate advice.
+            Not sure which service fits your situation? Call our technical dispatchers at <a href="tel:4083203288" className="text-blue-700 font-bold underline hover:text-blue-900">(408) 320-3288</a> for immediate advice.
           </div>
         </div>
       </section>

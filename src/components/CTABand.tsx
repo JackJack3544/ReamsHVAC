@@ -30,11 +30,11 @@ export function CTABand() {
           </Link>
 
           <a
-            href="tel:1-800-555-0199"
+            href="tel:4083203288"
             className="bg-white/10 backdrop-blur-md border border-white/30 text-white font-bold text-xs sm:text-lg px-5 sm:px-8 py-3 sm:py-4 rounded-md sm:rounded-none hover:bg-white/20 transition-colors flex-initial sm:w-auto shadow-sm inline-flex items-center justify-center gap-2 sm:gap-2.5 h-11 sm:h-auto min-h-[44px] sm:min-h-[52px] text-center [&>svg]:w-4 sm:[&>svg]:w-5"
           >
             <Phone className="hidden sm:inline-flex w-4 h-4 sm:w-5 sm:h-5 text-white" />
-            <span>1-800-555-0199</span>
+            <span>(408) 320-3288</span>
           </a>
         </div>
 

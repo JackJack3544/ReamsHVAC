@@ -88,7 +88,7 @@ export function LicensingGuarantee() {
     "@context": "https://schema.org",
     "@type": "HVACBusiness",
     "name": "ReamsHVAC Licensing, Insurance & Guarantee",
-    "telephone": "1-800-555-0199",
+    "telephone": "(408) 320-3288",
     "url": "https://reamshvac.com/licensing-insurance-guarantee",
     "license": "CA C-20 #1048291",
     "address": {
@@ -124,8 +124,8 @@ export function LicensingGuarantee() {
           icon: <ShieldCheck className="w-5 h-5 text-blue-900" />,
         }}
         secondaryCta={{
-          text: "1-800-555-0199",
-          href: "tel:1-800-555-0199",
+          text: "(408) 320-3288",
+          href: "tel:4083203288",
           icon: <Phone className="w-5 h-5 text-white" />,
         }}
       />

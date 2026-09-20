@@ -124,7 +124,7 @@ export function HeatPumps() {
         "provider": {
           "@type": "HomeAndConstructionBusiness",
           "name": "ReamsHVAC",
-          "telephone": "1-800-555-0199",
+          "telephone": "(408) 320-3288",
           "license": "CA C-20 #1048291",
           "address": {
             "@type": "PostalAddress",
@@ -183,7 +183,7 @@ export function HeatPumps() {
     <div className="bg-slate-50 min-h-screen text-slate-800">
       <SEO
         title="Heat Pump Installation & Repair in San Jose | ReamsHVAC"
-        description="Certified heat pump installation, electrification upgrades & repair across San Jose, Santa Clara & Sunnyvale. Maximize TECH Clean California rebates. Call 1-800-555-0199."
+        description="Certified heat pump installation, electrification upgrades & repair across San Jose, Santa Clara & Sunnyvale. Maximize TECH Clean California rebates. Call (408) 320-3288."
         canonical="/services/heat-pumps"
         schema={schemaData}
       />
@@ -204,8 +204,8 @@ export function HeatPumps() {
           icon: <Wrench className="w-5 h-5 text-blue-900" />,
         }}
         secondaryCta={{
-          text: "1-800-555-0199",
-          href: "tel:1-800-555-0199",
+          text: "(408) 320-3288",
+          href: "tel:4083203288",
           icon: <Phone className="w-5 h-5 text-white" />,
         }}
       />

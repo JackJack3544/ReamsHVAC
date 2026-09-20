@@ -102,8 +102,8 @@ export function Specials() {
           icon: <Tag className="w-5 h-5 text-blue-900" />,
         }}
         secondaryCta={{
-          text: "1-800-555-0199",
-          href: "tel:1-800-555-0199",
+          text: "(408) 320-3288",
+          href: "tel:4083203288",
           icon: <Phone className="w-5 h-5 text-white" />,
         }}
       />
@@ -224,7 +224,7 @@ export function Specials() {
               </div>
               <div className="p-3 bg-slate-50 rounded-lg">
                 <span className="font-bold text-blue-950 block text-sm mb-1">2. Book Walkthrough</span>
-                Schedule online or call 1-800-555-0199 and mention your promo code to our team.
+                Schedule online or call (408) 320-3288 and mention your promo code to our team.
               </div>
               <div className="p-3 bg-slate-50 rounded-lg">
                 <span className="font-bold text-blue-950 block text-sm mb-1">3. Instant Savings</span>

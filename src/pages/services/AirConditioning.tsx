@@ -123,7 +123,7 @@ export function AirConditioning() {
         "provider": {
           "@type": "HomeAndConstructionBusiness",
           "name": "ReamsHVAC",
-          "telephone": "1-800-555-0199",
+          "telephone": "(408) 320-3288",
           "license": "CA C-20 #1048291",
           "address": {
             "@type": "PostalAddress",
@@ -182,7 +182,7 @@ export function AirConditioning() {
     <div className="bg-slate-50 min-h-screen text-slate-800">
       <SEO
         title="Air Conditioning Repair & Installation in San Jose | ReamsHVAC"
-        description="Fast central AC repair, 24/7 emergency cooling service, and high-efficiency SEER2 replacements in San Jose, Santa Clara & Sunnyvale. Call 1-800-555-0199."
+        description="Fast central AC repair, 24/7 emergency cooling service, and high-efficiency SEER2 replacements in San Jose, Santa Clara & Sunnyvale. Call (408) 320-3288."
         canonical="/services/air-conditioning"
         schema={schemaData}
       />
@@ -203,8 +203,8 @@ export function AirConditioning() {
           icon: <Wrench className="w-5 h-5 text-blue-900" />,
         }}
         secondaryCta={{
-          text: "1-800-555-0199",
-          href: "tel:1-800-555-0199",
+          text: "(408) 320-3288",
+          href: "tel:4083203288",
           icon: <Phone className="w-5 h-5 text-white" />,
         }}
       />

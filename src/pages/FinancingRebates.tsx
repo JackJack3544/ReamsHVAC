@@ -14,7 +14,7 @@ export function FinancingRebates() {
     "provider": {
       "@type": "HVACBusiness",
       "name": "ReamsHVAC",
-      "telephone": "1-800-555-0199",
+      "telephone": "(408) 320-3288",
       "license": "CA C-20 #1048291",
       "address": {
         "@type": "PostalAddress",
@@ -48,8 +48,8 @@ export function FinancingRebates() {
           icon: <Banknote className="w-5 h-5 text-blue-900" />,
         }}
         secondaryCta={{
-          text: "Rebate Hotline: 1-800-555-0199",
-          href: "tel:1-800-555-0199",
+          text: "Rebate Hotline: (408) 320-3288",
+          href: "tel:4083203288",
           icon: <DollarSign className="w-5 h-5 text-white" />,
         }}
       />

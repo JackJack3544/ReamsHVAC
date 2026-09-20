@@ -123,7 +123,7 @@ export function HeatingHeatPumpsCategory() {
         "provider": {
           "@type": "HomeAndConstructionBusiness",
           "name": "ReamsHVAC",
-          "telephone": "1-800-555-0199",
+          "telephone": "(408) 320-3288",
           "license": "CA C-20 #1048291",
           "address": {
             "@type": "PostalAddress",
@@ -182,7 +182,7 @@ export function HeatingHeatPumpsCategory() {
     <div className="bg-slate-50 min-h-screen text-slate-800">
       <SEO
         title="Heating & Heat Pump Services in San Jose | ReamsHVAC"
-        description="Gas furnace repair, high-efficiency heat pump installation & dual-fuel heating solutions in San Jose, Santa Clara & Bay Area. Call 1-800-555-0199."
+        description="Gas furnace repair, high-efficiency heat pump installation & dual-fuel heating solutions in San Jose, Santa Clara & Bay Area. Call (408) 320-3288."
         canonical="/services/heating-heat-pumps"
         schema={schemaData}
       />
@@ -203,8 +203,8 @@ export function HeatingHeatPumpsCategory() {
           icon: <Wrench className="w-5 h-5 text-blue-900" />,
         }}
         secondaryCta={{
-          text: "1-800-555-0199",
-          href: "tel:1-800-555-0199",
+          text: "(408) 320-3288",
+          href: "tel:4083203288",
           icon: <Phone className="w-5 h-5 text-white" />,
         }}
       />

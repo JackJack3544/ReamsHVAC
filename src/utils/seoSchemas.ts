@@ -10,7 +10,7 @@ export const REAMSHVAC_BUSINESS_INFO = {
   url: "https://reamshvac.com",
   logo: "https://res.cloudinary.com/dbdrkehcp/image/upload/v1784693931/Untitled_design_2_tnj3em.png",
   image: "https://res.cloudinary.com/dbdrkehcp/image/upload/v1784693931/Untitled_design_2_tnj3em.png",
-  telephone: "+1-800-555-0199",
+  telephone: "+14083203288",
   email: "dispatch@reamshvac.com",
   license: "California C-20 HVAC Contractor License #1048291",
   foundingDate: "2004",

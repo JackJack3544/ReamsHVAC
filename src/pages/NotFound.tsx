@@ -26,8 +26,8 @@ export function NotFound() {
           icon: <Home className="w-5 h-5 text-blue-900" />,
         }}
         secondaryCta={{
-          text: "1-800-555-0199",
-          href: "tel:1-800-555-0199",
+          text: "(408) 320-3288",
+          href: "tel:4083203288",
           icon: <Phone className="w-5 h-5 text-white" />,
         }}
       />
@@ -74,8 +74,8 @@ export function NotFound() {
 
           <p className="text-xs text-slate-500">
             Need urgent assistance? Call our 24/7 direct hotline at{" "}
-            <a href="tel:1-800-555-0199" className="text-blue-900 font-bold hover:underline">
-              1-800-555-0199
+            <a href="tel:4083203288" className="text-blue-900 font-bold hover:underline">
+              (408) 320-3288
             </a>.
           </p>
         </div>

@@ -242,7 +242,7 @@ export function ServiceAreasHub() {
         "provider": {
           "@type": "HomeAndConstructionBusiness",
           "name": "ReamsHVAC",
-          "telephone": "1-800-555-0199",
+          "telephone": "(408) 320-3288",
           "license": "CA C-20 #1048291"
         }
       },
@@ -290,8 +290,8 @@ export function ServiceAreasHub() {
           icon: <MapPin className="w-5 h-5 text-blue-900" />,
         }}
         secondaryCta={{
-          text: "Dispatch: 1-800-555-0199",
-          href: "tel:1-800-555-0199",
+          text: "Dispatch: (408) 320-3288",
+          href: "tel:4083203288",
           icon: <Phone className="w-5 h-5 text-white" />,
         }}
       />
@@ -421,7 +421,7 @@ export function ServiceAreasHub() {
           )}
 
           <div className="max-w-4xl mx-auto bg-white border border-slate-200/80 rounded-xl p-3.5 sm:p-5 text-center text-xs sm:text-sm text-slate-700 font-medium shadow-xs">
-            Not sure which region covers your city? Call our dispatchers at <a href="tel:1-800-555-0199" className="text-blue-700 font-bold underline hover:text-blue-900">1-800-555-0199</a> for immediate confirmation.
+            Not sure which region covers your city? Call our dispatchers at <a href="tel:4083203288" className="text-blue-700 font-bold underline hover:text-blue-900">(408) 320-3288</a> for immediate confirmation.
           </div>
         </div>
       </section>

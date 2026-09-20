@@ -75,7 +75,7 @@ export function CityPage({ citySlug }: CityPageProps) {
         "provider": {
           "@type": "HomeAndConstructionBusiness",
           "name": "ReamsHVAC",
-          "telephone": "1-800-555-0199",
+          "telephone": "(408) 320-3288",
           "license": "CA C-20 #1048291"
         }
       },
@@ -115,7 +115,7 @@ export function CityPage({ citySlug }: CityPageProps) {
     <div className="bg-slate-50 min-h-screen text-slate-800">
       <SEO
         title={`HVAC Heating & AC Repair in ${city.name}, CA | ReamsHVAC`}
-        description={`Top-rated HVAC services in ${city.name}, CA. Gas furnace repair, AC installation, heat pump electrification & 24/7 emergency service. Call 1-800-555-0199.`}
+        description={`Top-rated HVAC services in ${city.name}, CA. Gas furnace repair, AC installation, heat pump electrification & 24/7 emergency service. Call (408) 320-3288.`}
         canonical={`/service-areas/${city.regionId}/${city.slug}`}
         schema={schemaData}
       />
@@ -137,8 +137,8 @@ export function CityPage({ citySlug }: CityPageProps) {
           icon: <MapPin className="w-5 h-5 text-blue-900" />,
         }}
         secondaryCta={{
-          text: "Hotline: 1-800-555-0199",
-          href: "tel:1-800-555-0199",
+          text: "Hotline: (408) 320-3288",
+          href: "tel:4083203288",
           icon: <Phone className="w-5 h-5 text-white" />,
         }}
       />

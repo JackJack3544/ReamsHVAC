@@ -167,4 +167,18 @@
     padding-top: 3rem !important;
     padding-bottom: 3rem !important;
   }
+
+  /* Prevent mobile browsers (especially iOS Safari) from zooming in when focusing form inputs */
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="number"],
+  input[type="password"],
+  input[type="search"],
+  input[type="url"],
+  textarea,
+  select {
+    font-size: 16px !important;
+  }
 }
+

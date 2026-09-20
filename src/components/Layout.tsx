@@ -104,15 +104,15 @@ export function Layout() {
               <Link to="/about" className="text-blue-900 hover:text-blue-800 font-medium">Why Us</Link>
               <Link to="/gallery" className="text-blue-900 hover:text-blue-800 font-medium">Gallery</Link>
               <Link to="/contact" className="text-blue-900 hover:text-blue-800 font-medium">Contact</Link>
-              <a href="tel:1-800-555-0199" aria-label="Call ReamsHVAC dispatch at 1-800-555-0199" className="text-blue-900 font-bold flex items-center hover:text-blue-700 ml-4">
+              <a href="tel:4083203288" aria-label="Call ReamsHVAC dispatch at (408) 320-3288" className="text-blue-900 font-bold flex items-center hover:text-blue-700 ml-4">
                 <Phone className="h-5 w-5 mr-2" />
-                1-800-555-0199
+                (408) 320-3288
               </a>
             </nav>
 
             {/* Mobile menu button */}
             <div className="flex md:hidden items-center space-x-4">
-              <a href="tel:1-800-555-0199" aria-label="Call ReamsHVAC Dispatch" className="text-blue-900">
+              <a href="tel:4083203288" aria-label="Call ReamsHVAC Dispatch at (408) 320-3288" className="text-blue-900">
                 <Phone className="h-6 w-6" />
               </a>
               <button
@@ -173,12 +173,12 @@ export function Layout() {
             
             <div className="flex items-center gap-2 sm:gap-3 flex-wrap">
               <a 
-                href="tel:1-800-555-0199" 
-                aria-label="Call ReamsHVAC dispatch"
+                href="tel:4083203288" 
+                aria-label="Call ReamsHVAC dispatch at (408) 320-3288"
                 className="inline-flex items-center gap-1.5 bg-blue-900/50 hover:bg-blue-800 border border-blue-400/30 text-white text-xs sm:text-sm font-semibold px-3 py-1.5 rounded-md transition-colors"
               >
                 <Phone size={13} className="text-blue-400" />
-                <span>1-800-555-0199</span>
+                <span>(408) 320-3288</span>
               </a>
               <span className="text-[11px] bg-white/10 px-2.5 py-1 rounded text-slate-200 border border-white/15 font-mono">
                 Lic #1048291

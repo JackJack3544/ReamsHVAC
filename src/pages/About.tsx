@@ -17,7 +17,7 @@ export function About() {
     "mainEntity": {
       "@type": "HVACBusiness",
       "name": "ReamsHVAC",
-      "telephone": "1-800-555-0199",
+      "telephone": "(408) 320-3288",
       "areaServed": "San Jose & San Francisco Bay Area",
       "license": "CA C-20 #1048291"
     }
@@ -47,8 +47,8 @@ export function About() {
           icon: <Wrench className="w-5 h-5 text-blue-900" />,
         }}
         secondaryCta={{
-          text: "1-800-555-0199",
-          href: "tel:1-800-555-0199",
+          text: "(408) 320-3288",
+          href: "tel:4083203288",
           icon: <Phone className="w-5 h-5 text-white" />,
         }}
       />

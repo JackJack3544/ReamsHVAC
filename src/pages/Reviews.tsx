@@ -158,7 +158,7 @@ export function Reviews() {
     "@context": "https://schema.org",
     "@type": "HVACBusiness",
     "name": "ReamsHVAC Customer Reviews",
-    "telephone": "1-800-555-0199",
+    "telephone": "(408) 320-3288",
     "url": "https://reamshvac.com/reviews",
     "aggregateRating": {
       "@type": "AggregateRating",
@@ -204,8 +204,8 @@ export function Reviews() {
           icon: <ShieldCheck className="w-5 h-5 text-blue-900" />,
         }}
         secondaryCta={{
-          text: "1-800-555-0199",
-          href: "tel:1-800-555-0199",
+          text: "(408) 320-3288",
+          href: "tel:4083203288",
           icon: <Phone className="w-5 h-5 text-white" />,
         }}
       />
@@ -361,11 +361,11 @@ export function Reviews() {
                 <ArrowRight className="w-4 h-4" />
               </Link>
               <a
-                href="tel:1-800-555-0199"
+                href="tel:4083203288"
                 className="bg-slate-100 text-blue-950 font-bold px-6 py-2.5 rounded-lg hover:bg-slate-200 transition-colors text-xs sm:text-sm inline-flex items-center justify-center gap-1.5 border border-slate-200"
               >
                 <Phone className="w-4 h-4" />
-                <span>Call 1-800-555-0199</span>
+                <span>Call (408) 320-3288</span>
               </a>
             </div>
           </div>

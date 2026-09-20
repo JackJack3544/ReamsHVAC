@@ -6,7 +6,7 @@ export function EmergencyLanding() {
     <div className="min-h-screen bg-red-600 flex flex-col font-sans text-white">
       <SEO
         title="24/7 Emergency HVAC Service San Jose | Immediate Dispatch | ReamsHVAC"
-        description="Immediate 24/7 emergency HVAC repair dispatch across San Jose and the Bay Area. Heating outages, heatwave AC failures, and safety emergencies. Call 1-800-555-0199."
+        description="Immediate 24/7 emergency HVAC repair dispatch across San Jose and the Bay Area. Heating outages, heatwave AC failures, and safety emergencies. Call (408) 320-3288."
         canonical="/emergency"
       />
       {/* Ultra stripped-down header */}
@@ -36,12 +36,12 @@ export function EmergencyLanding() {
           </p>
 
           <a 
-            href="tel:1-800-555-0199"
+            href="tel:4083203288"
             className="block w-full bg-red-600 hover:bg-red-700 text-white text-2xl sm:text-4xl font-black py-6 rounded-lg shadow-lg mb-10 transition-transform active:scale-95"
           >
             <div className="flex items-center justify-center gap-4">
               <Phone className="w-8 h-8 sm:w-10 sm:h-10" />
-              1-800-555-0199
+              (408) 320-3288
             </div>
             <span className="block text-sm sm:text-lg font-medium mt-2 opacity-90">Tap to Call Now</span>
           </a>

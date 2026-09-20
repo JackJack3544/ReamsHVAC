@@ -50,7 +50,7 @@ export function AuthorizedDealer() {
         "@type": "HVACBusiness",
         "name": "ReamsHVAC Authorized Dealer & Factory Certifications",
         "image": "https://res.cloudinary.com/dbdrkehcp/image/upload/v1784693931/Untitled_design_2_tnj3em.png",
-        "telephone": "1-800-555-0199",
+        "telephone": "(408) 320-3288",
         "url": "https://reamshvac.com/authorized-dealer",
         "license": "CA C-20 #1048291",
         "address": {
@@ -207,8 +207,8 @@ export function AuthorizedDealer() {
           icon: <Wrench className="w-5 h-5 text-blue-900" />,
         }}
         secondaryCta={{
-          text: "1-800-555-0199",
-          href: "tel:1-800-555-0199",
+          text: "(408) 320-3288",
+          href: "tel:4083203288",
           icon: <Phone className="w-5 h-5 text-white" />,
         }}
       />

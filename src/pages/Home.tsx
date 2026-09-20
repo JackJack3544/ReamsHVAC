@@ -232,7 +232,7 @@ export function Home() {
       }
     } catch (error) {
       console.error("Free estimate submission error:", error);
-      setEstimateError("Network error. Please call 1-800-555-0199 directly.");
+      setEstimateError("Network error. Please call (408) 320-3288 directly.");
     } finally {
       setIsSubmittingEstimate(false);
     }
@@ -262,11 +262,11 @@ export function Home() {
           }
           description={
             <>
-              <span className="sm:hidden">
-                20 years of honest, fast heating and cooling service for Bay Area families — same-day repairs, precision installs, and no surprises on the bill.
+              <span className="block">
+                Precision heating and air conditioning repair, high-efficiency heat pumps, and ductwork engineering across San Jose and 46 Bay Area cities.
               </span>
               <span className="hidden sm:inline">
-                For over 20 years, our family-owned team has delivered dependable, honest heating and cooling service across San Jose and the Bay Area — from same-day emergency repairs and high-efficiency heat pump installations to whole-home airflow optimization, with upfront flat-rate pricing and no surprises on the bill.
+                {" "}Non-commissioned master technicians with ACCA Manual J sizing.
               </span>
             </>
           }
@@ -276,8 +276,8 @@ export function Home() {
             icon: <Wrench className="w-5 h-5 text-blue-900" />,
           }}
           secondaryCta={{
-            text: "1-800-555-0199",
-            href: "tel:1-800-555-0199",
+            text: "(408) 320-3288",
+            href: "tel:4083203288",
             icon: <Phone className="w-5 h-5 text-white" />,
           }}
         />
@@ -351,7 +351,7 @@ export function Home() {
                         placeholder="Name" 
                         value={estimateData.name}
                         onChange={(e) => setEstimateData({ ...estimateData, name: e.target.value })}
-                        className="w-full px-2.5 sm:px-3 py-2 border border-slate-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 text-sm sm:text-sm" 
+                        className="w-full px-2.5 sm:px-3 py-2 border border-slate-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 text-base sm:text-sm" 
                       />
                       <input 
                         type="tel" 
@@ -362,7 +362,7 @@ export function Home() {
                         placeholder="Phone" 
                         value={estimateData.phone}
                         onChange={(e) => setEstimateData({ ...estimateData, phone: e.target.value })}
-                        className="w-full px-2.5 sm:px-3 py-2 border border-slate-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 text-sm sm:text-sm" 
+                        className="w-full px-2.5 sm:px-3 py-2 border border-slate-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 text-base sm:text-sm" 
                       />
                     </div>
                     <input 
@@ -374,7 +374,7 @@ export function Home() {
                       placeholder="Email" 
                       value={estimateData.email}
                       onChange={(e) => setEstimateData({ ...estimateData, email: e.target.value })}
-                      className="w-full px-2.5 sm:px-3 py-2 border border-slate-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 text-sm sm:text-sm" 
+                      className="w-full px-2.5 sm:px-3 py-2 border border-slate-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 text-base sm:text-sm" 
                     />
                     <textarea 
                       id="estimate-message"
@@ -384,7 +384,7 @@ export function Home() {
                       placeholder="How can we help?" 
                       value={estimateData.message}
                       onChange={(e) => setEstimateData({ ...estimateData, message: e.target.value })}
-                      className="w-full px-2.5 sm:px-3 py-2 border border-slate-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 text-sm sm:text-sm flex-grow resize-none min-h-[64px] sm:min-h-[72px]"
+                      className="w-full px-2.5 sm:px-3 py-2 border border-slate-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 text-base sm:text-sm flex-grow resize-none min-h-[64px] sm:min-h-[72px]"
                     ></textarea>
                     <button 
                       type="submit" 

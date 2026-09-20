@@ -147,7 +147,7 @@ export function RegionHub({ regionKey }: RegionHubProps) {
         "provider": {
           "@type": "HomeAndConstructionBusiness",
           "name": "ReamsHVAC",
-          "telephone": "1-800-555-0199",
+          "telephone": "(408) 320-3288",
           "license": "CA C-20 #1048291"
         }
       },
@@ -181,7 +181,7 @@ export function RegionHub({ regionKey }: RegionHubProps) {
     <div className="bg-slate-50 min-h-screen text-slate-800">
       <SEO
         title={`HVAC Heating & Cooling in ${region.name} | ReamsHVAC`}
-        description={`Reliable heating, cooling, heat pump and AC services in the ${region.name} (${region.citiesCount}). Fast local dispatch & 24/7 emergency service. Call 1-800-555-0199.`}
+        description={`Reliable heating, cooling, heat pump and AC services in the ${region.name} (${region.citiesCount}). Fast local dispatch & 24/7 emergency service. Call (408) 320-3288.`}
         canonical={`/service-areas/${region.id}`}
         schema={schemaData}
       />
@@ -202,8 +202,8 @@ export function RegionHub({ regionKey }: RegionHubProps) {
           icon: <MapPin className="w-5 h-5 text-blue-900" />,
         }}
         secondaryCta={{
-          text: "Dispatch: 1-800-555-0199",
-          href: "tel:1-800-555-0199",
+          text: "Dispatch: (408) 320-3288",
+          href: "tel:4083203288",
           icon: <Phone className="w-5 h-5 text-white" />,
         }}
       />

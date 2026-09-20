@@ -1,6 +1,7 @@
 import { useState, useId, type FormEvent } from "react";
 import { 
-  Phone, CheckCircle2, Send, Check, Wrench, ArrowRight
+  Phone, CheckCircle2, Send, Wrench, ArrowRight,
+  ShieldCheck, Banknote, Truck, Clock
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { PageHero } from "../components/PageHero";
@@ -44,7 +45,7 @@ export function Contact() {
       }
     } catch (error) {
       console.error("Contact form submission error:", error);
-      setErrorMessage("Network error. Please call 1-800-555-0199 directly.");
+      setErrorMessage("Network error. Please call (408) 320-3288 directly.");
     } finally {
       setIsSubmitting(false);
     }
@@ -59,7 +60,7 @@ export function Contact() {
     "mainEntity": {
       "@type": "HVACBusiness",
       "name": "ReamsHVAC",
-      "telephone": "1-800-555-0199",
+      "telephone": "+14083203288",
       "email": "dispatch@reamshvac.com",
       "address": {
         "@type": "PostalAddress",
@@ -75,7 +76,7 @@ export function Contact() {
     <div className="bg-slate-50 min-h-screen text-slate-800" id="contact-page">
       <SEO
         title="Contact ReamsHVAC | San Jose Heating & Air Conditioning Dispatch"
-        description="Need HVAC service, emergency repairs, or an estimate? Call 1-800-555-0199 or connect online with ReamsHVAC in San Jose, CA."
+        description="Need HVAC service, emergency repairs, or an estimate? Call (408) 320-3288 or connect online with ReamsHVAC in San Jose, CA."
         canonical="/contact"
         schema={schemaData}
       />
@@ -95,8 +96,8 @@ export function Contact() {
           icon: <Wrench className="w-5 h-5 text-blue-900" />,
         }}
         secondaryCta={{
-          text: "1-800-555-0199",
-          href: "tel:1-800-555-0199",
+          text: "(408) 320-3288",
+          href: "tel:4083203288",
           icon: <Phone className="w-5 h-5 text-white" />,
         }}
       />
@@ -122,41 +123,49 @@ export function Contact() {
 
               {/* Core Value Points */}
               <div className="space-y-2.5 sm:space-y-3">
-                <div className="flex items-start gap-3 p-3.5 sm:p-4 rounded-xl bg-slate-50 border border-slate-200 shadow-2xs">
-                  <Check className="w-4 h-4 sm:w-5 sm:h-5 text-blue-950 shrink-0 mt-0.5" />
-                  <div>
-                    <strong className="text-blue-950 block text-xs sm:text-sm font-bold">100% Non-Commissioned</strong>
-                    <span className="text-[10px] sm:text-xs text-slate-600">Zero sales commissions. Honest repairs and diagnostics every time.</span>
+                <div className="relative overflow-hidden p-3.5 sm:p-4 rounded-xl bg-slate-50 border border-slate-200 shadow-2xs group hover:border-slate-300 transition-colors">
+                  <div className="absolute -right-3 -bottom-3 sm:-right-4 sm:-bottom-4 opacity-[0.06] text-blue-950 pointer-events-none group-hover:opacity-[0.10] transition-opacity">
+                    <ShieldCheck className="w-16 h-16 sm:w-20 sm:h-20 stroke-[1.8]" />
+                  </div>
+                  <div className="relative z-10 pr-6 sm:pr-8">
+                    <strong className="text-blue-950 block text-xs sm:text-sm font-bold tracking-tight">100% Non-Commissioned</strong>
+                    <p className="text-[11px] sm:text-xs text-slate-600 leading-relaxed mt-0.5">Zero sales commissions. Honest repairs and diagnostics every time.</p>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-3 p-3.5 sm:p-4 rounded-xl bg-slate-50 border border-slate-200 shadow-2xs">
-                  <Check className="w-4 h-4 sm:w-5 sm:h-5 text-blue-950 shrink-0 mt-0.5" />
-                  <div>
-                    <strong className="text-blue-950 block text-xs sm:text-sm font-bold">Upfront Flat-Rate Pricing</strong>
-                    <span className="text-[10px] sm:text-xs text-slate-600">Clear written proposals before any work begins. Zero surprise fees.</span>
+                <div className="relative overflow-hidden p-3.5 sm:p-4 rounded-xl bg-slate-50 border border-slate-200 shadow-2xs group hover:border-slate-300 transition-colors">
+                  <div className="absolute -right-3 -bottom-3 sm:-right-4 sm:-bottom-4 opacity-[0.06] text-blue-950 pointer-events-none group-hover:opacity-[0.10] transition-opacity">
+                    <Banknote className="w-16 h-16 sm:w-20 sm:h-20 stroke-[1.8]" />
+                  </div>
+                  <div className="relative z-10 pr-6 sm:pr-8">
+                    <strong className="text-blue-950 block text-xs sm:text-sm font-bold tracking-tight">Upfront Flat-Rate Pricing</strong>
+                    <p className="text-[11px] sm:text-xs text-slate-600 leading-relaxed mt-0.5">Clear written proposals before any work begins. Zero surprise fees.</p>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-3 p-3.5 sm:p-4 rounded-xl bg-slate-50 border border-slate-200 shadow-2xs">
-                  <Check className="w-4 h-4 sm:w-5 sm:h-5 text-blue-950 shrink-0 mt-0.5" />
-                  <div>
-                    <strong className="text-blue-950 block text-xs sm:text-sm font-bold">Fast Local Dispatch</strong>
-                    <span className="text-[10px] sm:text-xs text-slate-600">Equipped mobile service vans operating across all 46 Bay Area cities.</span>
+                <div className="relative overflow-hidden p-3.5 sm:p-4 rounded-xl bg-slate-50 border border-slate-200 shadow-2xs group hover:border-slate-300 transition-colors">
+                  <div className="absolute -right-3 -bottom-3 sm:-right-4 sm:-bottom-4 opacity-[0.06] text-blue-950 pointer-events-none group-hover:opacity-[0.10] transition-opacity">
+                    <Truck className="w-16 h-16 sm:w-20 sm:h-20 stroke-[1.8]" />
+                  </div>
+                  <div className="relative z-10 pr-6 sm:pr-8">
+                    <strong className="text-blue-950 block text-xs sm:text-sm font-bold tracking-tight">Fast Local Dispatch</strong>
+                    <p className="text-[11px] sm:text-xs text-slate-600 leading-relaxed mt-0.5">Equipped mobile service vans operating across all 46 Bay Area cities.</p>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-3 p-3.5 sm:p-4 rounded-xl bg-slate-50 border border-slate-200 shadow-2xs">
-                  <Check className="w-4 h-4 sm:w-5 sm:h-5 text-blue-950 shrink-0 mt-0.5" />
-                  <div>
-                    <strong className="text-blue-950 block text-xs sm:text-sm font-bold">24/7 Emergency Response</strong>
-                    <span className="text-[10px] sm:text-xs text-slate-600">Around-the-clock dispatch for heatwave AC failures and winter heating outages.</span>
+                <div className="relative overflow-hidden p-3.5 sm:p-4 rounded-xl bg-slate-50 border border-slate-200 shadow-2xs group hover:border-slate-300 transition-colors">
+                  <div className="absolute -right-3 -bottom-3 sm:-right-4 sm:-bottom-4 opacity-[0.06] text-blue-950 pointer-events-none group-hover:opacity-[0.10] transition-opacity">
+                    <Clock className="w-16 h-16 sm:w-20 sm:h-20 stroke-[1.8]" />
+                  </div>
+                  <div className="relative z-10 pr-6 sm:pr-8">
+                    <strong className="text-blue-950 block text-xs sm:text-sm font-bold tracking-tight">24/7 Emergency Response</strong>
+                    <p className="text-[11px] sm:text-xs text-slate-600 leading-relaxed mt-0.5">Around-the-clock dispatch for heatwave AC failures and winter heating outages.</p>
                   </div>
                 </div>
               </div>
 
               <div className="pt-1 text-[10px] sm:text-xs text-slate-500">
-                Direct Dispatch Hotline: <a href="tel:1-800-555-0199" className="font-bold text-blue-950 hover:underline">1-800-555-0199</a> &bull; Mon–Sat: 7am–7pm (24/7 Emergency Response)
+                Direct Dispatch Hotline: <a href="tel:4083203288" className="font-bold text-blue-950 hover:underline">(408) 320-3288</a> &bull; Mon–Sat: 7am–7pm (24/7 Emergency Response)
               </div>
             </div>
 
@@ -227,7 +236,7 @@ export function Contact() {
                         placeholder="Your Full Name"
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        className="w-full px-3.5 sm:px-4 py-2.5 sm:py-3 bg-slate-50 border border-slate-200 rounded-lg text-xs sm:text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-950 focus:bg-white transition-all"
+                        className="w-full px-3.5 sm:px-4 py-2.5 sm:py-3 bg-slate-50 border border-slate-200 rounded-lg text-base sm:text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-950 focus:bg-white transition-all"
                       />
                     </div>
 
@@ -241,10 +250,10 @@ export function Contact() {
                         name="phone"
                         type="tel"
                         required
-                        placeholder="(408) 555-0199"
+                        placeholder="(408) 320-3288"
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        className="w-full px-3.5 sm:px-4 py-2.5 sm:py-3 bg-slate-50 border border-slate-200 rounded-lg text-xs sm:text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-950 focus:bg-white transition-all"
+                        className="w-full px-3.5 sm:px-4 py-2.5 sm:py-3 bg-slate-50 border border-slate-200 rounded-lg text-base sm:text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-950 focus:bg-white transition-all"
                       />
                     </div>
 
@@ -261,7 +270,7 @@ export function Contact() {
                         placeholder="you@example.com"
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        className="w-full px-3.5 sm:px-4 py-2.5 sm:py-3 bg-slate-50 border border-slate-200 rounded-lg text-xs sm:text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-950 focus:bg-white transition-all"
+                        className="w-full px-3.5 sm:px-4 py-2.5 sm:py-3 bg-slate-50 border border-slate-200 rounded-lg text-base sm:text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-950 focus:bg-white transition-all"
                       />
                     </div>
 
@@ -278,7 +287,7 @@ export function Contact() {
                         placeholder="Tell us about your HVAC issue, home size, or equipment questions..."
                         value={formData.message}
                         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                        className="w-full px-3.5 sm:px-4 py-2.5 sm:py-3 bg-slate-50 border border-slate-200 rounded-lg text-xs sm:text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-950 focus:bg-white transition-all resize-none min-h-[100px]"
+                        className="w-full px-3.5 sm:px-4 py-2.5 sm:py-3 bg-slate-50 border border-slate-200 rounded-lg text-base sm:text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-950 focus:bg-white transition-all resize-none min-h-[100px]"
                       />
                     </div>
 
