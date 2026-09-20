@@ -417,8 +417,8 @@ export function Home() {
                           <Award className="w-16 h-16 sm:w-24 sm:h-24" />
                         </div>
                         <div className="relative z-10">
-                          <div className="hidden sm:flex w-11 h-11 rounded-xl bg-blue-950/10 border border-blue-950/15 items-center justify-center mb-3.5 text-blue-950 group-hover:bg-blue-950 group-hover:text-white transition-colors">
-                            <Award className="w-5 h-5 stroke-[2.2]" />
+                          <div className="flex mb-2.5 sm:mb-3.5 text-blue-950">
+                            <Award className="w-5 h-5 sm:w-6 sm:h-6 stroke-[2.2]" />
                           </div>
                           <h3 className="font-bold text-blue-950 text-xs sm:text-base mb-1 sm:mb-2">Family-First Care</h3>
                           <p className="text-blue-900/60 text-[10px] sm:text-sm line-clamp-3 sm:line-clamp-none">We treat your home like our own, always prioritizing honest repairs over costly replacements.</p>
@@ -430,8 +430,8 @@ export function Home() {
                           <Settings className="w-16 h-16 sm:w-24 sm:h-24" />
                         </div>
                         <div className="relative z-10">
-                          <div className="hidden sm:flex w-11 h-11 rounded-xl bg-blue-950/10 border border-blue-950/15 items-center justify-center mb-3.5 text-blue-950 group-hover:bg-blue-950 group-hover:text-white transition-colors">
-                            <Settings className="w-5 h-5 stroke-[2.2]" />
+                          <div className="flex mb-2.5 sm:mb-3.5 text-blue-950">
+                            <Settings className="w-5 h-5 sm:w-6 sm:h-6 stroke-[2.2]" />
                           </div>
                           <h3 className="font-bold text-blue-950 text-xs sm:text-base mb-1 sm:mb-2">Carefully Sized Systems</h3>
                           <p className="text-blue-900/60 text-[10px] sm:text-sm line-clamp-3 sm:line-clamp-none">We take the time to evaluate your home's layout so your new system heats and cools evenly.</p>
@@ -443,8 +443,8 @@ export function Home() {
                           <ShieldCheck className="w-16 h-16 sm:w-24 sm:h-24" />
                         </div>
                         <div className="relative z-10">
-                          <div className="hidden sm:flex w-11 h-11 rounded-xl bg-blue-950/10 border border-blue-950/15 items-center justify-center mb-3.5 text-blue-950 group-hover:bg-blue-950 group-hover:text-white transition-colors">
-                            <ShieldCheck className="w-5 h-5 stroke-[2.2]" />
+                          <div className="flex mb-2.5 sm:mb-3.5 text-blue-950">
+                            <ShieldCheck className="w-5 h-5 sm:w-6 sm:h-6 stroke-[2.2]" />
                           </div>
                           <h3 className="font-bold text-blue-950 text-xs sm:text-base mb-1 sm:mb-2">Written Guarantees</h3>
                           <p className="text-blue-900/60 text-[10px] sm:text-sm line-clamp-3 sm:line-clamp-none">We back our work with trusted manufacturer warranties and our own 1-year labor guarantee.</p>
@@ -466,8 +466,8 @@ export function Home() {
                           <Clock className="w-16 h-16 sm:w-24 sm:h-24" />
                         </div>
                         <div className="relative z-10">
-                          <div className="hidden sm:flex w-11 h-11 rounded-xl bg-blue-950/10 border border-blue-950/15 items-center justify-center mb-3.5 text-blue-950 group-hover:bg-blue-950 group-hover:text-white transition-colors">
-                            <Clock className="w-5 h-5 stroke-[2.2]" />
+                          <div className="flex mb-2.5 sm:mb-3.5 text-blue-950">
+                            <Clock className="w-5 h-5 sm:w-6 sm:h-6 stroke-[2.2]" />
                           </div>
                           <h3 className="font-bold text-blue-950 text-xs sm:text-base mb-1 sm:mb-2">Always Here to Help</h3>
                           <p className="text-blue-900/60 text-[10px] sm:text-sm line-clamp-3 sm:line-clamp-none">When heating or AC suddenly fails, our local team is ready to restore your home's comfort.</p>
@@ -479,8 +479,8 @@ export function Home() {
                           <Zap className="w-16 h-16 sm:w-24 sm:h-24" />
                         </div>
                         <div className="relative z-10">
-                          <div className="hidden sm:flex w-11 h-11 rounded-xl bg-blue-950/10 border border-blue-950/15 items-center justify-center mb-3.5 text-blue-950 group-hover:bg-blue-950 group-hover:text-white transition-colors">
-                            <Zap className="w-5 h-5 stroke-[2.2]" />
+                          <div className="flex mb-2.5 sm:mb-3.5 text-blue-950">
+                            <Zap className="w-5 h-5 sm:w-6 sm:h-6 stroke-[2.2]" />
                           </div>
                           <h3 className="font-bold text-blue-950 text-xs sm:text-base mb-1 sm:mb-2">Rebate Guidance</h3>
                           <p className="text-blue-900/60 text-[10px] sm:text-sm line-clamp-3 sm:line-clamp-none">We help your family claim available local rebates on energy-saving heat pumps and ACs.</p>
@@ -492,8 +492,8 @@ export function Home() {
                           <Banknote className="w-16 h-16 sm:w-24 sm:h-24" />
                         </div>
                         <div className="relative z-10">
-                          <div className="hidden sm:flex w-11 h-11 rounded-xl bg-blue-950/10 border border-blue-950/15 items-center justify-center mb-3.5 text-blue-950 group-hover:bg-blue-950 group-hover:text-white transition-colors">
-                            <Banknote className="w-5 h-5 stroke-[2.2]" />
+                          <div className="flex mb-2.5 sm:mb-3.5 text-blue-950">
+                            <Banknote className="w-5 h-5 sm:w-6 sm:h-6 stroke-[2.2]" />
                           </div>
                           <h3 className="font-bold text-blue-950 text-xs sm:text-base mb-1 sm:mb-2">Clear, Upfront Pricing</h3>
                           <p className="text-blue-900/60 text-[10px] sm:text-sm line-clamp-3 sm:line-clamp-none">No hidden fees or surprises. You always approve the straightforward price before work starts.</p>
