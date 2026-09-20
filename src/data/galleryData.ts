@@ -45,15 +45,15 @@ export const galleryItems: GalleryItem[] = [
     badge: "Wall Mount Inverter"
   },
   {
-    id: "ductless-indoor-mini-split",
-    src: "/images/gallery/mini-split-indoor.jpg",
-    title: "Whisper-Quiet Multi-Zone Indoor Wall Unit",
-    category: "Mini-Splits",
-    location: "Palo Alto, CA",
-    equipment: "Ductless Multi-Zone High-Wall Air Handler",
-    alt: "Clean modern wall-mounted ductless mini-split air handler providing zoned climate control",
-    description: "Seamless indoor wall-mount air handler installation with concealed gravity condensate drain lines and independent wireless digital thermostatic control for room-by-room comfort.",
-    badge: "Ductless Zoned Comfort"
+    id: "rooftop-central-condenser",
+    src: "/images/gallery/rooftop-condenser.jpg",
+    title: "High-Efficiency Central AC Condenser on Rooftop Vibration Curb",
+    category: "AC & Condensers",
+    location: "San Jose, CA",
+    equipment: "Heavy-Duty Residential Central AC Condenser",
+    alt: "Rooftop residential central air conditioning condenser mounted on seismic equipment curb with weatherproof disconnect",
+    description: "Custom rooftop central AC condenser installation mounted on an engineered vibration-dampening seismic equipment curb. Includes sealed electrical whip, lockable disconnect box, and high-efficiency subcooling coil protection.",
+    badge: "Rooftop Central AC"
   },
   {
     id: "mitsubishi-smart-multi",

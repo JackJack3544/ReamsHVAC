@@ -11,32 +11,42 @@ import { SEO } from "../components/SEO";
 export function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
     email: "",
+    message: "",
   });
 
   const nameId = useId();
   const phoneId = useId();
   const emailId = useId();
+  const messageId = useId();
 
-  const handleSubmit = async (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setErrorMessage(null);
     try {
-      await fetch("/", {
+      const formPayload = new FormData(e.currentTarget);
+      if (!formPayload.has("access_key")) {
+        formPayload.append("access_key", "24043072-108e-4ff2-a8c9-e9d0f2ef537d");
+      }
+      const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams({
-          "form-name": "contact",
-          ...formData,
-        }).toString(),
+        body: formPayload,
       });
-      setSubmitted(true);
+      const data = await response.json();
+      if (data.success) {
+        setSubmitted(true);
+      } else {
+        console.error("Web3Forms error:", data);
+        setErrorMessage(data.message || "Failed to submit request. Please try again.");
+      }
     } catch (error) {
-      console.error("Netlify form submission error:", error);
-      setSubmitted(true);
+      console.error("Contact form submission error:", error);
+      setErrorMessage("Network error. Please call 1-800-555-0199 directly.");
     } finally {
       setIsSubmitting(false);
     }
@@ -207,7 +217,7 @@ export function Contact() {
                     type="button"
                     onClick={() => {
                       setSubmitted(false);
-                      setFormData({ name: "", phone: "", email: "" });
+                      setFormData({ name: "", phone: "", email: "", message: "" });
                     }}
                     className="bg-blue-950 text-white font-bold px-5 sm:px-6 py-2.5 rounded-md text-xs sm:text-sm hover:bg-blue-900 transition-colors cursor-pointer"
                   >
@@ -215,92 +225,111 @@ export function Contact() {
                   </button>
                 </div>
               ) : (
-                <form
-                  name="contact"
-                  method="POST"
-                  data-netlify="true"
-                  data-netlify-honeypot="bot-field"
-                  onSubmit={handleSubmit}
-                  className="space-y-4 sm:space-y-5"
-                >
-                  {/* Hidden inputs for Netlify Forms */}
-                  <input type="hidden" name="form-name" value="contact" />
-                  <p className="hidden">
-                    <label>
-                      Don’t fill this out if you're human: <input name="bot-field" />
-                    </label>
-                  </p>
-                  
-                  {/* Name */}
-                  <div>
-                    <label htmlFor={nameId} className="block text-[10px] sm:text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5 sm:mb-2">
-                      Name *
-                    </label>
-                    <input
-                      id={nameId}
-                      name="name"
-                      type="text"
-                      required
-                      placeholder="Your Full Name"
-                      value={formData.name}
-                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full px-3.5 sm:px-4 py-2.5 sm:py-3 bg-slate-50 border border-slate-200 rounded-lg text-xs sm:text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-950 focus:bg-white transition-all"
-                    />
-                  </div>
+                  <form
+                    action="https://api.web3forms.com/submit"
+                    method="POST"
+                    onSubmit={handleSubmit}
+                    className="space-y-4 sm:space-y-5"
+                    aria-label="Contact and service request form"
+                  >
+                    <input type="hidden" name="access_key" value="24043072-108e-4ff2-a8c9-e9d0f2ef537d" />
+                    <input type="hidden" name="subject" value="New Service Request - ReamsHVAC" />
+                    <input type="hidden" name="from_name" value="ReamsHVAC Website" />
+                    <input type="checkbox" name="botcheck" className="hidden" style={{ display: "none" }} />
 
-                  {/* Phone */}
-                  <div>
-                    <label htmlFor={phoneId} className="block text-[10px] sm:text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5 sm:mb-2">
-                      Phone Number *
-                    </label>
-                    <input
-                      id={phoneId}
-                      name="phone"
-                      type="tel"
-                      required
-                      placeholder="(408) 555-0199"
-                      value={formData.phone}
-                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      className="w-full px-3.5 sm:px-4 py-2.5 sm:py-3 bg-slate-50 border border-slate-200 rounded-lg text-xs sm:text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-950 focus:bg-white transition-all"
-                    />
-                  </div>
+                    {errorMessage && (
+                      <div className="p-3 rounded-lg bg-red-50 border border-red-200 text-red-700 text-xs sm:text-sm text-center">
+                        {errorMessage}
+                      </div>
+                    )}
+                    
+                    {/* Name */}
+                    <div>
+                      <label htmlFor={nameId} className="block text-[10px] sm:text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5 sm:mb-2">
+                        Name *
+                      </label>
+                      <input
+                        id={nameId}
+                        name="name"
+                        type="text"
+                        required
+                        placeholder="Your Full Name"
+                        value={formData.name}
+                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                        className="w-full px-3.5 sm:px-4 py-2.5 sm:py-3 bg-slate-50 border border-slate-200 rounded-lg text-xs sm:text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-950 focus:bg-white transition-all"
+                      />
+                    </div>
 
-                  {/* Email */}
-                  <div>
-                    <label htmlFor={emailId} className="block text-[10px] sm:text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5 sm:mb-2">
-                      Email Address *
-                    </label>
-                    <input
-                      id={emailId}
-                      name="email"
-                      type="email"
-                      required
-                      placeholder="you@example.com"
-                      value={formData.email}
-                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full px-3.5 sm:px-4 py-2.5 sm:py-3 bg-slate-50 border border-slate-200 rounded-lg text-xs sm:text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-950 focus:bg-white transition-all"
-                    />
-                  </div>
+                    {/* Phone */}
+                    <div>
+                      <label htmlFor={phoneId} className="block text-[10px] sm:text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5 sm:mb-2">
+                        Phone Number *
+                      </label>
+                      <input
+                        id={phoneId}
+                        name="phone"
+                        type="tel"
+                        required
+                        placeholder="(408) 555-0199"
+                        value={formData.phone}
+                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                        className="w-full px-3.5 sm:px-4 py-2.5 sm:py-3 bg-slate-50 border border-slate-200 rounded-lg text-xs sm:text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-950 focus:bg-white transition-all"
+                      />
+                    </div>
 
-                  {/* Submit */}
-                  <div className="pt-1.5 sm:pt-2">
-                    <button
-                      type="submit"
-                      id="contact-submit-btn"
-                      disabled={isSubmitting}
-                      className="w-full bg-blue-950 text-white font-bold py-3.5 sm:py-4 px-6 rounded-lg hover:bg-blue-900 transition-colors shadow-md flex items-center justify-center gap-2 text-sm sm:text-base cursor-pointer disabled:opacity-75 disabled:cursor-not-allowed"
-                    >
-                      <Send className="w-4 h-4" />
-                      <span>{isSubmitting ? "Submitting..." : "Contact Us"}</span>
-                    </button>
-                  </div>
+                    {/* Email */}
+                    <div>
+                      <label htmlFor={emailId} className="block text-[10px] sm:text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5 sm:mb-2">
+                        Email Address *
+                      </label>
+                      <input
+                        id={emailId}
+                        name="email"
+                        type="email"
+                        required
+                        placeholder="you@example.com"
+                        value={formData.email}
+                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                        className="w-full px-3.5 sm:px-4 py-2.5 sm:py-3 bg-slate-50 border border-slate-200 rounded-lg text-xs sm:text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-950 focus:bg-white transition-all"
+                      />
+                    </div>
 
-                  <p className="text-[10px] sm:text-xs text-slate-500 text-center pt-1">
-                    We respect your privacy. No spam, ever.
-                  </p>
+                    {/* Message */}
+                    <div>
+                      <label htmlFor={messageId} className="block text-[10px] sm:text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5 sm:mb-2">
+                        How Can We Help? *
+                      </label>
+                      <textarea
+                        id={messageId}
+                        name="message"
+                        required
+                        rows={4}
+                        placeholder="Tell us about your HVAC issue, home size, or equipment questions..."
+                        value={formData.message}
+                        onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                        className="w-full px-3.5 sm:px-4 py-2.5 sm:py-3 bg-slate-50 border border-slate-200 rounded-lg text-xs sm:text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-950 focus:bg-white transition-all resize-none min-h-[100px]"
+                      />
+                    </div>
 
-                </form>
-              )}
+                    {/* Submit */}
+                    <div className="pt-1.5 sm:pt-2">
+                      <button
+                        type="submit"
+                        id="contact-submit-btn"
+                        disabled={isSubmitting}
+                        className="w-full bg-blue-950 text-white font-bold py-3.5 sm:py-4 px-6 rounded-lg hover:bg-blue-900 transition-colors shadow-md flex items-center justify-center gap-2 text-sm sm:text-base cursor-pointer disabled:opacity-75 disabled:cursor-not-allowed"
+                      >
+                        <Send className="w-4 h-4" />
+                        <span>{isSubmitting ? "Submitting..." : "Contact Us"}</span>
+                      </button>
+                    </div>
+
+                    <p className="text-[10px] sm:text-xs text-slate-500 text-center pt-1">
+                      We respect your privacy. No spam, ever.
+                    </p>
+
+                  </form>
+                )}
 
             </div>
 

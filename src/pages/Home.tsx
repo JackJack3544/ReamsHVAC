@@ -176,27 +176,35 @@ export function Home() {
     name: "",
     phone: "",
     email: "",
-    notes: "",
+    message: "",
   });
   const [estimateSubmitted, setEstimateSubmitted] = useState(false);
   const [isSubmittingEstimate, setIsSubmittingEstimate] = useState(false);
+  const [estimateError, setEstimateError] = useState<string | null>(null);
 
-  const handleEstimateSubmit = async (e: FormEvent) => {
+  const handleEstimateSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmittingEstimate(true);
+    setEstimateError(null);
     try {
-      await fetch("/", {
+      const formData = new FormData(e.currentTarget);
+      if (!formData.has("access_key")) {
+        formData.append("access_key", "24043072-108e-4ff2-a8c9-e9d0f2ef537d");
+      }
+      const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams({
-          "form-name": "free-estimate",
-          ...estimateData,
-        }).toString(),
+        body: formData,
       });
-      setEstimateSubmitted(true);
+      const data = await response.json();
+      if (data.success) {
+        setEstimateSubmitted(true);
+      } else {
+        console.error("Web3Forms error:", data);
+        setEstimateError(data.message || "Failed to submit request. Please try again.");
+      }
     } catch (error) {
       console.error("Free estimate submission error:", error);
-      setEstimateSubmitted(true);
+      setEstimateError("Network error. Please call 1-800-555-0199 directly.");
     } finally {
       setIsSubmittingEstimate(false);
     }
@@ -279,7 +287,7 @@ export function Home() {
                       type="button"
                       onClick={() => {
                         setEstimateSubmitted(false);
-                        setEstimateData({ name: "", phone: "", email: "", notes: "" });
+                        setEstimateData({ name: "", phone: "", email: "", message: "" });
                       }}
                       className="text-xs font-bold text-blue-950 underline hover:text-blue-800 cursor-pointer"
                     >
@@ -288,20 +296,22 @@ export function Home() {
                   </div>
                 ) : (
                   <form
-                    name="free-estimate"
+                    action="https://api.web3forms.com/submit"
                     method="POST"
-                    data-netlify="true"
-                    data-netlify-honeypot="bot-field"
                     onSubmit={handleEstimateSubmit}
                     className="flex flex-col gap-2.5 sm:gap-3 flex-grow"
                     aria-label="Free estimate request form"
                   >
-                    <input type="hidden" name="form-name" value="free-estimate" />
-                    <p className="hidden">
-                      <label>
-                        Don’t fill this out if you're human: <input name="bot-field" />
-                      </label>
-                    </p>
+                    <input type="hidden" name="access_key" value="24043072-108e-4ff2-a8c9-e9d0f2ef537d" />
+                    <input type="hidden" name="subject" value="New Free Estimate Request - ReamsHVAC" />
+                    <input type="hidden" name="from_name" value="ReamsHVAC Website" />
+                    <input type="checkbox" name="botcheck" className="hidden" style={{ display: "none" }} />
+
+                    {estimateError && (
+                      <div className="p-2 rounded bg-red-50 border border-red-200 text-red-700 text-xs text-center">
+                        {estimateError}
+                      </div>
+                    )}
 
                     <div className="flex flex-row gap-2 sm:gap-3">
                       <input 
@@ -339,12 +349,13 @@ export function Home() {
                       className="w-full px-2.5 sm:px-3 py-2 border border-slate-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 text-sm sm:text-sm" 
                     />
                     <textarea 
-                      id="estimate-notes"
-                      name="notes"
+                      id="estimate-message"
+                      name="message"
+                      required
                       aria-label="How can we help you?"
                       placeholder="How can we help?" 
-                      value={estimateData.notes}
-                      onChange={(e) => setEstimateData({ ...estimateData, notes: e.target.value })}
+                      value={estimateData.message}
+                      onChange={(e) => setEstimateData({ ...estimateData, message: e.target.value })}
                       className="w-full px-2.5 sm:px-3 py-2 border border-slate-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 text-sm sm:text-sm flex-grow resize-none min-h-[64px] sm:min-h-[72px]"
                     ></textarea>
                     <button 
