@@ -1,0 +1,160 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', sans-serif;
+  --font-display: 'Inter', sans-serif;
+  --color-blue-900: #001845;
+  --color-blue-950: #001845;
+}
+
+@layer utilities {
+  .animate-scroll-up {
+    animation: scroll-up 30s linear infinite;
+  }
+  .animate-scroll-down {
+    animation: scroll-down 30s linear infinite;
+  }
+}
+
+@keyframes scroll-up {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes scroll-down {
+  from {
+    transform: translateY(-50%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@layer utilities {
+  .animate-scroll-left {
+    animation: scroll-left 90s linear infinite;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+@keyframes scroll-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes ticker {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@layer utilities {
+  .animate-ticker {
+    animation: ticker 18s linear infinite;
+  }
+}
+
+/* ==========================================================================
+   Mobile-Only Hero Layout Overrides (max-width: 767px)
+   Applied to all hero sections (#home-hero and .page-hero-section).
+   Ensures the entire hero is cleanly proportioned on phone screens
+   with identical sizing, padding, and typography without dead space.
+   Desktop (>= 768px) is 100% untouched and pixel-identical.
+   ========================================================================== */
+@media (max-width: 767px) {
+  /* Hero Section: properly proportioned and balanced for mobile */
+  #home-hero > section,
+  .page-hero-section {
+    min-height: 0 !important;
+    max-height: none !important;
+  }
+
+  #home-hero .hero-main-content,
+  .page-hero-section .hero-main-content {
+    padding-top: 2rem !important;
+    padding-bottom: 1.5rem !important;
+  }
+
+  /* Remove breadcrumbs and dead space from hero on mobile */
+  #home-hero .hero-breadcrumb-container,
+  .page-hero-section .hero-breadcrumb-container {
+    display: none !important;
+  }
+
+  /* Eyebrow: smaller than title, refined and cleanly proportioned */
+  #home-hero .hero-eyebrow,
+  .page-hero-section .hero-eyebrow {
+    font-size: 0.5625rem !important;
+    letter-spacing: 0.08em !important;
+    margin-bottom: 0.625rem !important;
+    min-height: 0 !important;
+    font-weight: 600 !important;
+  }
+
+  /* Headline: properly proportioned so text fits cleanly on mobile screens */
+  #home-hero h1,
+  .page-hero-section h1 {
+    font-size: clamp(1.3rem, 5.8vw, 1.7rem) !important;
+    line-height: 1.25 !important;
+    margin-bottom: 1.05rem !important;
+    letter-spacing: -0.015em !important;
+    font-weight: 800 !important;
+  }
+
+  /* Description text: clean, focused, comfortable reading width */
+  #home-hero p.text-slate-200.font-medium,
+  .page-hero-section .hero-description,
+  .page-hero-section p.text-slate-200.font-medium {
+    font-size: 0.8125rem !important;
+    line-height: 1.55 !important;
+    margin-bottom: 1.35rem !important;
+    max-width: 320px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    color: rgba(226, 232, 240, 0.92) !important;
+  }
+
+  /* CTA Buttons: balanced, centered, compact */
+  #home-hero .hero-cta-group,
+  .page-hero-section .hero-cta-group {
+    gap: 0.75rem !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    max-width: 320px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* Reviews Section rhythm on mobile */
+  #home-page .home-reviews-wrapper section,
+  .home-reviews-wrapper section,
+  .reviews-section-wrapper section,
+  section[aria-label="Customer reviews and ratings"] {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+
+  /* CTABand rhythm on mobile */
+  #home-page .home-cta-wrapper section,
+  .home-cta-wrapper section {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+}

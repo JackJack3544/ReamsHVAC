@@ -1,0 +1,6 @@
+{
+  "name": "ReamsHVAC",
+  "description": "20 years of honest, fast heating and cooling service for Bay Area families — same-day repairs, precision installs, and no surprises on the bill.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <rect width="32" height="32" rx="6" fill="#0f172a"/>
+  <!-- Flame / Heat curve in orange-amber -->
+  <path d="M11 22C9.5 20.5 9 18 10 16C10.5 15 11.5 14.5 12 13.5C12.5 15.5 14 16.5 14 18.5C14 20.5 12.8 22 11 22Z" fill="#f97316"/>
+  <!-- Snowflake / Cool crystal in cyan-blue -->
+  <path d="M16 7V25M11.5 9.5L20.5 22.5M20.5 9.5L11.5 22.5M16 11L14 9M16 11L18 9M16 21L14 23M16 21L18 23" stroke="#38bdf8" stroke-width="2" stroke-linecap="round"/>
+</svg>
