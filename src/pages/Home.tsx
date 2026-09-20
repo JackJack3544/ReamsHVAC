@@ -221,7 +221,7 @@ export function Home() {
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-blue-950 mb-3 sm:mb-6 leading-tight text-center sm:text-left">
                 San Jose HVAC Repair & Heat Pump Specialists
               </h2>
-              <p className="text-xs sm:text-base lg:text-lg text-slate-700 mb-6 md:mb-10 leading-relaxed text-center sm:text-left max-w-xl mx-auto sm:mx-0">
+              <p className="text-sm sm:text-base lg:text-lg text-slate-700 mb-6 md:mb-10 leading-relaxed text-center sm:text-left max-w-xl mx-auto sm:mx-0">
                 Since 2004, our family-owned team has kept Santa Clara County homes comfortable with dependable repairs and honest care. We treat your home like our own—recommending only what your system truly needs, with straightforward pricing and guaranteed workmanship.
               </p>
               <div className="relative rounded-2xl overflow-hidden shadow-lg border border-blue-100 bg-white p-3.5 sm:p-5 md:p-6 flex flex-col aspect-auto md:aspect-video">
@@ -234,7 +234,7 @@ export function Home() {
                       name="name"
                       aria-label="Your full name"
                       placeholder="Name" 
-                      className="w-full px-2.5 sm:px-3 py-2 border border-slate-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 text-xs sm:text-sm" 
+                      className="w-full px-2.5 sm:px-3 py-2 border border-slate-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 text-sm sm:text-sm" 
                     />
                     <input 
                       type="tel" 
@@ -242,7 +242,7 @@ export function Home() {
                       name="phone"
                       aria-label="Your phone number"
                       placeholder="Phone" 
-                      className="w-full px-2.5 sm:px-3 py-2 border border-slate-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 text-xs sm:text-sm" 
+                      className="w-full px-2.5 sm:px-3 py-2 border border-slate-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 text-sm sm:text-sm" 
                     />
                   </div>
                   <input 
@@ -251,16 +251,16 @@ export function Home() {
                     name="email"
                     aria-label="Your email address"
                     placeholder="Email" 
-                    className="w-full px-2.5 sm:px-3 py-2 border border-slate-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 text-xs sm:text-sm" 
+                    className="w-full px-2.5 sm:px-3 py-2 border border-slate-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 text-sm sm:text-sm" 
                   />
                   <textarea 
                     id="estimate-notes"
                     name="notes"
                     aria-label="How can we help you?"
                     placeholder="How can we help?" 
-                    className="w-full px-2.5 sm:px-3 py-2 border border-slate-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 text-xs sm:text-sm flex-grow resize-none min-h-[64px] sm:min-h-[72px]"
+                    className="w-full px-2.5 sm:px-3 py-2 border border-slate-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 text-sm sm:text-sm flex-grow resize-none min-h-[64px] sm:min-h-[72px]"
                   ></textarea>
-                  <button type="submit" aria-label="Submit your free estimate request" className="bg-blue-900 text-white font-bold py-2.5 rounded-md hover:bg-blue-800 transition-colors w-full mt-1 text-xs sm:text-sm min-h-[40px] sm:min-h-[44px] flex items-center justify-center">
+                  <button type="submit" aria-label="Submit your free estimate request" className="bg-blue-900 text-white font-bold py-2.5 rounded-md hover:bg-blue-800 transition-colors w-full mt-1 text-sm sm:text-sm min-h-[40px] sm:min-h-[44px] flex items-center justify-center">
                     SUBMIT
                   </button>
                 </form>
@@ -392,7 +392,7 @@ export function Home() {
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-white mb-2 sm:mb-4 tracking-tight">
               Licensed Heating & Air Conditioning Services
             </h2>
-            <p className="text-xs sm:text-base lg:text-lg text-slate-100 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-sm sm:text-base lg:text-lg text-slate-100 max-w-3xl mx-auto leading-relaxed">
               Rapid diagnostics, code-compliant installations, and seasonal maintenance engineered for South Bay microclimates.
             </p>
           </div>
@@ -414,12 +414,12 @@ export function Home() {
 
                   <div className="relative z-10">
                     {/* Title */}
-                    <h3 className="font-bold text-blue-950 text-[9px] min-[360px]:text-[9.5px] min-[390px]:text-[10px] sm:text-lg md:text-base tracking-tight whitespace-nowrap overflow-hidden text-ellipsis mb-1 sm:mb-2 md:mb-1.5 min-h-[16px] sm:min-h-0 flex items-center">
+                    <h3 className="font-bold text-blue-950 text-xs min-[360px]:text-[13px] sm:text-lg md:text-base tracking-tight whitespace-nowrap overflow-hidden text-ellipsis mb-1 sm:mb-2 md:mb-1.5 min-h-[16px] sm:min-h-0 flex items-center">
                       {service.title}
                     </h3>
 
                     {/* Subtitle / Description */}
-                    <p className="text-slate-600 text-[9px] min-[360px]:text-[9.5px] sm:text-xs md:text-sm leading-tight sm:leading-relaxed mb-1.5 sm:mb-3 md:mb-2.5 min-h-[30px] sm:min-h-0">
+                    <p className="text-slate-600 text-[10.5px] min-[360px]:text-[11.5px] sm:text-xs md:text-sm leading-tight sm:leading-relaxed mb-1.5 sm:mb-3 md:mb-2.5 min-h-[30px] sm:min-h-0">
                       <span className="sm:hidden">{service.mobileSubtitle || service.subtitle}</span>
                       <span className="hidden sm:inline">{service.subtitle}</span>
                     </p>
@@ -429,7 +429,7 @@ export function Home() {
                   <div className="relative z-10 pt-0.5 sm:pt-2 flex items-center justify-between mt-auto">
                     <Link
                       to={service.link}
-                      className="min-h-0 md:min-h-0 inline-flex items-center gap-1 text-[9px] min-[360px]:text-[9.5px] sm:text-xs font-bold text-blue-950"
+                      className="min-h-0 md:min-h-0 inline-flex items-center gap-1 text-[11px] min-[360px]:text-xs sm:text-xs font-bold text-blue-950"
                     >
                       <span>{service.actionLabel || "Explore Service"}</span>
                       {service.showArrow !== false && (
@@ -446,14 +446,14 @@ export function Home() {
           <div className="mt-6 md:mt-12 flex flex-row justify-center items-center gap-2 sm:gap-4 max-w-lg sm:max-w-none mx-auto">
             <Link
               to="/services/smart-thermostats"
-              className="bg-white text-blue-950 px-2.5 sm:px-8 py-2.5 sm:py-4 rounded-md font-bold text-xs sm:text-lg hover:bg-slate-100 transition-colors flex-1 sm:flex-initial sm:w-auto shadow-lg inline-flex items-center justify-center gap-1 sm:gap-2 h-10 sm:h-auto min-h-[40px] sm:min-h-[48px] text-center [&>svg]:w-3.5 [&>svg]:h-3.5 sm:[&>svg]:w-5 sm:[&>svg]:h-5"
+              className="bg-white text-blue-950 px-2.5 sm:px-8 py-2.5 sm:py-4 rounded-md font-bold text-sm sm:text-lg hover:bg-slate-100 transition-colors flex-1 sm:flex-initial sm:w-auto shadow-lg inline-flex items-center justify-center gap-1 sm:gap-2 h-10 sm:h-auto min-h-[40px] sm:min-h-[48px] text-center [&>svg]:w-3.5 [&>svg]:h-3.5 sm:[&>svg]:w-5 sm:[&>svg]:h-5"
             >
               <span>Smart Thermostats</span>
               <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
             </Link>
             <Link
               to="/services"
-              className="bg-white/5 backdrop-blur-[2px] border border-white/20 text-white px-2.5 sm:px-8 py-2.5 sm:py-4 rounded-md font-bold text-xs sm:text-lg hover:bg-white/10 transition-colors flex-1 sm:flex-initial sm:w-auto inline-flex items-center justify-center gap-1 sm:gap-2 h-10 sm:h-auto min-h-[40px] sm:min-h-[48px] text-center [&>svg]:w-3.5 [&>svg]:h-3.5 sm:[&>svg]:w-5 sm:[&>svg]:h-5"
+              className="bg-white/5 backdrop-blur-[2px] border border-white/20 text-white px-2.5 sm:px-8 py-2.5 sm:py-4 rounded-md font-bold text-sm sm:text-lg hover:bg-white/10 transition-colors flex-1 sm:flex-initial sm:w-auto inline-flex items-center justify-center gap-1 sm:gap-2 h-10 sm:h-auto min-h-[40px] sm:min-h-[48px] text-center [&>svg]:w-3.5 [&>svg]:h-3.5 sm:[&>svg]:w-5 sm:[&>svg]:h-5"
             >
               <span>Explore All Services</span>
               <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
@@ -471,20 +471,20 @@ export function Home() {
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-blue-950 leading-tight mb-2 sm:mb-4">
                 Recent Work in Local Homes
               </h2>
-              <p className="text-xs sm:text-base lg:text-lg text-slate-600">
+              <p className="text-sm sm:text-base lg:text-lg text-slate-600">
                 A look at our installations across the South Bay—from quiet heat pumps and AC units to clean, efficient ductwork.
               </p>
             </div>
             <div className="flex flex-row gap-2 sm:gap-4 w-full sm:w-auto shrink-0">
               <Link 
                 to="/gallery" 
-                className="bg-blue-900 text-white font-bold px-2.5 sm:px-8 py-2.5 sm:py-4 rounded-md hover:bg-blue-800 transition-colors shadow-md inline-flex items-center justify-center shrink-0 flex-1 sm:flex-initial sm:w-auto text-xs sm:text-base h-10 sm:h-auto min-h-[40px] sm:min-h-[48px] text-center"
+                className="bg-blue-900 text-white font-bold px-2.5 sm:px-8 py-2.5 sm:py-4 rounded-md hover:bg-blue-800 transition-colors shadow-md inline-flex items-center justify-center shrink-0 flex-1 sm:flex-initial sm:w-auto text-sm sm:text-base h-10 sm:h-auto min-h-[40px] sm:min-h-[48px] text-center"
               >
                 View Full Gallery
               </Link>
               <Link 
                 to="/contact" 
-                className="bg-white text-blue-900 font-bold px-2.5 sm:px-8 py-2.5 sm:py-4 rounded-md hover:bg-slate-50 transition-colors shadow-md inline-flex items-center justify-center shrink-0 flex-1 sm:flex-initial sm:w-auto text-xs sm:text-base h-10 sm:h-auto min-h-[40px] sm:min-h-[48px] text-center"
+                className="bg-white text-blue-900 font-bold px-2.5 sm:px-8 py-2.5 sm:py-4 rounded-md hover:bg-slate-50 transition-colors shadow-md inline-flex items-center justify-center shrink-0 flex-1 sm:flex-initial sm:w-auto text-sm sm:text-base h-10 sm:h-auto min-h-[40px] sm:min-h-[48px] text-center"
               >
                 Schedule Walkthrough
               </Link>
@@ -566,7 +566,7 @@ export function Home() {
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-blue-950 mb-2 sm:mb-4 tracking-tight">
               A Simple Worry-Free Process
             </h2>
-            <p className="text-xs sm:text-base lg:text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-sm sm:text-base lg:text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
               From your first phone call to the final walkthrough, our team treats your home with care—delivering reliable comfort, honest answers, and work done right.
             </p>
           </div>
@@ -594,10 +594,10 @@ export function Home() {
                         {stepNumber}
                       </div>
 
-                      <h3 className="text-xs sm:text-lg font-bold text-blue-950 mb-1 sm:mb-2.5">
+                      <h3 className="text-sm sm:text-lg font-bold text-blue-950 mb-1 sm:mb-2.5">
                         {s.title}
                       </h3>
-                      <p className="text-slate-600 text-[10px] sm:text-sm leading-tight sm:leading-relaxed">
+                      <p className="text-slate-600 text-xs sm:text-sm leading-snug sm:leading-relaxed">
                         {s.desc}
                       </p>
                     </div>
@@ -674,14 +674,14 @@ export function Home() {
               <div className="grid grid-cols-2 gap-2 sm:gap-3 md:gap-4">
                 <div className="bg-white p-2.5 sm:p-4 md:p-5 border border-slate-200 shadow-xs flex flex-col justify-between">
                   <div>
-                    <h4 className="font-bold text-blue-950 text-xs sm:text-base mb-0.5 sm:mb-1">East Bay</h4>
-                    <p className="text-[10px] sm:text-xs text-slate-600 md:text-slate-500 mb-2 sm:mb-3 leading-tight sm:leading-relaxed line-clamp-2 sm:line-clamp-none">
+                    <h4 className="font-bold text-blue-950 text-sm sm:text-base mb-0.5 sm:mb-1">East Bay</h4>
+                    <p className="text-xs sm:text-xs text-slate-600 md:text-slate-500 mb-2 sm:mb-3 leading-tight sm:leading-relaxed line-clamp-2 sm:line-clamp-none">
                       Oakland, Fremont, Hayward, Berkeley, Concord, Walnut Creek
                     </p>
                   </div>
                   <Link
                     to="/service-areas/east-bay"
-                    className="min-h-0 md:min-h-0 inline-flex items-center gap-1 text-[10px] sm:text-xs font-bold text-blue-950 pt-1.5 sm:pt-2 border-t border-slate-100"
+                    className="min-h-0 md:min-h-0 inline-flex items-center gap-1 text-xs sm:text-xs font-bold text-blue-950 pt-1.5 sm:pt-2 border-t border-slate-100"
                   >
                     <span>View East Bay</span>
                     <ArrowRight className="w-3 h-3 text-blue-950" />
@@ -690,14 +690,14 @@ export function Home() {
 
                 <div className="bg-white p-2.5 sm:p-4 md:p-5 border border-slate-200 shadow-xs flex flex-col justify-between">
                   <div>
-                    <h4 className="font-bold text-blue-950 text-xs sm:text-base mb-0.5 sm:mb-1">Peninsula</h4>
-                    <p className="text-[10px] sm:text-xs text-slate-600 md:text-slate-500 mb-2 sm:mb-3 leading-tight sm:leading-relaxed line-clamp-2 sm:line-clamp-none">
+                    <h4 className="font-bold text-blue-950 text-sm sm:text-base mb-0.5 sm:mb-1">Peninsula</h4>
+                    <p className="text-xs sm:text-xs text-slate-600 md:text-slate-500 mb-2 sm:mb-3 leading-tight sm:leading-relaxed line-clamp-2 sm:line-clamp-none">
                       San Mateo, Redwood City, Burlingame, Menlo Park, San Carlos
                     </p>
                   </div>
                   <Link
                     to="/service-areas/peninsula"
-                    className="min-h-0 md:min-h-0 inline-flex items-center gap-1 text-[10px] sm:text-xs font-bold text-blue-950 pt-1.5 sm:pt-2 border-t border-slate-100"
+                    className="min-h-0 md:min-h-0 inline-flex items-center gap-1 text-xs sm:text-xs font-bold text-blue-950 pt-1.5 sm:pt-2 border-t border-slate-100"
                   >
                     <span>View Peninsula</span>
                     <ArrowRight className="w-3 h-3 text-blue-950" />
@@ -706,14 +706,14 @@ export function Home() {
 
                 <div className="bg-white p-2.5 sm:p-4 md:p-5 border border-slate-200 shadow-xs flex flex-col justify-between">
                   <div>
-                    <h4 className="font-bold text-blue-950 text-xs sm:text-base mb-0.5 sm:mb-1">San Francisco</h4>
-                    <p className="text-[10px] sm:text-xs text-slate-600 md:text-slate-500 mb-2 sm:mb-3 leading-tight sm:leading-relaxed line-clamp-2 sm:line-clamp-none">
+                    <h4 className="font-bold text-blue-950 text-sm sm:text-base mb-0.5 sm:mb-1">San Francisco</h4>
+                    <p className="text-xs sm:text-xs text-slate-600 md:text-slate-500 mb-2 sm:mb-3 leading-tight sm:leading-relaxed line-clamp-2 sm:line-clamp-none">
                       Sunset, Richmond, Marina, Pacific Heights, SoMa, Mission
                     </p>
                   </div>
                   <Link
                     to="/service-areas/san-francisco"
-                    className="min-h-0 md:min-h-0 inline-flex items-center gap-1 text-[10px] sm:text-xs font-bold text-blue-950 pt-1.5 sm:pt-2 border-t border-slate-100"
+                    className="min-h-0 md:min-h-0 inline-flex items-center gap-1 text-xs sm:text-xs font-bold text-blue-950 pt-1.5 sm:pt-2 border-t border-slate-100"
                   >
                     <span>View SF</span>
                     <ArrowRight className="w-3 h-3 text-blue-950" />
@@ -722,14 +722,14 @@ export function Home() {
 
                 <div className="bg-white p-2.5 sm:p-4 md:p-5 border border-slate-200 shadow-xs flex flex-col justify-between">
                   <div>
-                    <h4 className="font-bold text-blue-950 text-xs sm:text-base mb-0.5 sm:mb-1">North Bay</h4>
-                    <p className="text-[10px] sm:text-xs text-slate-600 md:text-slate-500 mb-2 sm:mb-3 leading-tight sm:leading-relaxed line-clamp-2 sm:line-clamp-none">
+                    <h4 className="font-bold text-blue-950 text-sm sm:text-base mb-0.5 sm:mb-1">North Bay</h4>
+                    <p className="text-xs sm:text-xs text-slate-600 md:text-slate-500 mb-2 sm:mb-3 leading-tight sm:leading-relaxed line-clamp-2 sm:line-clamp-none">
                       San Rafael, Novato, Petaluma, Santa Rosa, Vallejo, Napa
                     </p>
                   </div>
                   <Link
                     to="/service-areas/north-bay"
-                    className="min-h-0 md:min-h-0 inline-flex items-center gap-1 text-[10px] sm:text-xs font-bold text-blue-950 pt-1.5 sm:pt-2 border-t border-slate-100"
+                    className="min-h-0 md:min-h-0 inline-flex items-center gap-1 text-xs sm:text-xs font-bold text-blue-950 pt-1.5 sm:pt-2 border-t border-slate-100"
                   >
                     <span>View North Bay</span>
                     <ArrowRight className="w-3 h-3 text-blue-950" />

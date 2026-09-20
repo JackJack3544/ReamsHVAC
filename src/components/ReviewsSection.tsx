@@ -136,16 +136,16 @@ export function ReviewsSection({
                       ))}
                     </div>
                   </div>
-                  <blockquote className="text-white italic text-xs sm:text-base leading-relaxed mb-4 sm:mb-6 font-normal">
+                  <blockquote className="text-white italic text-sm sm:text-base leading-relaxed mb-4 sm:mb-6 font-normal">
                     "{quoteText.replace(/^["']|["']$/g, '')}"
                   </blockquote>
                 </div>
                 <div className="pt-3 sm:pt-4 border-t border-white/10 flex items-center justify-between mt-auto">
                   <div>
-                    <h3 className="font-bold text-white text-xs sm:text-base">{review.name}</h3>
-                    <p className="text-[10px] sm:text-xs text-slate-300">{locationText}</p>
+                    <h3 className="font-bold text-white text-sm sm:text-base">{review.name}</h3>
+                    <p className="text-xs sm:text-xs text-slate-300">{locationText}</p>
                   </div>
-                  <span className="text-[10px] sm:text-xs font-semibold text-white">Verified Customer</span>
+                  <span className="text-xs sm:text-xs font-semibold text-white">Verified Customer</span>
                 </div>
               </div>
             );

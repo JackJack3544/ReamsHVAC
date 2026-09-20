@@ -98,48 +98,55 @@
     display: none !important;
   }
 
-  /* Eyebrow: smaller than title, refined and cleanly proportioned */
+  /* Eyebrow: clear, legible uppercase trust badge */
   #home-hero .hero-eyebrow,
   .page-hero-section .hero-eyebrow {
-    font-size: 0.5625rem !important;
-    letter-spacing: 0.08em !important;
-    margin-bottom: 0.625rem !important;
+    font-size: 0.75rem !important;
+    letter-spacing: 0.1em !important;
+    margin-bottom: 0.75rem !important;
     min-height: 0 !important;
-    font-weight: 600 !important;
+    font-weight: 700 !important;
   }
 
-  /* Headline: properly proportioned so text fits cleanly on mobile screens */
+  /* Headline: bold, commanding anchor establishing strong hierarchy */
   #home-hero h1,
   .page-hero-section h1 {
-    font-size: clamp(1.3rem, 5.8vw, 1.7rem) !important;
-    line-height: 1.25 !important;
-    margin-bottom: 1.05rem !important;
-    letter-spacing: -0.015em !important;
+    font-size: clamp(1.625rem, 6.8vw, 2.125rem) !important;
+    line-height: 1.2 !important;
+    margin-bottom: 1rem !important;
+    letter-spacing: -0.02em !important;
     font-weight: 800 !important;
   }
 
-  /* Description text: clean, focused, comfortable reading width */
+  /* Description text: clean, focused, comfortable reading size */
   #home-hero p.text-slate-200.font-medium,
   .page-hero-section .hero-description,
   .page-hero-section p.text-slate-200.font-medium {
-    font-size: 0.8125rem !important;
-    line-height: 1.55 !important;
-    margin-bottom: 1.35rem !important;
-    max-width: 320px !important;
+    font-size: 0.9375rem !important;
+    line-height: 1.6 !important;
+    margin-bottom: 1.5rem !important;
+    max-width: 360px !important;
     margin-left: auto !important;
     margin-right: auto !important;
-    color: rgba(226, 232, 240, 0.92) !important;
+    color: rgba(226, 232, 240, 0.95) !important;
   }
 
-  /* CTA Buttons: balanced, centered, compact */
+  /* CTA Buttons: balanced, centered, legible */
   #home-hero .hero-cta-group,
   .page-hero-section .hero-cta-group {
     gap: 0.75rem !important;
     margin-top: 0 !important;
     margin-bottom: 0 !important;
-    max-width: 320px !important;
+    max-width: 340px !important;
     margin-left: auto !important;
     margin-right: auto !important;
+  }
+
+  #home-hero .hero-cta-group a,
+  #home-hero .hero-cta-group button,
+  .page-hero-section .hero-cta-group a,
+  .page-hero-section .hero-cta-group button {
+    font-size: 0.875rem !important;
   }
 
   /* Reviews Section rhythm on mobile */
