@@ -405,7 +405,7 @@ export function Home() {
               return (
                 <div
                   key={service.id}
-                  className="relative overflow-hidden bg-white/95 backdrop-blur-md border border-white/40 rounded-xl p-2.5 sm:p-5 md:p-4 text-left shadow-sm sm:shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between h-full min-h-[120px] sm:min-h-0 group"
+                  className="relative overflow-hidden bg-white/80 sm:bg-white/95 backdrop-blur-md border border-white/40 rounded-xl p-2.5 sm:p-5 md:p-4 text-left shadow-sm sm:shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between h-full min-h-[120px] sm:min-h-0 group"
                 >
                   {/* Background Watermark Icon in Bottom Right */}
                   <div className="absolute -right-2 -bottom-2 opacity-[0.25] text-blue-950 group-hover:opacity-[0.38] transition-opacity pointer-events-none">
