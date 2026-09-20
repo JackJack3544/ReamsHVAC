@@ -1,6 +1,6 @@
 import { useState, useId, type FormEvent } from "react";
 import { 
-  Phone, CheckCircle2, Send, Check, Wrench, ArrowRight, Clock, Shield, ShieldCheck
+  Phone, CheckCircle2, Send, Check, Wrench, ArrowRight
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { PageHero } from "../components/PageHero";
@@ -337,47 +337,7 @@ export function Contact() {
         </div>
       </section>
 
-      {/* 3. Dark — Trust Signals */}
-      <section className="relative py-8 sm:py-16 lg:py-20 overflow-hidden bg-slate-900 text-white border-b border-slate-800">
-        <div className="absolute inset-0 z-0 bg-[url('https://res.cloudinary.com/dbdrkehcp/image/upload/v1784693931/Untitled_design_2_tnj3em.png')] bg-cover bg-center"></div>
-        <div className="absolute inset-0 z-10 bg-slate-950/25 backdrop-blur-xs"></div>
-
-        <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center sm:text-left">
-            <div className="mb-4 sm:mb-6">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
-                What to Expect When You Contact Us
-              </h2>
-            </div>
-            <div className="text-slate-100 leading-relaxed space-y-3 sm:space-y-4 text-xs sm:text-base lg:text-lg text-center sm:text-left">
-              <p>
-                Our dispatch team responds to every online inquiry within 30 minutes during business hours. For 24/7 emergency heating and cooling failures, call <a href="tel:1-800-555-0199" className="text-sky-300 font-semibold underline hover:text-sky-100 transition-colors">1-800-555-0199</a> for immediate live dispatch.
-              </p>
-              <p>
-                Every walkthrough begins with a thorough on-site diagnostic—no upsell pressure, no commissions. You receive a flat-rate written quote before any work begins.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 mt-6 sm:mt-8">
-              {[
-                { icon: <Clock className="w-4 h-4 sm:w-5 sm:h-5 text-white flex-shrink-0 mt-0.5" />, title: "30-Min Response", desc: "Online inquiries answered within 30 minutes during business hours." },
-                { icon: <Shield className="w-4 h-4 sm:w-5 sm:h-5 text-white flex-shrink-0 mt-0.5" />, title: "Flat-Rate Quotes", desc: "Written itemized pricing before we open a toolbox." },
-                { icon: <ShieldCheck className="w-4 h-4 sm:w-5 sm:h-5 text-white flex-shrink-0 mt-0.5" />, title: "24/7 Emergency", desc: "Around-the-clock live dispatch for heating and cooling emergencies." },
-              ].map((item) => (
-                <div key={item.title} className="flex items-start gap-3">
-                  {item.icon}
-                  <div>
-                    <p className="text-sm sm:text-base font-bold text-white">{item.title}</p>
-                    <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">{item.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 4. Verified Customer Reviews */}
+      {/* 3. Verified Customer Reviews */}
       <div className="home-reviews-wrapper">
         <ReviewsSection
           title="What Customers Say About Our Service"

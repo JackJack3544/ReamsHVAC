@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { 
   MapPin, Phone, ShieldCheck, Clock, ArrowRight, Building2, 
   Flame, Droplet, Zap, ThermometerSnowflake, Wind, CheckCircle2, 
-  Star, ChevronDown, ChevronUp, Award, Wrench, Check,
+  Star, ChevronDown, ChevronUp, Award, Wrench,
   ChevronLeft, ChevronRight
 } from "lucide-react";
 import { CTABand } from "../../components/CTABand";
@@ -426,63 +426,25 @@ export function ServiceAreasHub() {
         </div>
       </section>
 
-      {/* 4. Dark — Bay Area Map & Local Service */}
-      <section className="relative py-8 sm:py-16 lg:py-24 overflow-hidden bg-slate-900 text-white border-b border-slate-800">
-        <div className="absolute inset-0 z-0 bg-[url('https://res.cloudinary.com/dbdrkehcp/image/upload/v1784693931/Untitled_design_2_tnj3em.png')] bg-cover bg-center"></div>
-        <div className="absolute inset-0 z-10 bg-slate-950/25 backdrop-blur-xs"></div>
-
-        <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 items-center">
-            
-            <div className="lg:col-span-6 text-center sm:text-left">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-white tracking-tight mb-4 sm:mb-6">
-                Local Service Across All 9 Bay Area Counties
-              </h2>
-              <p className="text-slate-200 text-xs sm:text-base lg:text-lg leading-relaxed mb-4 sm:mb-6">
-                We maintain active GPS-tracked service trucks stationed across key Bay Area thoroughfares (I-880, US-101, I-280, I-680, and Hwy 85). This guarantees rapid dispatch times when your air conditioner or heating system breaks down unexpectedly.
-              </p>
-
-              <div className="space-y-2.5 sm:space-y-3 mb-6 sm:mb-8 text-left">
-                <div className="flex items-start gap-2.5 sm:gap-3">
-                  <Check className="w-4 h-4 sm:w-5 sm:h-5 text-white flex-shrink-0 mt-0.5" />
-                  <p className="text-xs sm:text-sm text-slate-200"><strong className="text-white">Licensed C-20 Contractor:</strong> Fully compliant with California Contractors State License Board (#1048291).</p>
-                </div>
-                <div className="flex items-start gap-2.5 sm:gap-3">
-                  <Check className="w-4 h-4 sm:w-5 sm:h-5 text-white flex-shrink-0 mt-0.5" />
-                  <p className="text-xs sm:text-sm text-slate-200"><strong className="text-white">Title 24 & HERS Certified:</strong> In-house HERS duct leakage testers for rapid permit finalization.</p>
-                </div>
-                <div className="flex items-start gap-2.5 sm:gap-3">
-                  <Check className="w-4 h-4 sm:w-5 sm:h-5 text-white flex-shrink-0 mt-0.5" />
-                  <p className="text-xs sm:text-sm text-slate-200"><strong className="text-white">Flat-Rate Pricing:</strong> Itemized written quotes with zero hidden travel charges or mileage fees.</p>
-                </div>
-              </div>
-
-              <Link to="/contact" className="inline-flex items-center justify-center sm:justify-start w-full sm:w-auto gap-2 bg-white text-blue-950 font-bold px-5 sm:px-6 py-2.5 sm:py-3 rounded-lg hover:bg-slate-100 transition-colors shadow-md text-xs sm:text-sm">
-                <span>Check Availability in Your Zip Code</span>
-                <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-              </Link>
+      {/* 4. Bay Area Service Area Map */}
+      <section className="py-8 sm:py-14 lg:py-16 bg-slate-100 border-b border-slate-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-white p-2 sm:p-3 border border-slate-200 shadow-sm rounded-xl overflow-hidden">
+            <div className="relative w-full h-[320px] sm:h-[450px] md:h-[520px] bg-slate-100 overflow-hidden rounded-lg">
+              <iframe 
+                title="San Jose and Bay Area HVAC Service Area Map"
+                src="https://maps.google.com/maps?q=San%20Jose%2C%20CA%20Bay%20Area&t=&z=9&ie=UTF8&iwloc=&output=embed" 
+                className="w-full h-full border-0" 
+                loading="lazy" 
+                allowFullScreen
+              ></iframe>
             </div>
-
-            <div className="lg:col-span-6 mt-4 sm:mt-0">
-              <div className="bg-white p-2 border border-slate-200 shadow-sm rounded-none overflow-hidden flex flex-col justify-between">
-                <div className="relative w-full h-[240px] sm:h-[360px] md:h-[440px] bg-slate-100 overflow-hidden rounded-none">
-                  <iframe 
-                    title="San Jose and Bay Area HVAC Service Area Map"
-                    src="https://maps.google.com/maps?q=San%20Jose%2C%20CA%20Bay%20Area&t=&z=9&ie=UTF8&iwloc=&output=embed" 
-                    className="w-full h-full border-0" 
-                    loading="lazy" 
-                    allowFullScreen
-                  ></iframe>
-                </div>
-              </div>
-            </div>
-
           </div>
         </div>
       </section>
 
       {/* 5. Authorized Dealer Status — desktop only */}
-      <section className="hidden sm:block py-8 sm:py-16 lg:py-20 bg-slate-50 border-b border-slate-200">
+      <section className="hidden sm:block py-8 sm:py-16 lg:py-20 bg-white border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col items-center md:items-start text-center md:text-left">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold mb-2 sm:mb-4 text-blue-950 tracking-tight">
             Authorized Equipment & Factory Warranties

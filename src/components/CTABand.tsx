@@ -9,11 +9,6 @@ export function CTABand() {
       <div className="absolute inset-0 z-10 bg-slate-950/75 backdrop-blur-[2px]"></div>
 
       <div className="relative z-20 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        {/* Eyebrow */}
-        <p className="hidden sm:inline-flex text-white font-bold tracking-wider sm:tracking-widest uppercase mb-4 sm:mb-6 text-[10px] min-[360px]:text-[11px] sm:text-sm items-center gap-1.5 bg-white/10 px-3 sm:px-3.5 py-1 border border-white/20 rounded-full sm:rounded-none">
-          <Clock className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white shrink-0" /> 24/7 EMERGENCY & SAME-DAY HVAC DISPATCH
-        </p>
-
         {/* Heading */}
         <h2 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white mb-2.5 sm:mb-4">
           Schedule a Walkthrough
