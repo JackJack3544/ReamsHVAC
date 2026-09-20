@@ -157,77 +157,125 @@ export function Layout() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-[#030712] text-white pt-16 pb-8" role="contentinfo">
+      <footer className="bg-[#030712] text-white py-8 sm:py-14 lg:pt-16 lg:pb-10" role="contentinfo">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+          
+          {/* Top Company Brand & Quick Contact Header */}
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-white/10 mb-6 sm:mb-10">
             <div>
-              <Link to="/" className="inline-block mb-6" aria-label="Ream's Mechanical HVAC Footer Home">
-                <Logo className="h-9 sm:h-10 w-auto" variant="light" />
+              <Link to="/" className="inline-block mb-2 sm:mb-0" aria-label="Ream's Mechanical HVAC Footer Home">
+                <Logo className="h-8 sm:h-9 w-auto" variant="light" />
               </Link>
-              <p className="text-sm text-slate-300 mb-6 pr-4 leading-relaxed">
-                Family-owned San Jose HVAC contractor with 20+ years of trade experience. Delivering honest furnace, heat pump, and AC repairs across Santa Clara County.
+              <p className="text-xs sm:text-sm text-slate-300 max-w-md leading-relaxed mt-1">
+                San Jose's trusted C-20 licensed HVAC contractor with 20+ years of trade experience. Delivering honest heating, cooling, and heat pump craftsmanship.
               </p>
-              <div className="space-y-2">
-                <p className="flex items-center gap-2 text-slate-100">
-                  <Phone size={16} className="text-blue-400" /> 
-                  <a href="tel:1-800-555-0199" aria-label="Call ReamsHVAC" className="hover:text-blue-300 font-semibold transition-colors">1-800-555-0199</a>
-                </p>
-              </div>
-              <div className="mt-6 flex gap-3 text-xs font-bold text-white">
-                <span className="bg-white/10 px-3 py-1.5 rounded-md border border-white/20">Lic #1048291</span>
-                <span className="bg-white/10 px-3 py-1.5 rounded-md border border-white/20">Insured & Bonded</span>
-              </div>
             </div>
+            
+            <div className="flex items-center gap-2 sm:gap-3 flex-wrap">
+              <a 
+                href="tel:1-800-555-0199" 
+                aria-label="Call ReamsHVAC dispatch"
+                className="inline-flex items-center gap-1.5 bg-blue-900/50 hover:bg-blue-800 border border-blue-400/30 text-white text-xs sm:text-sm font-semibold px-3 py-1.5 rounded-md transition-colors"
+              >
+                <Phone size={13} className="text-blue-400" />
+                <span>1-800-555-0199</span>
+              </a>
+              <span className="text-[11px] bg-white/10 px-2.5 py-1 rounded text-slate-200 border border-white/15 font-mono">
+                Lic #1048291
+              </span>
+              <span className="text-[11px] bg-white/10 px-2.5 py-1 rounded text-slate-200 border border-white/15">
+                Insured & Bonded
+              </span>
+            </div>
+          </div>
 
+          {/* Compact Responsive Links Grid (2 columns on mobile, 4 columns on desktop) */}
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-4 sm:gap-x-8 gap-y-6 sm:gap-y-10 mb-8 sm:mb-12">
+            
+            {/* Col 1: Core Services */}
             <div>
-              <h3 className="text-lg font-bold text-white mb-6 tracking-tight">Services</h3>
-              <ul className="space-y-3 text-sm">
-                {services.map(s => (
-                  <li key={s.path}>
-                    <Link to={s.path} className="text-slate-200 hover:text-white transition-colors">{s.name}</Link>
-                  </li>
-                ))}
+              <h3 className="text-xs sm:text-sm font-bold text-white uppercase tracking-wider mb-2.5 sm:mb-4">
+                Services
+              </h3>
+              <ul className="space-y-1.5 sm:space-y-2.5 text-xs sm:text-sm">
+                <li><Link to="/services/heat-pumps" className="text-slate-300 hover:text-white transition-colors">Heat Pumps</Link></li>
+                <li><Link to="/services/air-conditioning" className="text-slate-300 hover:text-white transition-colors">Air Conditioning</Link></li>
+                <li><Link to="/services/gas-furnaces" className="text-slate-300 hover:text-white transition-colors">Gas Furnaces</Link></li>
+                <li><Link to="/services/mini-splits" className="text-slate-300 hover:text-white transition-colors">Mini Splits</Link></li>
+                <li><Link to="/services/maintenance-plans" className="text-slate-300 hover:text-white transition-colors">Maintenance Plans</Link></li>
+                <li><Link to="/services/commercial-hvac" className="text-slate-300 hover:text-white transition-colors">Commercial HVAC</Link></li>
+                <li className="pt-1">
+                  <Link to="/services" className="text-blue-400 font-semibold hover:text-white transition-colors inline-flex items-center gap-0.5">
+                    View All Services &rarr;
+                  </Link>
+                </li>
               </ul>
             </div>
 
+            {/* Col 2: Service Areas */}
             <div>
-              <h3 className="text-lg font-bold text-white mb-6 tracking-tight">Service Areas</h3>
-              <ul className="space-y-3 text-sm">
-                 {regions.map(r => (
-                  <li key={r.path}>
-                    <Link to={r.path} className="text-slate-200 hover:text-white transition-colors">{r.name}</Link>
-                  </li>
-                ))}
-                <li className="pt-2">
-                  <Link to="/service-areas" className="text-blue-300 font-semibold hover:text-white transition-colors inline-flex items-center gap-1">
+              <h3 className="text-xs sm:text-sm font-bold text-white uppercase tracking-wider mb-2.5 sm:mb-4">
+                Service Areas
+              </h3>
+              <ul className="space-y-1.5 sm:space-y-2.5 text-xs sm:text-sm">
+                <li><Link to="/service-areas/south-bay" className="text-slate-300 hover:text-white transition-colors">South Bay</Link></li>
+                <li><Link to="/service-areas/peninsula" className="text-slate-300 hover:text-white transition-colors">Peninsula</Link></li>
+                <li><Link to="/service-areas/east-bay" className="text-slate-300 hover:text-white transition-colors">East Bay</Link></li>
+                <li><Link to="/service-areas/san-francisco" className="text-slate-300 hover:text-white transition-colors">San Francisco</Link></li>
+                <li><Link to="/service-areas/north-bay" className="text-slate-300 hover:text-white transition-colors">North Bay</Link></li>
+                <li><Link to="/service-areas/south-bay/san-jose" className="text-slate-300 hover:text-white transition-colors">San Jose HQ</Link></li>
+                <li className="pt-1">
+                  <Link to="/service-areas" className="text-blue-400 font-semibold hover:text-white transition-colors inline-flex items-center gap-0.5">
                     View All 46 Cities &rarr;
                   </Link>
                 </li>
               </ul>
             </div>
 
+            {/* Col 3: Why ReamsHVAC */}
             <div>
-              <h3 className="text-lg font-bold text-white mb-6 tracking-tight">Why ReamsHVAC</h3>
-              <ul className="space-y-3 text-sm mb-6">
-                <li><Link to="/about" className="text-slate-200 hover:text-white transition-colors">Our Story & Craft</Link></li>
-                <li><Link to="/gallery" className="text-slate-200 hover:text-white transition-colors">Project Gallery</Link></li>
-                <li><Link to="/authorized-dealer" className="text-slate-200 hover:text-white transition-colors">Authorized Dealer</Link></li>
-                <li><Link to="/financing-rebates" className="text-slate-200 hover:text-white transition-colors">Rebates & Financing</Link></li>
-                <li><Link to="/emergency" className="text-slate-200 hover:text-white transition-colors">24/7 Emergency Service</Link></li>
-                <li><Link to="/contact" className="text-slate-200 hover:text-white transition-colors">Schedule Consultation</Link></li>
+              <h3 className="text-xs sm:text-sm font-bold text-white uppercase tracking-wider mb-2.5 sm:mb-4">
+                Why ReamsHVAC
+              </h3>
+              <ul className="space-y-1.5 sm:space-y-2.5 text-xs sm:text-sm">
+                <li><Link to="/about" className="text-slate-300 hover:text-white transition-colors">Our Story & Craft</Link></li>
+                <li><Link to="/gallery" className="text-slate-300 hover:text-white transition-colors">Project Gallery</Link></li>
+                <li><Link to="/reviews" className="text-slate-300 hover:text-white transition-colors">500+ Customer Reviews</Link></li>
+                <li><Link to="/authorized-dealer" className="text-slate-300 hover:text-white transition-colors">Authorized Dealer</Link></li>
+                <li><Link to="/financing-rebates" className="text-slate-300 hover:text-white transition-colors">Rebates & Financing</Link></li>
+                <li><Link to="/team" className="text-slate-300 hover:text-white transition-colors">Meet Our Team</Link></li>
               </ul>
             </div>
+
+            {/* Col 4: Resources & Trust */}
+            <div>
+              <h3 className="text-xs sm:text-sm font-bold text-white uppercase tracking-wider mb-2.5 sm:mb-4">
+                Credentials & Help
+              </h3>
+              <ul className="space-y-1.5 sm:space-y-2.5 text-xs sm:text-sm">
+                <li><Link to="/licensing-insurance-guarantee" className="text-slate-300 hover:text-white transition-colors">License & Insurance</Link></li>
+                <li><Link to="/specials" className="text-slate-300 hover:text-white transition-colors">Specials & Coupons</Link></li>
+                <li><Link to="/blog" className="text-slate-300 hover:text-white transition-colors">HVAC Guides & Tips</Link></li>
+                <li><Link to="/faq" className="text-slate-300 hover:text-white transition-colors">Frequently Asked Questions</Link></li>
+                <li><Link to="/contact" className="text-slate-300 hover:text-white transition-colors">Schedule Consultation</Link></li>
+                <li><Link to="/emergency" className="text-slate-300 hover:text-white transition-colors">Emergency Protocol</Link></li>
+              </ul>
+            </div>
+
           </div>
           
-          <div className="border-t border-white/15 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-slate-300">
+          {/* Bottom Bar: Copyright & Quick Links */}
+          <div className="border-t border-white/10 pt-5 sm:pt-6 flex flex-col sm:flex-row justify-between items-center gap-3 text-[11px] sm:text-xs text-slate-400 text-center sm:text-left">
             <p>&copy; {new Date().getFullYear()} ReamsHVAC Inc. San Jose, CA. All rights reserved.</p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link to="/service-areas/south-bay/san-jose" className="hover:text-white transition-colors">San Jose HVAC</Link>
-              <Link to="/services/air-conditioning" className="hover:text-white transition-colors">AC Repair</Link>
-              <Link to="/services/heat-pumps" className="hover:text-white transition-colors">Heat Pumps</Link>
-              <Link to="/contact" className="hover:text-white transition-colors">Contact Dispatch</Link>
+            <div className="flex flex-wrap justify-center sm:justify-end gap-x-4 gap-y-1">
+              <Link to="/reviews" className="hover:text-white transition-colors">Reviews</Link>
+              <Link to="/licensing-insurance-guarantee" className="hover:text-white transition-colors">Credentials</Link>
+              <Link to="/specials" className="hover:text-white transition-colors">Specials</Link>
+              <Link to="/faq" className="hover:text-white transition-colors">FAQ</Link>
+              <Link to="/contact" className="hover:text-white transition-colors">Contact</Link>
             </div>
           </div>
+
         </div>
       </footer>
     </div>

@@ -25,7 +25,13 @@ import { About } from './pages/About.tsx';
 import { AuthorizedDealer } from './pages/AuthorizedDealer.tsx';
 import { Contact } from './pages/Contact.tsx';
 import { Gallery } from './pages/Gallery.tsx';
-import { Placeholder } from './pages/Placeholder.tsx';
+import { Reviews } from './pages/Reviews.tsx';
+import { LicensingGuarantee } from './pages/LicensingGuarantee.tsx';
+import { FAQ } from './pages/FAQ.tsx';
+import { Specials } from './pages/Specials.tsx';
+import { Team } from './pages/Team.tsx';
+import { Blog } from './pages/Blog.tsx';
+import { NotFound } from './pages/NotFound.tsx';
 import './index.css';
 
 createRoot(document.getElementById('root')!).render(
@@ -67,18 +73,18 @@ createRoot(document.getElementById('root')!).render(
           <Route path="/about" element={<About />} />
           <Route path="/why-us" element={<About />} />
           <Route path="/authorized-dealer" element={<AuthorizedDealer />} />
-          <Route path="/team" element={<Placeholder title="Our Team" />} />
-          <Route path="/licensing-insurance-guarantee" element={<Placeholder title="Licensing & Insurance" />} />
-          <Route path="/reviews" element={<Placeholder title="Reviews" />} />
+          <Route path="/team" element={<Team />} />
+          <Route path="/licensing-insurance-guarantee" element={<LicensingGuarantee />} />
+          <Route path="/reviews" element={<Reviews />} />
           <Route path="/financing-rebates" element={<FinancingRebates />} />
-          <Route path="/specials" element={<Placeholder title="Specials & Coupons" />} />
+          <Route path="/specials" element={<Specials />} />
           <Route path="/gallery" element={<Gallery />} />
-          <Route path="/blog" element={<Placeholder title="Blog Hub" />} />
+          <Route path="/blog" element={<Blog />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/faq" element={<Placeholder title="FAQ" />} />
+          <Route path="/faq" element={<FAQ />} />
           
           {/* Catch-all */}
-          <Route path="*" element={<Placeholder title="404 Page Not Found" />} />
+          <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
     </BrowserRouter>

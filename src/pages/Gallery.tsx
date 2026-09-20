@@ -182,14 +182,7 @@ export function Gallery() {
                     decoding="async"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                   />
-                  <div className="absolute inset-0 bg-slate-950/15 group-hover:bg-slate-950/5 transition-colors duration-300"></div>
-
-                  {/* Top Badge */}
-                  <div className="absolute top-3 left-3">
-                    <span className="px-2.5 py-1 rounded bg-blue-950/90 backdrop-blur-sm text-white text-[11px] font-bold tracking-wide uppercase shadow-sm">
-                      {item.badge}
-                    </span>
-                  </div>
+                  <div className="absolute inset-0 bg-slate-950/10 group-hover:bg-transparent transition-colors duration-300"></div>
 
                   {/* Zoom Overlay Indicator */}
                   <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -197,19 +190,20 @@ export function Gallery() {
                       <ZoomIn className="w-4 h-4" />
                     </span>
                   </div>
-
-                  {/* Bottom Image Gradient & Location */}
-                  <div className="absolute inset-x-0 bottom-0 p-3 bg-gradient-to-t from-slate-950/80 via-slate-950/40 to-transparent">
-                    <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-sky-300">
-                      <MapPin className="w-3 h-3 shrink-0" />
-                      {item.location}
-                    </span>
-                  </div>
                 </div>
 
                 {/* Card Information */}
                 <div className="p-4 flex-1 flex flex-col justify-between bg-white border-t border-slate-100">
                   <div>
+                    <div className="flex items-center justify-between gap-2 mb-1.5">
+                      <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-slate-500">
+                        <MapPin className="w-3 h-3 text-blue-900 shrink-0" />
+                        {item.location}
+                      </span>
+                      <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-blue-50 text-blue-950 border border-blue-100">
+                        {item.badge}
+                      </span>
+                    </div>
                     <h3 className="text-sm sm:text-base font-bold text-blue-950 group-hover:text-blue-700 transition-colors leading-snug">
                       {item.title}
                     </h3>

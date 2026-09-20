@@ -1,4 +1,4 @@
-import { Phone, ArrowRight, ShieldCheck, Clock, CheckCircle2 } from "lucide-react";
+import { Phone, ArrowRight, ShieldCheck, Award, CheckCircle2 } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export function CTABand() {
@@ -39,7 +39,7 @@ export function CTABand() {
         </div>
 
         {/* Trust Badges Bar (Hidden on mobile) */}
-        <div className="hidden sm:grid sm:grid-cols-3 pt-8 border-t border-white/15 gap-4 text-center text-sm text-slate-200">
+        <div className="hidden sm:flex sm:justify-center sm:items-center pt-8 border-t border-white/15 gap-8 text-center text-sm text-slate-200">
           <div className="flex items-center justify-center gap-2">
             <CheckCircle2 className="w-4 h-4 text-white shrink-0" />
             <span className="leading-tight">100% Workmanship Guarantee</span>
@@ -49,8 +49,8 @@ export function CTABand() {
             <span className="leading-tight">Upfront, Honest Pricing</span>
           </div>
           <div className="flex items-center justify-center gap-2">
-            <Clock className="w-4 h-4 text-white shrink-0" />
-            <span className="leading-tight">Same-Day & Emergency Care</span>
+            <Award className="w-4 h-4 text-white shrink-0" />
+            <span className="leading-tight">Licensed C-20 #1048291</span>
           </div>
         </div>
       </div>

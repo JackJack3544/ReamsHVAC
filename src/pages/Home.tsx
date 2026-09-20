@@ -643,10 +643,6 @@ export function Home() {
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                 />
                 <div className="absolute inset-0 bg-slate-900/10 group-hover:bg-transparent transition-colors duration-500"></div>
-                <div className="absolute inset-x-0 bottom-0 p-2.5 sm:p-3 bg-gradient-to-t from-slate-950/85 via-slate-950/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                  <span className="text-[10px] font-bold text-sky-300 uppercase tracking-wider block mb-0.5">{item.location}</span>
-                  <p className="text-xs sm:text-sm font-semibold text-white leading-tight line-clamp-1">{item.title}</p>
-                </div>
               </Link>
             ))}
           </div>
@@ -681,14 +677,6 @@ export function Home() {
                           className="w-full h-full object-cover"
                         />
                         <div className="absolute inset-0 bg-slate-950/10 pointer-events-none"></div>
-                        <div className="absolute inset-x-0 bottom-0 p-2 bg-gradient-to-t from-slate-950/85 via-slate-950/40 to-transparent pointer-events-none">
-                          <span className="text-[9px] font-bold text-sky-300 uppercase tracking-wider block leading-tight">
-                            {item.location}
-                          </span>
-                          <p className="text-[11px] font-semibold text-white leading-tight line-clamp-1">
-                            {item.title}
-                          </p>
-                        </div>
                       </Link>
                     ))}
                   </div>

@@ -4,7 +4,6 @@ import {
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { PageHero } from "../components/PageHero";
-import { ReviewsSection } from "../components/ReviewsSection";
 import { CTABand } from "../components/CTABand";
 import { SEO } from "../components/SEO";
 
@@ -51,33 +50,6 @@ export function Contact() {
       setIsSubmitting(false);
     }
   };
-
-  const reviews = [
-    {
-      name: "Brian S.",
-      city: "San Jose, CA",
-      date: "1 week ago",
-      rating: 5,
-      source: "Google Review",
-      comment: "Scheduled online at 8pm and had a technician at the door by 10am the next morning. ReamsHVAC was professional, gave me a flat-rate quote upfront, and completed the AC repair in under two hours."
-    },
-    {
-      name: "Michelle K.",
-      city: "Santa Clara, CA",
-      date: "3 weeks ago",
-      rating: 5,
-      source: "Yelp Verified",
-      comment: "Booking was simple and their team followed up within 30 minutes. The technician walked me through everything before starting work. Honest pricing, great communication."
-    },
-    {
-      name: "Derek P.",
-      city: "Sunnyvale, CA",
-      date: "1 month ago",
-      rating: 5,
-      source: "Google Review",
-      comment: "Called at 7am on a Saturday for a furnace that stopped working overnight. They had a tech out within 2 hours. Fixed and back to heat by noon. Couldn't ask for better service."
-    }
-  ];
 
   const schemaData = {
     "@context": "https://schema.org",
@@ -336,15 +308,6 @@ export function Contact() {
           </div>
         </div>
       </section>
-
-      {/* 3. Verified Customer Reviews */}
-      <div className="home-reviews-wrapper">
-        <ReviewsSection
-          title="What Customers Say About Our Service"
-          subtitle="Verified 5-Star Reviews from San Jose, Santa Clara & Sunnyvale"
-          reviews={reviews}
-        />
-      </div>
 
       {/* 5. CTA Band */}
       <div className="home-cta-wrapper hidden sm:block">
