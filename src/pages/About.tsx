@@ -5,37 +5,9 @@ import {
 } from "lucide-react";
 import { CTABand } from "../components/CTABand";
 import { PageHero } from "../components/PageHero";
-import { ReviewsSection } from "../components/ReviewsSection";
 import { SEO } from "../components/SEO";
 
 export function About() {
-  const reviews = [
-    {
-      name: "Jennifer W.",
-      city: "San Jose, CA",
-      date: "2 weeks ago",
-      rating: 5,
-      source: "Google Review",
-      comment: "ReamsHVAC technician arrived on time, diagnosed a failed heat exchanger honestly, and presented us with repair vs. replace options with zero pressure. The level of transparency was refreshing—no upsells, just facts."
-    },
-    {
-      name: "Marcus T.",
-      city: "Palo Alto, CA",
-      date: "1 month ago",
-      rating: 5,
-      source: "Yelp Verified",
-      comment: "Asked four contractors to size our heat pump. Three gave us a tonnage number off the top of their head. ReamsHVAC came back with a full Manual J calculation printout. That's the company I want touching my home."
-    },
-    {
-      name: "Sandra L.",
-      city: "Santa Clara, CA",
-      date: "6 weeks ago",
-      rating: 5,
-      source: "Google Review",
-      comment: "I was bracing for a pushy sales experience. Instead, I got an engineer who spent 45 minutes explaining exactly what was wrong, what it would cost, and what would happen if I chose each option. First honest HVAC company I've used."
-    }
-  ];
-
   const schemaData = {
     "@context": "https://schema.org",
     "@type": "AboutPage",
@@ -278,15 +250,6 @@ export function About() {
           </div>
         </div>
       </section>
-
-      {/* 4. Verified Customer Reviews */}
-      <div className="home-reviews-wrapper">
-        <ReviewsSection
-          title="What Bay Area Homeowners Say"
-          subtitle="Verified 5-Star Reviews from San Jose, Palo Alto & Santa Clara"
-          reviews={reviews}
-        />
-      </div>
 
       {/* 5. CTA Band */}
       <div className="home-cta-wrapper hidden sm:block">

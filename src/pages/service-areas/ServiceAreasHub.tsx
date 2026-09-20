@@ -463,8 +463,11 @@ export function ServiceAreasHub() {
         <ReviewsSection reviews={reviews} />
       </div>
 
-      {/* 7. FAQs Section */}
-      <section className="py-8 sm:py-16 lg:py-20 bg-slate-50 border-b border-slate-200">
+      {/* 7. Call to Action Band */}
+      <CTABand />
+
+      {/* 8. FAQs Section */}
+      <section className="py-8 sm:py-16 lg:py-20 bg-slate-50 border-t border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-6 sm:mb-10">
@@ -501,10 +504,6 @@ export function ServiceAreasHub() {
           </div>
         </div>
       </section>
-
-      <div className="home-cta-wrapper hidden sm:block">
-        <CTABand />
-      </div>
     </div>
   );
 }
