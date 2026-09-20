@@ -7,7 +7,7 @@ export interface PageHeroProps {
   breadcrumbs?: { label: string; href?: string }[];
   eyebrow: string;
   title: string | ReactNode;
-  description: string;
+  description: string | ReactNode;
   primaryCta?: {
     text: string;
     href: string;

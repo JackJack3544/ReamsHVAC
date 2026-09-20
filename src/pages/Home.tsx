@@ -193,7 +193,16 @@ export function Home() {
               <span className="block whitespace-nowrap">20+ Years and Counting.</span>
             </span>
           }
-          description="20 years of honest, fast heating and cooling service for Bay Area families — same-day repairs, precision installs, and no surprises on the bill."
+          description={
+            <>
+              <span className="sm:hidden">
+                20 years of honest, fast heating and cooling service for Bay Area families — same-day repairs, precision installs, and no surprises on the bill.
+              </span>
+              <span className="hidden sm:inline">
+                For over 20 years, our family-owned team has delivered dependable, honest heating and cooling service across San Jose and the Bay Area — from same-day emergency repairs and high-efficiency heat pump installations to whole-home airflow optimization, with upfront flat-rate pricing and no surprises on the bill.
+              </span>
+            </>
+          }
           primaryCta={{
             text: "Get a Quote",
             href: "/contact",
