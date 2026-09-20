@@ -208,7 +208,7 @@ export function Home() {
       </div>
 
       {/* 2. Why Choose Us (Scrolling Cards) */}
-      <section className="py-8 sm:py-16 lg:py-20 bg-white border-b border-blue-50 overflow-hidden">
+      <section className="py-12 sm:py-16 lg:py-20 bg-white border-b border-blue-50 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-8 md:gap-16 items-center">
             
@@ -377,7 +377,7 @@ export function Home() {
       </section>
 
       {/* 3. Services Showcase Section (Top 4 Services in 4-Column Grid) */}
-      <section className="relative py-8 sm:py-16 lg:py-20 overflow-hidden border-t border-slate-200/20">
+      <section className="relative py-12 sm:py-16 lg:py-20 overflow-hidden border-t border-slate-200/20">
         {/* Background image with neutral dark slate overlay */}
         <div className="absolute inset-0 z-0 bg-[url('https://res.cloudinary.com/dbdrkehcp/image/upload/v1784693931/Untitled_design_2_tnj3em.png')] bg-cover bg-center"></div>
         <div className="absolute inset-0 z-10 bg-slate-950/50 backdrop-blur-[2px]"></div>
@@ -385,7 +385,7 @@ export function Home() {
         <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           {/* Centered Header */}
-          <div className="text-center mb-6 sm:mb-12 lg:mb-16">
+          <div className="text-center mb-8 sm:mb-12 lg:mb-16">
             <p className="text-white font-bold tracking-widest uppercase text-xs sm:text-sm mb-2 sm:mb-3">
               SOUTH BAY HVAC SERVICES
             </p>
@@ -398,14 +398,14 @@ export function Home() {
           </div>
 
           {/* 4-Column Grid (Only Top 4 Services) - 2x2 grid on mobile downscaled */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-4 md:gap-6">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
             {SERVICES_DATA.slice(0, 4).map((service) => {
               const ServiceIcon = service.icon;
 
               return (
                 <div
                   key={service.id}
-                  className="relative overflow-hidden bg-gradient-to-b from-white via-white/95 to-white/85 sm:bg-none sm:bg-white/95 backdrop-blur-md border-0 sm:border sm:border-white/40 rounded-xl p-2.5 sm:p-5 md:p-4 text-left shadow-lg sm:shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between h-full min-h-[120px] sm:min-h-0 group"
+                  className="relative overflow-hidden bg-gradient-to-b from-white via-white/95 to-white/85 sm:bg-none sm:bg-white/95 backdrop-blur-md border-0 sm:border sm:border-white/40 rounded-xl p-3.5 sm:p-5 md:p-4 text-left shadow-lg sm:shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between h-full min-h-[130px] sm:min-h-0 group"
                 >
                   {/* Background Watermark Icon in Bottom Right */}
                   <div className="absolute -right-2 -bottom-2 text-blue-950 opacity-[0.25] group-hover:opacity-[0.38] transition-opacity pointer-events-none">
@@ -443,7 +443,7 @@ export function Home() {
           </div>
 
           {/* Bottom Callout Buttons (Residential Focus) */}
-          <div className="mt-6 md:mt-12 flex flex-row justify-center items-center gap-2 sm:gap-4 max-w-lg sm:max-w-none mx-auto">
+          <div className="mt-8 md:mt-12 flex flex-row justify-center items-center gap-2 sm:gap-4 max-w-lg sm:max-w-none mx-auto">
             <Link
               to="/services/smart-thermostats"
               className="bg-white text-blue-950 px-2.5 sm:px-8 py-2.5 sm:py-4 rounded-md font-bold text-sm sm:text-lg hover:bg-slate-100 transition-colors flex-1 sm:flex-initial sm:w-auto shadow-lg inline-flex items-center justify-center gap-1 sm:gap-2 h-10 sm:h-auto min-h-[40px] sm:min-h-[48px] text-center [&>svg]:w-3.5 [&>svg]:h-3.5 sm:[&>svg]:w-5 sm:[&>svg]:h-5"
@@ -464,9 +464,9 @@ export function Home() {
       </section>
 
       {/* 4. Our Work Section */}
-      <section className="py-8 sm:py-16 lg:py-20 bg-slate-100 border-y border-slate-200">
+      <section className="py-12 sm:py-16 lg:py-20 bg-slate-100 border-y border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-6 sm:mb-12 md:mb-16 gap-4 sm:gap-6">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-8 sm:mb-12 md:mb-16 gap-4 sm:gap-6">
             <div className="max-w-2xl text-center sm:text-left">
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-blue-950 leading-tight mb-2 sm:mb-4">
                 Recent Work in Local Homes
@@ -491,7 +491,7 @@ export function Home() {
             </div>
           </div>
           
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-4 md:gap-6">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
             {/* Card 1 */}
             <div className="group relative rounded-lg md:rounded-none overflow-hidden aspect-square sm:aspect-square md:aspect-[4/5] bg-slate-200 shadow-md border border-slate-200/80">
                <img 
@@ -557,9 +557,9 @@ export function Home() {
       </div>
 
       {/* 6. How It Works Section */}
-      <section className="py-8 sm:py-16 lg:py-20 bg-white text-blue-950 border-t border-slate-200">
+      <section className="py-12 sm:py-16 lg:py-20 bg-white text-blue-950 border-t border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-6 sm:mb-12 lg:mb-16">
+          <div className="text-center mb-8 sm:mb-12 lg:mb-16">
             <p className="text-blue-950 font-bold tracking-widest uppercase mb-2 sm:mb-3 text-xs sm:text-sm">
               TRANSPARENT 4-STEP SERVICE
             </p>
@@ -571,7 +571,7 @@ export function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 lg:gap-12 relative">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-12 relative">
             {STEPS.map((s, idx) => {
               const stepNumber = idx + 1;
               const isStaggered = idx % 2 === 1;
@@ -636,7 +636,7 @@ export function Home() {
       </div>
 
       {/* 8. Service Area Section with Interactive Map */}
-      <section className="py-8 sm:py-16 lg:py-20 bg-slate-50 text-blue-950 border-t border-slate-200">
+      <section className="py-12 sm:py-16 lg:py-20 bg-slate-50 text-blue-950 border-t border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Interactive Map & Dispatch Hub Display */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch mb-0">

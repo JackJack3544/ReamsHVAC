@@ -88,8 +88,8 @@
 
   #home-hero .hero-main-content,
   .page-hero-section .hero-main-content {
-    padding-top: 2rem !important;
-    padding-bottom: 1.5rem !important;
+    padding-top: 3.25rem !important;
+    padding-bottom: 2.5rem !important;
   }
 
   /* Remove breadcrumbs and dead space from hero on mobile */
@@ -98,12 +98,12 @@
     display: none !important;
   }
 
-  /* Eyebrow: clear, legible uppercase trust badge */
+  /* Eyebrow: clear, legible uppercase trust badge with generous space from title */
   #home-hero .hero-eyebrow,
   .page-hero-section .hero-eyebrow {
     font-size: 0.75rem !important;
     letter-spacing: 0.1em !important;
-    margin-bottom: 0.75rem !important;
+    margin-bottom: 1.5rem !important;
     min-height: 0 !important;
     font-weight: 700 !important;
   }
@@ -112,8 +112,8 @@
   #home-hero h1,
   .page-hero-section h1 {
     font-size: clamp(1.625rem, 6.8vw, 2.125rem) !important;
-    line-height: 1.2 !important;
-    margin-bottom: 1rem !important;
+    line-height: 1.25 !important;
+    margin-bottom: 1.25rem !important;
     letter-spacing: -0.02em !important;
     font-weight: 800 !important;
   }
@@ -123,8 +123,8 @@
   .page-hero-section .hero-description,
   .page-hero-section p.text-slate-200.font-medium {
     font-size: 0.9375rem !important;
-    line-height: 1.6 !important;
-    margin-bottom: 1.5rem !important;
+    line-height: 1.65 !important;
+    margin-bottom: 1.75rem !important;
     max-width: 360px !important;
     margin-left: auto !important;
     margin-right: auto !important;
@@ -154,14 +154,14 @@
   .home-reviews-wrapper section,
   .reviews-section-wrapper section,
   section[aria-label="Customer reviews and ratings"] {
-    padding-top: 2rem !important;
-    padding-bottom: 2rem !important;
+    padding-top: 3.25rem !important;
+    padding-bottom: 3.25rem !important;
   }
 
   /* CTABand rhythm on mobile */
   #home-page .home-cta-wrapper section,
   .home-cta-wrapper section {
-    padding-top: 2rem !important;
-    padding-bottom: 2rem !important;
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
   }
 }

@@ -77,7 +77,7 @@ export function PageHero({
         </div>
 
         {/* Eyebrow slot: exactly uniform height and styling */}
-        <p className="hero-eyebrow text-slate-200 font-bold tracking-wider sm:tracking-widest uppercase mb-2 sm:mb-3 text-[10px] sm:text-sm min-h-[16px] sm:min-h-[20px] flex items-center justify-center">
+        <p className="hero-eyebrow text-slate-200 font-bold tracking-wider sm:tracking-widest uppercase mb-4 sm:mb-6 text-[10px] sm:text-sm min-h-[16px] sm:min-h-[20px] flex items-center justify-center">
           {eyebrow}
         </p>
 
