@@ -171,6 +171,36 @@ const SERVICES_DATA = [
 
 export function Home() {
   const [openService, setOpenService] = useState<string | null>("heating");
+  const [estimateData, setEstimateData] = useState({
+    name: "",
+    phone: "",
+    email: "",
+    notes: "",
+  });
+  const [estimateSubmitted, setEstimateSubmitted] = useState(false);
+  const [isSubmittingEstimate, setIsSubmittingEstimate] = useState(false);
+
+  const handleEstimateSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmittingEstimate(true);
+    try {
+      await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams({
+          "form-name": "free-estimate",
+          ...estimateData,
+        }).toString(),
+      });
+      setEstimateSubmitted(true);
+    } catch (error) {
+      console.error("Free estimate submission error:", error);
+      setEstimateSubmitted(true);
+    } finally {
+      setIsSubmittingEstimate(false);
+    }
+  };
+
   const businessSchema = getLocalBusinessSchema();
 
   return (
@@ -235,44 +265,97 @@ export function Home() {
               </p>
               <div className="relative rounded-2xl overflow-hidden shadow-lg border border-blue-100 bg-white p-3.5 sm:p-5 md:p-6 flex flex-col aspect-auto md:aspect-video">
                 <h3 className="text-lg sm:text-xl font-bold text-blue-950 mb-3 sm:mb-4">Get a Free Estimate</h3>
-                <form className="flex flex-col gap-2.5 sm:gap-3 flex-grow" aria-label="Free estimate request form">
-                  <div className="flex flex-row gap-2 sm:gap-3">
-                    <input 
-                      type="text" 
-                      id="estimate-name"
-                      name="name"
-                      aria-label="Your full name"
-                      placeholder="Name" 
-                      className="w-full px-2.5 sm:px-3 py-2 border border-slate-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 text-sm sm:text-sm" 
-                    />
-                    <input 
-                      type="tel" 
-                      id="estimate-phone"
-                      name="phone"
-                      aria-label="Your phone number"
-                      placeholder="Phone" 
-                      className="w-full px-2.5 sm:px-3 py-2 border border-slate-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 text-sm sm:text-sm" 
-                    />
+                {estimateSubmitted ? (
+                  <div className="text-center py-6 px-4 my-auto">
+                    <div className="w-12 h-12 bg-blue-50 text-blue-950 rounded-full flex items-center justify-center mx-auto mb-2 border border-blue-200">
+                      <CheckCircle2 className="w-6 h-6 text-blue-950" />
+                    </div>
+                    <h4 className="text-lg font-bold text-blue-950 mb-1">Estimate Request Sent!</h4>
+                    <p className="text-slate-600 text-xs sm:text-sm mb-4">
+                      Thank you, <strong>{estimateData.name || "valued homeowner"}</strong>. Our San Jose team will reach out shortly.
+                    </p>
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setEstimateSubmitted(false);
+                        setEstimateData({ name: "", phone: "", email: "", notes: "" });
+                      }}
+                      className="text-xs font-bold text-blue-950 underline hover:text-blue-800 cursor-pointer"
+                    >
+                      Send another request
+                    </button>
                   </div>
-                  <input 
-                    type="email" 
-                    id="estimate-email"
-                    name="email"
-                    aria-label="Your email address"
-                    placeholder="Email" 
-                    className="w-full px-2.5 sm:px-3 py-2 border border-slate-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 text-sm sm:text-sm" 
-                  />
-                  <textarea 
-                    id="estimate-notes"
-                    name="notes"
-                    aria-label="How can we help you?"
-                    placeholder="How can we help?" 
-                    className="w-full px-2.5 sm:px-3 py-2 border border-slate-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 text-sm sm:text-sm flex-grow resize-none min-h-[64px] sm:min-h-[72px]"
-                  ></textarea>
-                  <button type="submit" aria-label="Submit your free estimate request" className="bg-blue-900 text-white font-bold py-2.5 rounded-md hover:bg-blue-800 transition-colors w-full mt-1 text-sm sm:text-sm min-h-[40px] sm:min-h-[44px] flex items-center justify-center">
-                    SUBMIT
-                  </button>
-                </form>
+                ) : (
+                  <form
+                    name="free-estimate"
+                    method="POST"
+                    data-netlify="true"
+                    data-netlify-honeypot="bot-field"
+                    onSubmit={handleEstimateSubmit}
+                    className="flex flex-col gap-2.5 sm:gap-3 flex-grow"
+                    aria-label="Free estimate request form"
+                  >
+                    <input type="hidden" name="form-name" value="free-estimate" />
+                    <p className="hidden">
+                      <label>
+                        Don’t fill this out if you're human: <input name="bot-field" />
+                      </label>
+                    </p>
+
+                    <div className="flex flex-row gap-2 sm:gap-3">
+                      <input 
+                        type="text" 
+                        id="estimate-name"
+                        name="name"
+                        required
+                        aria-label="Your full name"
+                        placeholder="Name" 
+                        value={estimateData.name}
+                        onChange={(e) => setEstimateData({ ...estimateData, name: e.target.value })}
+                        className="w-full px-2.5 sm:px-3 py-2 border border-slate-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 text-sm sm:text-sm" 
+                      />
+                      <input 
+                        type="tel" 
+                        id="estimate-phone"
+                        name="phone"
+                        required
+                        aria-label="Your phone number"
+                        placeholder="Phone" 
+                        value={estimateData.phone}
+                        onChange={(e) => setEstimateData({ ...estimateData, phone: e.target.value })}
+                        className="w-full px-2.5 sm:px-3 py-2 border border-slate-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 text-sm sm:text-sm" 
+                      />
+                    </div>
+                    <input 
+                      type="email" 
+                      id="estimate-email"
+                      name="email"
+                      required
+                      aria-label="Your email address"
+                      placeholder="Email" 
+                      value={estimateData.email}
+                      onChange={(e) => setEstimateData({ ...estimateData, email: e.target.value })}
+                      className="w-full px-2.5 sm:px-3 py-2 border border-slate-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 text-sm sm:text-sm" 
+                    />
+                    <textarea 
+                      id="estimate-notes"
+                      name="notes"
+                      aria-label="How can we help you?"
+                      placeholder="How can we help?" 
+                      value={estimateData.notes}
+                      onChange={(e) => setEstimateData({ ...estimateData, notes: e.target.value })}
+                      className="w-full px-2.5 sm:px-3 py-2 border border-slate-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 text-sm sm:text-sm flex-grow resize-none min-h-[64px] sm:min-h-[72px]"
+                    ></textarea>
+                    <button 
+                      type="submit" 
+                      disabled={isSubmittingEstimate}
+                      aria-label="Submit your free estimate request" 
+                      className="bg-blue-900 text-white font-bold py-2.5 rounded-md hover:bg-blue-800 transition-colors w-full mt-1 text-sm sm:text-sm min-h-[40px] sm:min-h-[44px] flex items-center justify-center disabled:opacity-75 disabled:cursor-not-allowed cursor-pointer"
+                    >
+                      {isSubmittingEstimate ? "SUBMITTING..." : "SUBMIT"}
+                    </button>
+                  </form>
+                )}
               </div>
             </div>
 

@@ -9,6 +9,7 @@ import { CTABand } from "../components/CTABand";
 import { SEO } from "../components/SEO";
 
 export function Contact() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
@@ -20,9 +21,25 @@ export function Contact() {
   const phoneId = useId();
   const emailId = useId();
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setIsSubmitting(true);
+    try {
+      await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams({
+          "form-name": "contact",
+          ...formData,
+        }).toString(),
+      });
+      setSubmitted(true);
+    } catch (error) {
+      console.error("Netlify form submission error:", error);
+      setSubmitted(true);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const reviews = [
@@ -198,7 +215,21 @@ export function Contact() {
                   </button>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5">
+                <form
+                  name="contact"
+                  method="POST"
+                  data-netlify="true"
+                  data-netlify-honeypot="bot-field"
+                  onSubmit={handleSubmit}
+                  className="space-y-4 sm:space-y-5"
+                >
+                  {/* Hidden inputs for Netlify Forms */}
+                  <input type="hidden" name="form-name" value="contact" />
+                  <p className="hidden">
+                    <label>
+                      Don’t fill this out if you're human: <input name="bot-field" />
+                    </label>
+                  </p>
                   
                   {/* Name */}
                   <div>
@@ -207,6 +238,7 @@ export function Contact() {
                     </label>
                     <input
                       id={nameId}
+                      name="name"
                       type="text"
                       required
                       placeholder="Your Full Name"
@@ -223,6 +255,7 @@ export function Contact() {
                     </label>
                     <input
                       id={phoneId}
+                      name="phone"
                       type="tel"
                       required
                       placeholder="(408) 555-0199"
@@ -239,6 +272,7 @@ export function Contact() {
                     </label>
                     <input
                       id={emailId}
+                      name="email"
                       type="email"
                       required
                       placeholder="you@example.com"
@@ -253,10 +287,11 @@ export function Contact() {
                     <button
                       type="submit"
                       id="contact-submit-btn"
-                      className="w-full bg-blue-950 text-white font-bold py-3.5 sm:py-4 px-6 rounded-lg hover:bg-blue-900 transition-colors shadow-md flex items-center justify-center gap-2 text-sm sm:text-base cursor-pointer"
+                      disabled={isSubmitting}
+                      className="w-full bg-blue-950 text-white font-bold py-3.5 sm:py-4 px-6 rounded-lg hover:bg-blue-900 transition-colors shadow-md flex items-center justify-center gap-2 text-sm sm:text-base cursor-pointer disabled:opacity-75 disabled:cursor-not-allowed"
                     >
                       <Send className="w-4 h-4" />
-                      <span>Contact Us</span>
+                      <span>{isSubmitting ? "Submitting..." : "Contact Us"}</span>
                     </button>
                   </div>
 
