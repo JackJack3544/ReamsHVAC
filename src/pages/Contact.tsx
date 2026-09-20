@@ -4,7 +4,6 @@ import {
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { PageHero } from "../components/PageHero";
-import { CTABand } from "../components/CTABand";
 import { SEO } from "../components/SEO";
 
 export function Contact() {
@@ -309,10 +308,6 @@ export function Contact() {
         </div>
       </section>
 
-      {/* 5. CTA Band */}
-      <div className="home-cta-wrapper hidden sm:block">
-        <CTABand />
-      </div>
     </div>
   );
 }

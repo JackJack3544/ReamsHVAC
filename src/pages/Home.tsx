@@ -208,7 +208,6 @@ export function Home() {
   const mobilePhotoSets = [
     galleryItems.slice(0, 4),
     galleryItems.slice(4, 8),
-    galleryItems.slice(8, 12),
   ];
 
   const handleEstimateSubmit = async (e: FormEvent<HTMLFormElement>) => {
@@ -698,7 +697,7 @@ export function Home() {
 
               <div className="flex flex-col items-center gap-1">
                 <div className="flex items-center gap-1.5">
-                  {[0, 1, 2].map((idx) => (
+                  {mobilePhotoSets.map((_, idx) => (
                     <button
                       key={idx}
                       type="button"
@@ -713,14 +712,14 @@ export function Home() {
                   ))}
                 </div>
                 <span className="text-[11px] text-slate-500 font-medium tracking-tight">
-                  Swipe for more • Set {mobileSlideIndex + 1} of 3 (12 photos)
+                  Swipe for more • Set {mobileSlideIndex + 1} of {mobilePhotoSets.length}
                 </span>
               </div>
 
               <button
                 type="button"
-                onClick={() => goToMobileSlide(Math.min(2, mobileSlideIndex + 1))}
-                disabled={mobileSlideIndex === 2}
+                onClick={() => goToMobileSlide(Math.min(mobilePhotoSets.length - 1, mobileSlideIndex + 1))}
+                disabled={mobileSlideIndex === mobilePhotoSets.length - 1}
                 aria-label="Next set of 4 photos"
                 className="p-2 rounded-full bg-white border border-slate-200 text-blue-950 shadow-xs disabled:opacity-30 disabled:pointer-events-none active:bg-slate-100 touch-manipulation cursor-pointer"
               >
