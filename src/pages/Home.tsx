@@ -405,21 +405,21 @@ export function Home() {
               return (
                 <div
                   key={service.id}
-                  className="relative overflow-hidden bg-white/15 sm:bg-white/95 backdrop-blur-md border border-white/25 sm:border-white/40 rounded-xl p-2.5 sm:p-5 md:p-4 text-left shadow-lg sm:shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between h-full min-h-[120px] sm:min-h-0 group"
+                  className="relative overflow-hidden bg-white/55 sm:bg-white/95 backdrop-blur-lg border border-white/70 sm:border-white/40 rounded-xl p-2.5 sm:p-5 md:p-4 text-left shadow-lg sm:shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between h-full min-h-[120px] sm:min-h-0 group"
                 >
                   {/* Background Watermark Icon in Bottom Right */}
-                  <div className="absolute -right-2 -bottom-2 text-white/20 sm:text-blue-950 sm:opacity-[0.25] group-hover:opacity-[0.38] transition-opacity pointer-events-none">
+                  <div className="absolute -right-2 -bottom-2 text-blue-950 opacity-[0.25] group-hover:opacity-[0.38] transition-opacity pointer-events-none">
                     <ServiceIcon className="w-12 h-12 sm:w-20 sm:h-20" />
                   </div>
 
                   <div className="relative z-10">
                     {/* Title */}
-                    <h3 className="font-bold text-white sm:text-blue-950 text-xs min-[360px]:text-[13px] sm:text-lg md:text-base tracking-tight whitespace-nowrap overflow-hidden text-ellipsis mb-1 sm:mb-2 md:mb-1.5 min-h-[16px] sm:min-h-0 flex items-center">
+                    <h3 className="font-bold text-blue-950 text-xs min-[360px]:text-[13px] sm:text-lg md:text-base tracking-tight whitespace-nowrap overflow-hidden text-ellipsis mb-1 sm:mb-2 md:mb-1.5 min-h-[16px] sm:min-h-0 flex items-center">
                       {service.title}
                     </h3>
 
                     {/* Subtitle / Description */}
-                    <p className="text-slate-200 sm:text-slate-600 text-[10.5px] min-[360px]:text-[11.5px] sm:text-xs md:text-sm leading-tight sm:leading-relaxed mb-1.5 sm:mb-3 md:mb-2.5 min-h-[30px] sm:min-h-0">
+                    <p className="text-slate-800 sm:text-slate-600 text-[10.5px] min-[360px]:text-[11.5px] sm:text-xs md:text-sm leading-tight sm:leading-relaxed mb-1.5 sm:mb-3 md:mb-2.5 min-h-[30px] sm:min-h-0">
                       <span className="sm:hidden">{service.mobileSubtitle || service.subtitle}</span>
                       <span className="hidden sm:inline">{service.subtitle}</span>
                     </p>
@@ -429,11 +429,11 @@ export function Home() {
                   <div className="relative z-10 pt-0.5 sm:pt-2 flex items-center justify-between mt-auto">
                     <Link
                       to={service.link}
-                      className="min-h-0 md:min-h-0 inline-flex items-center gap-1 text-[11px] min-[360px]:text-xs sm:text-xs font-bold text-white sm:text-blue-950"
+                      className="min-h-0 md:min-h-0 inline-flex items-center gap-1 text-[11px] min-[360px]:text-xs sm:text-xs font-bold text-blue-950"
                     >
                       <span>{service.actionLabel || "Explore Service"}</span>
                       {service.showArrow !== false && (
-                        <ArrowRight className="w-3 h-3 sm:w-3.5 sm:h-3.5 group-hover:translate-x-1 transition-transform text-white sm:text-blue-950 shrink-0" />
+                        <ArrowRight className="w-3 h-3 sm:w-3.5 sm:h-3.5 group-hover:translate-x-1 transition-transform text-blue-950 shrink-0" />
                       )}
                     </Link>
                   </div>
