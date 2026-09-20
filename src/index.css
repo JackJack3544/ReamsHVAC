@@ -112,7 +112,7 @@
   #home-hero h1,
   .page-hero-section h1 {
     font-size: clamp(1.625rem, 6.8vw, 2.125rem) !important;
-    line-height: 1.25 !important;
+    line-height: 1.15 !important;
     margin-bottom: 1.25rem !important;
     letter-spacing: -0.02em !important;
     font-weight: 800 !important;

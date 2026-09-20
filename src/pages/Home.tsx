@@ -188,7 +188,7 @@ export function Home() {
           breadcrumbs={[{ label: "Home" }]}
           eyebrow="Proudly serving the Bay Area since 2004"
           title={
-            <span className="flex flex-col gap-2 sm:gap-2.5 md:gap-3.5 items-center justify-center">
+            <span className="flex flex-col gap-0.5 sm:gap-1 items-center justify-center">
               <span className="block whitespace-nowrap">San Jose's HVAC Experts.</span>
               <span className="block whitespace-nowrap">20+ Years and Counting.</span>
             </span>
