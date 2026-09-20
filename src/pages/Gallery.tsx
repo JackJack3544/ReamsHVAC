@@ -208,10 +208,7 @@ export function Gallery() {
         </div>
       )}
 
-      {/* SWAPPED SECTION 1: Call to Action Band (Schedule a Walkthrough) */}
-      <CTABand />
-
-      {/* SWAPPED SECTION 2: Craftsmanship Standards Section (Our Uncompromising Standards) */}
+      {/* Craftsmanship Standards Section (Our Uncompromising Standards) */}
       <section className="py-12 sm:py-16 bg-slate-100 border-t border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
@@ -269,6 +266,9 @@ export function Gallery() {
           </div>
         </div>
       </section>
+
+      {/* Call to Action Band (Schedule a Walkthrough) */}
+      <CTABand />
     </div>
   );
 }

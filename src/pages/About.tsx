@@ -217,40 +217,6 @@ export function About() {
         </div>
       </section>
 
-      {/* 3. Dark — Differentiators Banner */}
-      <section className="relative py-8 sm:py-16 lg:py-20 overflow-hidden bg-slate-900 text-white border-b border-slate-800">
-        <div className="absolute inset-0 z-0 bg-[url('https://res.cloudinary.com/dbdrkehcp/image/upload/v1784693931/Untitled_design_2_tnj3em.png')] bg-cover bg-center"></div>
-        <div className="absolute inset-0 z-10 bg-slate-950/25 backdrop-blur-xs"></div>
-
-        <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center sm:text-left">
-            <div className="mb-4 sm:mb-6">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
-                What Makes ReamsHVAC Different
-              </h2>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
-              {[
-                { title: "100% Non-Commissioned", desc: "Salaried master technicians with zero equipment sales incentives." },
-                { title: "ACCA Manual J Sizing", desc: "Every system engineered with load calculations, never guesswork." },
-                { title: "Nitrogen-Purged Installs", desc: "Refrigerant lines purged during brazing to prevent oxidation." },
-                { title: "Deep Vacuum Evacuation", desc: "Verified below 500 microns for moisture-free refrigerant loops." },
-                { title: "Title 24 & HERS In-House", desc: "We handle all permits and HERS duct testing end-to-end." },
-                { title: "Flat-Rate Written Pricing", desc: "Itemized quotes before any work begins. Zero surprise fees." },
-              ].map((item) => (
-                <div key={item.title} className="flex items-start gap-3 sm:gap-4">
-                  <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-white flex-shrink-0 mt-0.5" />
-                  <div>
-                    <p className="text-sm sm:text-base font-bold text-white">{item.title}</p>
-                    <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">{item.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* 5. CTA Band */}
       <div className="home-cta-wrapper hidden sm:block">
         <CTABand />
