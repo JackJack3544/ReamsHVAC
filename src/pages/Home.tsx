@@ -1,4 +1,4 @@
-import { useState, type FormEvent } from "react";
+import { useState, useRef, type FormEvent } from "react";
 import { Link } from "react-router-dom";
 import { PageHero } from "../components/PageHero";
 import { TrustBar } from "../components/TrustBar";
@@ -181,6 +181,35 @@ export function Home() {
   const [estimateSubmitted, setEstimateSubmitted] = useState(false);
   const [isSubmittingEstimate, setIsSubmittingEstimate] = useState(false);
   const [estimateError, setEstimateError] = useState<string | null>(null);
+
+  // Mobile Gallery Swiper (Sets of 4 photos, 12 total)
+  const mobileGalleryRef = useRef<HTMLDivElement>(null);
+  const [mobileSlideIndex, setMobileSlideIndex] = useState(0);
+
+  const handleMobileScroll = () => {
+    if (!mobileGalleryRef.current) return;
+    const { scrollLeft, clientWidth } = mobileGalleryRef.current;
+    if (clientWidth > 0) {
+      const newIndex = Math.max(0, Math.min(2, Math.round(scrollLeft / clientWidth)));
+      setMobileSlideIndex((prev) => (prev !== newIndex ? newIndex : prev));
+    }
+  };
+
+  const goToMobileSlide = (index: number) => {
+    if (!mobileGalleryRef.current) return;
+    const width = mobileGalleryRef.current.clientWidth;
+    mobileGalleryRef.current.scrollTo({
+      left: index * width,
+      behavior: "smooth",
+    });
+    setMobileSlideIndex(index);
+  };
+
+  const mobilePhotoSets = [
+    galleryItems.slice(0, 4),
+    galleryItems.slice(4, 8),
+    galleryItems.slice(8, 12),
+  ];
 
   const handleEstimateSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -595,14 +624,13 @@ export function Home() {
             </div>
           </div>
           
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
-            {galleryItems.slice(0, 8).map((item, index) => (
+          {/* Desktop Grid: Displays 8 photos at once (4 cols x 2 rows) - Hidden on mobile */}
+          <div className="hidden sm:grid sm:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
+            {galleryItems.slice(0, 8).map((item) => (
               <Link
                 to="/gallery"
                 key={item.id}
-                className={`group relative rounded-lg md:rounded-none overflow-hidden aspect-square sm:aspect-square md:aspect-[4/5] bg-slate-200 shadow-md border border-slate-200/80 block ${
-                  index >= 4 ? "hidden sm:block" : ""
-                }`}
+                className="group relative rounded-none overflow-hidden aspect-square md:aspect-[4/5] bg-slate-200 shadow-md border border-slate-200/80 block"
                 title={item.title}
               >
                 <img
@@ -621,6 +649,96 @@ export function Home() {
                 </div>
               </Link>
             ))}
+          </div>
+
+          {/* Mobile Swiper: Swipes on sets of 4 images (12 photos total) - Only on mobile */}
+          <div className="block sm:hidden">
+            <div
+              ref={mobileGalleryRef}
+              onScroll={handleMobileScroll}
+              className="flex overflow-x-auto snap-x snap-mandatory scroll-smooth pb-1 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden touch-pan-x"
+            >
+              {mobilePhotoSets.map((set, setIdx) => (
+                <div
+                  key={setIdx}
+                  className="w-full shrink-0 snap-center px-0.5"
+                >
+                  <div className="grid grid-cols-2 gap-2.5">
+                    {set.map((item) => (
+                      <Link
+                        to="/gallery"
+                        key={item.id}
+                        className="group relative rounded-lg overflow-hidden aspect-square bg-slate-200 shadow-xs border border-slate-200/80 block"
+                        title={item.title}
+                      >
+                        <img
+                          src={item.src}
+                          alt={item.alt}
+                          width={300}
+                          height={300}
+                          loading="lazy"
+                          decoding="async"
+                          className="w-full h-full object-cover"
+                        />
+                        <div className="absolute inset-0 bg-slate-950/10 pointer-events-none"></div>
+                        <div className="absolute inset-x-0 bottom-0 p-2 bg-gradient-to-t from-slate-950/85 via-slate-950/40 to-transparent pointer-events-none">
+                          <span className="text-[9px] font-bold text-sky-300 uppercase tracking-wider block leading-tight">
+                            {item.location}
+                          </span>
+                          <p className="text-[11px] font-semibold text-white leading-tight line-clamp-1">
+                            {item.title}
+                          </p>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Mobile Swiper Controls & Indicator */}
+            <div className="flex items-center justify-between mt-3 px-1">
+              <button
+                type="button"
+                onClick={() => goToMobileSlide(Math.max(0, mobileSlideIndex - 1))}
+                disabled={mobileSlideIndex === 0}
+                aria-label="Previous set of 4 photos"
+                className="p-2 rounded-full bg-white border border-slate-200 text-blue-950 shadow-xs disabled:opacity-30 disabled:pointer-events-none active:bg-slate-100 touch-manipulation cursor-pointer"
+              >
+                <ChevronLeft className="w-4 h-4" />
+              </button>
+
+              <div className="flex flex-col items-center gap-1">
+                <div className="flex items-center gap-1.5">
+                  {[0, 1, 2].map((idx) => (
+                    <button
+                      key={idx}
+                      type="button"
+                      onClick={() => goToMobileSlide(idx)}
+                      aria-label={`Go to photo set ${idx + 1}`}
+                      className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${
+                        mobileSlideIndex === idx
+                          ? "w-6 bg-blue-900"
+                          : "w-2 bg-slate-300 hover:bg-slate-400"
+                      }`}
+                    />
+                  ))}
+                </div>
+                <span className="text-[11px] text-slate-500 font-medium tracking-tight">
+                  Swipe for more • Set {mobileSlideIndex + 1} of 3 (12 photos)
+                </span>
+              </div>
+
+              <button
+                type="button"
+                onClick={() => goToMobileSlide(Math.min(2, mobileSlideIndex + 1))}
+                disabled={mobileSlideIndex === 2}
+                aria-label="Next set of 4 photos"
+                className="p-2 rounded-full bg-white border border-slate-200 text-blue-950 shadow-xs disabled:opacity-30 disabled:pointer-events-none active:bg-slate-100 touch-manipulation cursor-pointer"
+              >
+                <ChevronRight className="w-4 h-4" />
+              </button>
+            </div>
           </div>
         </div>
       </section>

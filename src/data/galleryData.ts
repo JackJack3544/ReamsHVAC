@@ -98,5 +98,49 @@ export const galleryItems: GalleryItem[] = [
     alt: "Close-up view of Midea inverter heat pump outdoor condenser on specialized roof vibration mount",
     description: "Precision installation detail showing the EnergyGuide high-efficiency rating, vibration dampening isolation base, and factory-sealed electrical connections engineered for zero roof resonance.",
     badge: "Title 24 Engineered"
+  },
+  {
+    id: "bryant-service-tech",
+    src: "/images/gallery/bryant-service-tech.jpg",
+    title: "Certified Master Technician Precision Condenser Service",
+    category: "AC & Condensers",
+    location: "Sunnyvale, CA",
+    equipment: "Bryant Central AC Diagnostic & Maintenance",
+    alt: "ReamsHVAC certified technician in company uniform servicing an outdoor central air conditioning condenser",
+    description: "Dedicated ReamsHVAC technician performing live amp-draw testing, electrical contactor inspection, and coil pressure optimization.",
+    badge: "Master Craftsmanship"
+  },
+  {
+    id: "midea-rooftop-curb",
+    src: "/images/gallery/midea-rooftop-curb.jpg",
+    title: "Ultra-Quiet Rooftop Inverter Heat Pump on Equipment Curb",
+    category: "Rooftop Systems",
+    location: "San Jose, CA",
+    equipment: "Midea High-Efficiency Inverter Condenser",
+    alt: "Midea high-efficiency inverter heat pump mounted on custom equipment curb on residential rooftop",
+    description: "High-efficiency inverter heat pump engineered for whisper-quiet rooftop performance, equipped with seismic vibration-isolation mounting.",
+    badge: "EnergyGuide Certified"
+  },
+  {
+    id: "mitsubishi-multizone-detail",
+    src: "/images/gallery/mitsubishi-multizone-detail.jpg",
+    title: "Architectural Line-Hide Chase & Multi-Zone Inverter Detail",
+    category: "Heat Pumps",
+    location: "Los Altos, CA",
+    equipment: "Mitsubishi Electric SMART MULTI Inverter & Line Hide",
+    alt: "Close-up of Mitsubishi SMART MULTI dual-fan heat pump condenser and custom metal line-hide chase",
+    description: "Custom galvanized architectural metal line chase cleanly routing insulated refrigeration lines up exterior wall with weatherproof roof penetration.",
+    badge: "Architectural Fit"
+  },
+  {
+    id: "day-night-fan-detail",
+    src: "/images/gallery/day-night-fan-detail.jpg",
+    title: "Day & Night Central AC Top-Discharge Grille & Coil Detail",
+    category: "AC & Condensers",
+    location: "Campbell, CA",
+    equipment: "Day & Night Heavy-Duty AC Condenser",
+    alt: "Detail shot of Day and Night air conditioner condenser protective wire coil guard and top discharge fan",
+    description: "Heavy-duty wire coil guard and aerodynamic top-discharge fan grille, paired with exterior electrical disconnect for rapid servicing.",
+    badge: "Heavy-Duty Coil"
   }
 ];
