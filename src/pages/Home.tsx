@@ -405,7 +405,7 @@ export function Home() {
               return (
                 <div
                   key={service.id}
-                  className="relative overflow-hidden bg-white/55 sm:bg-white/95 backdrop-blur-lg border border-white/70 sm:border-white/40 rounded-xl p-2.5 sm:p-5 md:p-4 text-left shadow-lg sm:shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between h-full min-h-[120px] sm:min-h-0 group"
+                  className="relative overflow-hidden bg-gradient-to-b from-white via-white/95 to-white/85 sm:bg-none sm:bg-white/95 backdrop-blur-md border border-white/90 sm:border-white/40 rounded-xl p-2.5 sm:p-5 md:p-4 text-left shadow-lg sm:shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between h-full min-h-[120px] sm:min-h-0 group"
                 >
                   {/* Background Watermark Icon in Bottom Right */}
                   <div className="absolute -right-2 -bottom-2 text-blue-950 opacity-[0.25] group-hover:opacity-[0.38] transition-opacity pointer-events-none">
@@ -419,7 +419,7 @@ export function Home() {
                     </h3>
 
                     {/* Subtitle / Description */}
-                    <p className="text-slate-800 sm:text-slate-600 text-[10.5px] min-[360px]:text-[11.5px] sm:text-xs md:text-sm leading-tight sm:leading-relaxed mb-1.5 sm:mb-3 md:mb-2.5 min-h-[30px] sm:min-h-0">
+                    <p className="text-slate-600 text-[10.5px] min-[360px]:text-[11.5px] sm:text-xs md:text-sm leading-tight sm:leading-relaxed mb-1.5 sm:mb-3 md:mb-2.5 min-h-[30px] sm:min-h-0">
                       <span className="sm:hidden">{service.mobileSubtitle || service.subtitle}</span>
                       <span className="hidden sm:inline">{service.subtitle}</span>
                     </p>
