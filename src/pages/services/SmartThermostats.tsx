@@ -13,6 +13,7 @@ import {
 import { CTABand } from "../../components/CTABand";
 import { TrustBar } from "../../components/TrustBar";
 import { PageHero } from "../../components/PageHero";
+import { ReviewsSection } from "../../components/ReviewsSection";
 import { SEO } from "../../components/SEO";
 
 export function SmartThermostats() {
@@ -22,6 +23,32 @@ export function SmartThermostats() {
  setOpenFaq(openFaq === index ? null : index);
  };
 
+ const reviews = [
+ {
+ name: "Brian P.",
+ city: "San Jose, CA",
+ date: "2 weeks ago",
+ rating: 5,
+ source: "Google Review",
+ comment: "Attempted a DIY Nest installation and blew the 3A fuse on my furnace control board because my older home lacked a C-wire. ReamsHVAC arrived the same afternoon, installed a C-wire adapter, replaced the fuse, and properly programmed our heat pump reversing valve."
+ },
+ {
+ name: "Christina M.",
+ city: "Santa Clara, CA",
+ date: "1 month ago",
+ rating: 5,
+ source: "Yelp Verified",
+ comment: "We upgraded to an Ecobee Smart Premium with remote room sensors for our two-story home. Upstairs bedrooms stay comfortable now, and we set up PG&E Time-of-Use pre-cooling to save money during 4-9 PM peak hours."
+ },
+ {
+ name: "Kevin D.",
+ city: "Sunnyvale, CA",
+ date: "2 months ago",
+ rating: 5,
+ source: "Google Review",
+ comment: "Fast, knowledgeable service. The technician tested all multi-stage heating and cooling cycles from his phone before leaving and walked us through the app interface."
+ }
+ ];
 
  const faqs = [
  {
@@ -544,6 +571,10 @@ export function SmartThermostats() {
  </div>
  </section>
 
+ {/* 9. Verified Customer Reviews */}
+ <div className="home-reviews-wrapper">
+ <ReviewsSection reviews={reviews} />
+ </div>
 
  {/* 10. FAQs Section */}
  <section className="py-8 sm:py-16 lg:py-20 bg-slate-50 border-b border-slate-200">

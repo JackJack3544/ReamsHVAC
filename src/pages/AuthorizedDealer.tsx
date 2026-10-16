@@ -10,6 +10,7 @@ import {
 import { CTABand } from "../components/CTABand";
 import { TrustBar } from "../components/TrustBar";
 import { PageHero } from "../components/PageHero";
+import { ReviewsSection } from "../components/ReviewsSection";
 import { SEO } from "../components/SEO";
 
 export function AuthorizedDealer() {
@@ -441,7 +442,10 @@ export function AuthorizedDealer() {
  </div>
  </section>
 
- {/* 7. FAQs Section */}
+ {/* 7. Verified Customer Reviews */}
+ <ReviewsSection />
+
+ {/* 8. FAQs Section */}
  <section className="py-16 lg:py-20 bg-slate-50 border-b border-slate-200">
  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
  <div className="max-w-3xl mx-auto">

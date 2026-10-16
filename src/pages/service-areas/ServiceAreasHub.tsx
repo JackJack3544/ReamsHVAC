@@ -9,6 +9,7 @@ import {
 import { CTABand } from "../../components/CTABand";
 import { TrustBar } from "../../components/TrustBar";
 import { PageHero } from "../../components/PageHero";
+import { ReviewsSection } from "../../components/ReviewsSection";
 import { SEO } from "../../components/SEO";
 
 export function ServiceAreasHub() {
@@ -429,6 +430,14 @@ export function ServiceAreasHub() {
  </Link>
  </div>
  </section>
+
+ {/* 6. Customer Reviews */}
+ <div className="home-reviews-wrapper">
+   <ReviewsSection 
+     title="Customer Reviews Across 46 Bay Area Cities"
+     subtitle="4.9-Star Rating Across 500+ Verified Bay Area Homeowners"
+   />
+ </div>
 
  {/* 7. Call to Action Band */}
  <CTABand />

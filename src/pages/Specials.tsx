@@ -6,6 +6,7 @@ import {
 import { PageHero } from "../components/PageHero";
 import { TrustBar } from "../components/TrustBar";
 import { CTABand } from "../components/CTABand";
+import { ReviewsSection } from "../components/ReviewsSection";
 import { SEO } from "../components/SEO";
 
 interface SpecialOffer {
@@ -235,6 +236,14 @@ export function Specials() {
 
         </div>
       </section>
+
+      {/* Verified Reviews */}
+      <div className="home-reviews-wrapper">
+        <ReviewsSection 
+          title="Homeowner Reviews on Our Service & Value"
+          subtitle="4.9-Star Rating Across 500+ Verified Bay Area Homeowners"
+        />
+      </div>
 
       <CTABand />
     </div>

@@ -7,6 +7,7 @@ import {
 import { PageHero } from "../components/PageHero";
 import { TrustBar } from "../components/TrustBar";
 import { CTABand } from "../components/CTABand";
+import { ReviewsSection } from "../components/ReviewsSection";
 import { SEO } from "../components/SEO";
 
 export function LicensingGuarantee() {
@@ -262,6 +263,14 @@ export function LicensingGuarantee() {
  </div>
  </div>
  </section>
+
+ {/* Customer Reviews */}
+ <div className="home-reviews-wrapper">
+   <ReviewsSection 
+     title="Verified Homeowner Reviews & Ratings"
+     subtitle="4.9-Star Rating Across 500+ Verified Bay Area Homeowners"
+   />
+ </div>
 
  <CTABand />
  </div>

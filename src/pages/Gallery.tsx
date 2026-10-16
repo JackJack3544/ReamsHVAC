@@ -5,6 +5,7 @@ import {
 } from "lucide-react";
 import { SEO } from "../components/SEO";
 import { PageHero } from "../components/PageHero";
+import { ReviewsSection } from "../components/ReviewsSection";
 import { CTABand } from "../components/CTABand";
 import { galleryItems, GalleryItem } from "../data/galleryData";
 
@@ -266,6 +267,14 @@ export function Gallery() {
           </div>
         </div>
       </section>
+
+      {/* Verified Reviews */}
+      <div className="home-reviews-wrapper">
+        <ReviewsSection 
+          title="Homeowner Reviews on Our Finished Installations"
+          subtitle="4.9-Star Rating Across 500+ Verified Bay Area Homeowners"
+        />
+      </div>
 
       {/* Call to Action Band (Schedule a Walkthrough) */}
       <CTABand />

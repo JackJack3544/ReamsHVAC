@@ -1,16 +1,20 @@
-import { ShieldCheck, CheckCircle2, Award, Wrench } from "lucide-react";
+import { ShieldCheck, Star, Award, Wrench } from "lucide-react";
 import { Link } from "react-router-dom";
 
 function TrustPoints({ isFrosted }: { isFrosted: boolean }) {
   return (
     <div className="flex items-center gap-7 px-4 shrink-0">
       <div className="flex items-center gap-2 shrink-0">
-        <div className={`${isFrosted ? "bg-white/20 text-white" : "bg-blue-100 text-blue-900"} p-1 rounded-full`}>
-          <Wrench className="w-3.5 h-3.5" />
+        <div className="flex text-amber-400">
+          <Star className="fill-amber-400 text-amber-400 w-3 h-3" />
+          <Star className="fill-amber-400 text-amber-400 w-3 h-3" />
+          <Star className="fill-amber-400 text-amber-400 w-3 h-3" />
+          <Star className="fill-amber-400 text-amber-400 w-3 h-3" />
+          <Star className="fill-amber-400 text-amber-400 w-3 h-3" />
         </div>
         <div>
-          <p className={`text-xs font-bold ${isFrosted ? "text-white" : "text-slate-800"}`}>100% Non-Commissioned</p>
-          <Link to="/why-us" className={`text-[11px] ${isFrosted ? "text-blue-200 hover:text-white" : "text-blue-600"} hover:underline`}>Honest repairs &amp; diagnostics</Link>
+          <p className={`text-xs font-bold ${isFrosted ? "text-white" : "text-slate-800"}`}>4.9/5 Average Rating</p>
+          <Link to="/reviews" className={`text-[11px] ${isFrosted ? "text-blue-200 hover:text-white" : "text-blue-600"} hover:underline`}>Read our 500+ reviews</Link>
         </div>
       </div>
 
@@ -68,12 +72,16 @@ export function TrustBar({ variant = "light", className = "" }: { variant?: "lig
         <div className="hidden md:flex flex-row justify-between items-center gap-6 text-left py-1">
           
           <div className="flex items-center gap-2 sm:gap-3 shrink-0">
-            <div className={`${isFrosted ? "bg-white/20 text-white" : "bg-blue-100 text-blue-900"} p-1.5 sm:p-2 rounded-full`}>
-              <Wrench className="w-3.5 h-3.5 sm:w-5 sm:h-5" />
+            <div className="flex text-amber-400">
+              <Star className="fill-amber-400 text-amber-400 w-3.5 h-3.5 sm:w-4 sm:h-4" />
+              <Star className="fill-amber-400 text-amber-400 w-3.5 h-3.5 sm:w-4 sm:h-4" />
+              <Star className="fill-amber-400 text-amber-400 w-3.5 h-3.5 sm:w-4 sm:h-4" />
+              <Star className="fill-amber-400 text-amber-400 w-3.5 h-3.5 sm:w-4 sm:h-4" />
+              <Star className="fill-amber-400 text-amber-400 w-3.5 h-3.5 sm:w-4 sm:h-4" />
             </div>
             <div>
-              <p className={`text-xs sm:text-sm font-bold ${isFrosted ? "text-white" : "text-slate-800"}`}>100% Non-Commissioned</p>
-              <Link to="/why-us" className={`text-[10px] sm:text-xs ${isFrosted ? "text-blue-200 hover:text-white" : "text-blue-600"} hover:underline`}>Honest repairs &amp; diagnostics</Link>
+              <p className={`text-xs sm:text-sm font-bold ${isFrosted ? "text-white" : "text-slate-800"}`}>4.9/5 Average Rating</p>
+              <Link to="/reviews" className={`text-[10px] sm:text-xs ${isFrosted ? "text-blue-200 hover:text-white" : "text-blue-600"} hover:underline`}>Read our 500+ reviews</Link>
             </div>
           </div>
 

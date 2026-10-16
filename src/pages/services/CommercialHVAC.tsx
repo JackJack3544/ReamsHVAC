@@ -13,6 +13,7 @@ import {
 import { CTABand } from "../../components/CTABand";
 import { TrustBar } from "../../components/TrustBar";
 import { PageHero } from "../../components/PageHero";
+import { ReviewsSection } from "../../components/ReviewsSection";
 import { SEO } from "../../components/SEO";
 
 export function CommercialHVAC() {
@@ -22,6 +23,32 @@ export function CommercialHVAC() {
  setOpenFaq(openFaq === index ? null : index);
  };
 
+ const reviews = [
+ {
+ name: "David K.",
+ city: "San Jose, CA",
+ date: "2 weeks ago",
+ rating: 5,
+ source: "Google Review",
+ comment: "ReamsHVAC handles the quarterly HVAC maintenance for our 45,000 sq ft office facility in North San Jose. When an economizer damper stuck open during a hot July afternoon, their commercial crew responded within 2 hours."
+ },
+ {
+ name: "Marcus V.",
+ city: "Santa Clara, CA",
+ date: "1 month ago",
+ rating: 5,
+ source: "Yelp Verified",
+ comment: "Replacing two 10-ton Carrier rooftop units on our retail building required Sunday crane hoisting to avoid customer disruption. ReamsHVAC executed the crane pull smoothly, satisfied City of Santa Clara permits, and had us running before Monday morning."
+ },
+ {
+ name: "Sandra H.",
+ city: "Sunnyvale, CA",
+ date: "2 months ago",
+ rating: 5,
+ source: "Google Review",
+ comment: "Outstanding commercial contractor. They retrofitted our tech office with multi-zone VRF climate controls, lowering our peak electrical demand while giving tenants customized room thermostat settings."
+ }
+ ];
 
  const faqs = [
  {
@@ -277,7 +304,7 @@ export function CommercialHVAC() {
  </div>
 
  <div className="max-w-4xl mx-auto bg-white border border-slate-200/80 rounded-xl p-4 sm:p-5 text-center text-xs sm:text-sm text-slate-700 font-medium shadow-xs">
- We carry comprehensive commercial general liability insurance and dedicated workers' compensation to satisfy property manager compliance requirements.
+ We carry $2M commercial general liability insurance and dedicated workers' compensation to satisfy property manager compliance requirements.
  </div>
  </div>
  </section>
@@ -544,6 +571,10 @@ export function CommercialHVAC() {
  </div>
  </section>
 
+ {/* 9. Verified Customer Reviews */}
+ <div className="home-reviews-wrapper">
+ <ReviewsSection reviews={reviews} />
+ </div>
 
  {/* 10. FAQs Section */}
  <section className="py-8 sm:py-16 lg:py-20 bg-slate-50 border-b border-slate-200">

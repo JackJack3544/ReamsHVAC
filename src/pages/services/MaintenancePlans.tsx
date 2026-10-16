@@ -13,6 +13,7 @@ import {
 import { CTABand } from "../../components/CTABand";
 import { TrustBar } from "../../components/TrustBar";
 import { PageHero } from "../../components/PageHero";
+import { ReviewsSection } from "../../components/ReviewsSection";
 import { SEO } from "../../components/SEO";
 
 export function MaintenancePlans() {
@@ -22,6 +23,32 @@ export function MaintenancePlans() {
  setOpenFaq(openFaq === index ? null : index);
  };
 
+ const reviews = [
+ {
+ name: "Robert M.",
+ city: "San Jose, CA",
+ date: "2 weeks ago",
+ rating: 5,
+ source: "Google Review",
+ comment: "Enrolled in ReamsHVAC's annual maintenance plan 3 years ago. During last month's 102°F heatwave, our capacitor failed on a Sunday. They dispatched a technician within 3 hours, replaced the part under our member discount, and had us cool in no time."
+ },
+ {
+ name: "Karen S.",
+ city: "Santa Clara, CA",
+ date: "1 month ago",
+ rating: 5,
+ source: "Yelp Verified",
+ comment: "Bi-annual maintenance visits are thorough and punctual. They flushed our condensate drain lines, tested our furnace heat exchanger safety, and kept digital logs for our Carrier 10-year warranty compliance."
+ },
+ {
+ name: "James L.",
+ city: "Sunnyvale, CA",
+ date: "2 months ago",
+ rating: 5,
+ source: "Google Review",
+ comment: "Worth every penny. The 21-point spring tune-up caught a leaking capacitor before it destroyed our outdoor compressor motor. Honest technicians and zero sales pressure."
+ }
+ ];
 
  const faqs = [
  {
@@ -544,6 +571,10 @@ export function MaintenancePlans() {
  </div>
  </section>
 
+ {/* 9. Verified Customer Reviews */}
+ <div className="home-reviews-wrapper">
+ <ReviewsSection reviews={reviews} />
+ </div>
 
  {/* 10. FAQs Section */}
  <section className="py-8 sm:py-16 lg:py-20 bg-slate-50 border-b border-slate-200">

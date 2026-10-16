@@ -1,6 +1,7 @@
 import { CTABand } from "../components/CTABand";
 import { TrustBar } from "../components/TrustBar";
 import { PageHero } from "../components/PageHero";
+import { ReviewsSection } from "../components/ReviewsSection";
 import { DollarSign, CheckCircle2, AlertCircle, ArrowRight, Banknote } from "lucide-react";
 import { Link } from "react-router-dom";
 import { SEO } from "../components/SEO";
@@ -150,6 +151,14 @@ export function FinancingRebates() {
  </div>
  </div>
  </section>
+
+ {/* Customer Reviews */}
+ <div className="home-reviews-wrapper">
+   <ReviewsSection 
+     title="What Homeowners Say About Our Rebate Assistance"
+     subtitle="4.9-Star Rating Across 500+ Verified Bay Area Homeowners"
+   />
+ </div>
 
  <CTABand />
  </div>

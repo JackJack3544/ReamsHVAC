@@ -5,6 +5,7 @@ import {
 } from "lucide-react";
 import { CTABand } from "../components/CTABand";
 import { PageHero } from "../components/PageHero";
+import { ReviewsSection } from "../components/ReviewsSection";
 import { SEO } from "../components/SEO";
 
 export function About() {
@@ -218,6 +219,14 @@ export function About() {
  </section>
 
  {/* 5. CTA Band */}
+      {/* 4. Verified Customer Reviews */}
+      <div className="home-reviews-wrapper">
+        <ReviewsSection
+          title="What Bay Area Homeowners Say"
+          subtitle="Verified 5-Star Reviews from San Jose, Palo Alto & Santa Clara"
+        />
+      </div>
+
  <div className="home-cta-wrapper hidden sm:block">
  <CTABand />
  </div>

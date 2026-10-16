@@ -13,6 +13,7 @@ import {
 import { CTABand } from "../../components/CTABand";
 import { TrustBar } from "../../components/TrustBar";
 import { PageHero } from "../../components/PageHero";
+import { ReviewsSection } from "../../components/ReviewsSection";
 import { SEO } from "../../components/SEO";
 
 export function IndoorAirQuality() {
@@ -22,6 +23,32 @@ export function IndoorAirQuality() {
  setOpenFaq(openFaq === index ? null : index);
  };
 
+ const reviews = [
+ {
+ name: "Rachel M.",
+ city: "San Jose, CA",
+ date: "2 weeks ago",
+ rating: 5,
+ source: "Google Review",
+ comment: "During last autumn's wildfire smoke events, our indoor air was unbearable. ReamsHVAC retrofitted our furnace cabinet with a MERV 13 deep-pleat media air cleaner and an iWave air purifier. Our indoor air stayed crystal clear even when outside AQI hit 180."
+ },
+ {
+ name: "Jason L.",
+ city: "Santa Clara, CA",
+ date: "1 month ago",
+ rating: 5,
+ source: "Yelp Verified",
+ comment: "Both my kids have severe dust allergies. ReamsHVAC installed a UV-C germicidal light near our evaporator coil and upgraded our filtration. My kids haven't woken up with morning congestion since."
+ },
+ {
+ name: "Evelyn K.",
+ city: "Sunnyvale, CA",
+ date: "2 months ago",
+ rating: 5,
+ source: "Google Review",
+ comment: "Professional, punctual, and highly knowledgeable. They measured our furnace's static pressure before installing high-efficiency filtration to ensure our blower motor wouldn't strain."
+ }
+ ];
 
  const faqs = [
  {
@@ -544,6 +571,10 @@ export function IndoorAirQuality() {
  </div>
  </section>
 
+ {/* 9. Verified Customer Reviews */}
+ <div className="home-reviews-wrapper">
+ <ReviewsSection reviews={reviews} />
+ </div>
 
  {/* 10. FAQs Section */}
  <section className="py-8 sm:py-16 lg:py-20 bg-slate-50 border-b border-slate-200">

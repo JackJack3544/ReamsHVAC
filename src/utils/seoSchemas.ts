@@ -38,7 +38,13 @@ export const REAMSHVAC_BUSINESS_INFO = {
     "Menlo Park", "Redwood City", "San Mateo", "Burlingame", "Fremont", 
     "Newark", "Union City", "Hayward", "Oakland", "Berkeley", "Walnut Creek", 
     "Concord", "San Francisco", "San Rafael", "Novato", "Petaluma"
-  ]
+  ],
+  aggregateRating: {
+    ratingValue: "4.9",
+    reviewCount: "524",
+    bestRating: "5",
+    worstRating: "1"
+  }
 };
 
 /**
@@ -98,6 +104,13 @@ export function getLocalBusinessSchema() {
         "name": "California"
       }
     })),
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": REAMSHVAC_BUSINESS_INFO.aggregateRating.ratingValue,
+      "reviewCount": REAMSHVAC_BUSINESS_INFO.aggregateRating.reviewCount,
+      "bestRating": REAMSHVAC_BUSINESS_INFO.aggregateRating.bestRating,
+      "worstRating": REAMSHVAC_BUSINESS_INFO.aggregateRating.worstRating
+    },
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
       "name": "Heating, Cooling & Air Quality Services",

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { PageHero } from "../components/PageHero";
 import { TrustBar } from "../components/TrustBar";
 import { CTABand } from "../components/CTABand";
+import { ReviewsSection } from "../components/ReviewsSection";
 import { SEO } from "../components/SEO";
 import { getLocalBusinessSchema } from "../utils/seoSchemas";
 import { ArrowRight, ArrowDown, ArrowUpRight, CheckCircle2, Phone, MapPin, Wrench, ShieldCheck, Zap, ThermometerSnowflake, Droplet, Star, AlertTriangle, Award, Shield, Clock, Banknote, Settings, ClipboardCheck, Globe, User, Mail, PenLine, ChevronDown, ChevronUp, Flame, Wind, Sparkles, Check, Quote, ChevronLeft, ChevronRight } from "lucide-react";
@@ -676,7 +677,12 @@ export function Home() {
         </div>
       </section>
 
-      {/* 5. How It Works Section */}
+      {/* 5. Featured Reviews Section */}
+      <div className="home-reviews-wrapper">
+        <ReviewsSection />
+      </div>
+
+      {/* 6. How It Works Section */}
       <section className="py-12 sm:py-16 lg:py-20 bg-white text-blue-950 border-t border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8 sm:mb-12 lg:mb-16">

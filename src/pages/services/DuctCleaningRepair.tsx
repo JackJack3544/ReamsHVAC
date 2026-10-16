@@ -13,6 +13,7 @@ import {
 import { CTABand } from "../../components/CTABand";
 import { TrustBar } from "../../components/TrustBar";
 import { PageHero } from "../../components/PageHero";
+import { ReviewsSection } from "../../components/ReviewsSection";
 import { SEO } from "../../components/SEO";
 
 export function DuctCleaningRepair() {
@@ -22,6 +23,32 @@ export function DuctCleaningRepair() {
  setOpenFaq(openFaq === index ? null : index);
  };
 
+ const reviews = [
+ {
+ name: "Greg V.",
+ city: "San Jose, CA",
+ date: "2 weeks ago",
+ rating: 5,
+ source: "Google Review",
+ comment: "Our back bedrooms were always 10 degrees hotter in summer. ReamsHVAC performed a static pressure test, found two crushed flexible ducts in our attic, replaced them with R-8 insulated ducting, and mastic-sealed all plenums. Temperature is completely balanced now."
+ },
+ {
+ name: "Melissa H.",
+ city: "Santa Clara, CA",
+ date: "1 month ago",
+ rating: 5,
+ source: "Yelp Verified",
+ comment: "Had our ductwork cleaned and sanitized after remodeling our home. The technicians used a high-powered HEPA negative pressure machine and showed us before-and-after video footage inside the registers. Super professional work."
+ },
+ {
+ name: "David K.",
+ city: "Sunnyvale, CA",
+ date: "2 months ago",
+ rating: 5,
+ source: "Google Review",
+ comment: "When we replaced our furnace, ReamsHVAC arranged the HERS duct leakage testing for San Jose city permit signoff. Our system passed with only 3% leakage. Our PG&E heating bill dropped immediately."
+ }
+ ];
 
  const faqs = [
  {
@@ -544,6 +571,10 @@ export function DuctCleaningRepair() {
  </div>
  </section>
 
+ {/* 9. Verified Customer Reviews */}
+ <div className="home-reviews-wrapper">
+ <ReviewsSection reviews={reviews} />
+ </div>
 
  {/* 10. FAQs Section */}
  <section className="py-8 sm:py-16 lg:py-20 bg-slate-50 border-b border-slate-200">

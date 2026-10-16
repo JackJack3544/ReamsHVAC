@@ -5,6 +5,7 @@ import {
   ShieldCheck, Banknote, Truck, Clock
 } from "lucide-react";
 import { PageHero } from "../components/PageHero";
+import { ReviewsSection } from "../components/ReviewsSection";
 import { SEO } from "../components/SEO";
 
 export function Contact() {
@@ -319,6 +320,14 @@ export function Contact() {
           </div>
         </div>
       </section>
+
+      {/* 3. Verified Customer Reviews */}
+      <div className="home-reviews-wrapper">
+        <ReviewsSection 
+          title="What Customers Say About Our Service"
+          subtitle="Verified 5-Star Reviews from San Jose, Santa Clara & Sunnyvale"
+        />
+      </div>
 
     </div>
   );

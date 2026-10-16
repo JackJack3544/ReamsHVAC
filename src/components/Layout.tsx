@@ -240,7 +240,7 @@ export function Layout() {
  <ul className="space-y-1.5 sm:space-y-2.5 text-xs sm:text-sm">
  <li><Link to="/about" className="text-slate-300 hover:text-white transition-colors">Our Story & Craft</Link></li>
  <li><Link to="/gallery" className="text-slate-300 hover:text-white transition-colors">Project Gallery</Link></li>
- <li><Link to="/reviews" className="text-slate-300 hover:text-white transition-colors">Client Reviews &amp; Feedback</Link></li>
+ <li><Link to="/reviews" className="text-slate-300 hover:text-white transition-colors">500+ Verified Customer Reviews</Link></li>
  <li><Link to="/authorized-dealer" className="text-slate-300 hover:text-white transition-colors">Authorized Dealer</Link></li>
  <li><Link to="/financing-rebates" className="text-slate-300 hover:text-white transition-colors">Rebates &amp; Financing</Link></li>
  <li><Link to="/team" className="text-slate-300 hover:text-white transition-colors">Technical Standards</Link></li>
