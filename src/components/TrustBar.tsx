@@ -42,8 +42,8 @@ function TrustPoints({ isFrosted }: { isFrosted: boolean }) {
         <div className="flex flex-col">
           <p className={`text-[10px] font-bold ${isFrosted ? "text-white" : "text-slate-800"} uppercase tracking-wider mb-0.5`}>Authorized Dealer</p>
           <div className="flex gap-1.5">
-            <span className={`text-[9.5px] font-bold ${isFrosted ? "bg-white/20 text-white" : "bg-slate-200 text-slate-700"} px-1.5 py-0.5 rounded`}>MITSUBISHI</span>
-            <span className={`text-[9.5px] font-bold ${isFrosted ? "bg-white/20 text-white" : "bg-slate-200 text-slate-700"} px-1.5 py-0.5 rounded`}>MIDEA</span>
+            <span className="text-[9.5px] font-bold bg-red-600 text-white px-1.5 py-0.5 rounded">MITSUBISHI</span>
+            <span className="text-[9.5px] font-bold bg-blue-600 text-white px-1.5 py-0.5 rounded">MIDEA</span>
           </div>
         </div>
       </div>
@@ -109,8 +109,8 @@ export function TrustBar({ variant = "light", className = "" }: { variant?: "lig
             <div className="flex flex-col">
               <p className={`text-[10px] sm:text-xs font-bold ${isFrosted ? "text-white" : "text-slate-800"} uppercase tracking-wider mb-1`}>Authorized Dealer</p>
               <div className="flex gap-1.5 sm:gap-2">
-                 <span className={`text-[9px] sm:text-[10px] font-bold ${isFrosted ? "bg-white/20 text-white" : "bg-slate-200 text-slate-700"} px-1.5 sm:px-2 py-0.5 rounded`}>MITSUBISHI</span>
-                 <span className={`text-[9px] sm:text-[10px] font-bold ${isFrosted ? "bg-white/20 text-white" : "bg-slate-200 text-slate-700"} px-1.5 sm:px-2 py-0.5 rounded`}>MIDEA</span>
+                 <span className="text-[9px] sm:text-[10px] font-bold bg-red-600 text-white px-1.5 sm:px-2 py-0.5 rounded">MITSUBISHI</span>
+                 <span className="text-[9px] sm:text-[10px] font-bold bg-blue-600 text-white px-1.5 sm:px-2 py-0.5 rounded">MIDEA</span>
               </div>
             </div>
           </div>

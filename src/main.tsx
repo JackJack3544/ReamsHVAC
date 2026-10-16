@@ -31,6 +31,9 @@ import { FAQ } from './pages/FAQ.tsx';
 import { Specials } from './pages/Specials.tsx';
 import { Team } from './pages/Team.tsx';
 import { Blog } from './pages/Blog.tsx';
+import { PrivacyPolicy } from './pages/PrivacyPolicy.tsx';
+import { TermsOfService } from './pages/TermsOfService.tsx';
+import { AccessibilityStatement } from './pages/AccessibilityStatement.tsx';
 import { NotFound } from './pages/NotFound.tsx';
 import './index.css';
 
@@ -82,6 +85,9 @@ createRoot(document.getElementById('root')!).render(
           <Route path="/blog" element={<Blog />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/faq" element={<FAQ />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-of-service" element={<TermsOfService />} />
+          <Route path="/accessibility" element={<AccessibilityStatement />} />
           
           {/* Catch-all */}
           <Route path="*" element={<NotFound />} />

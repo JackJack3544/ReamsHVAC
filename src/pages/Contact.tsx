@@ -1,4 +1,5 @@
 import { useState, useId, type FormEvent } from "react";
+import { Link } from "react-router-dom";
 import { 
   Phone, CheckCircle2, Send, Wrench,
   ShieldCheck, Banknote, Truck, Clock
@@ -44,7 +45,7 @@ export function Contact() {
       }
     } catch (error) {
       console.error("Contact form submission error:", error);
-      setErrorMessage("Network error. Please call (408) 320-3288 directly.");
+      setErrorMessage("Network error. Please call (408) 303-9777 directly.");
     } finally {
       setIsSubmitting(false);
     }
@@ -59,7 +60,7 @@ export function Contact() {
     "mainEntity": {
       "@type": "HVACBusiness",
       "name": "ReamsHVAC",
-      "telephone": "+14083203288",
+      "telephone": "+14083039777",
       "email": "dispatch@reamshvac.com",
       "address": {
         "@type": "PostalAddress",
@@ -75,7 +76,7 @@ export function Contact() {
     <div className="bg-slate-50 min-h-screen text-slate-800" id="contact-page">
       <SEO
         title="Contact ReamsHVAC | San Jose Heating & Air Conditioning Dispatch"
-        description="Need HVAC service, emergency repairs, or an estimate? Call (408) 320-3288 or connect online with ReamsHVAC in San Jose, CA."
+        description="Need HVAC service, emergency repairs, or an estimate? Call (408) 303-9777 or connect online with ReamsHVAC in San Jose, CA."
         canonical="/contact"
         schema={schemaData}
       />
@@ -95,8 +96,8 @@ export function Contact() {
           icon: <Wrench className="w-5 h-5 text-blue-900" />,
         }}
         secondaryCta={{
-          text: "(408) 320-3288",
-          href: "tel:4083203288",
+          text: "(408) 303-9777",
+          href: "tel:4083039777",
           icon: <Phone className="w-5 h-5 text-white" />,
         }}
       />
@@ -164,7 +165,7 @@ export function Contact() {
               </div>
 
               <div className="pt-1 text-[10px] sm:text-xs text-slate-500">
-                Direct Dispatch Hotline: <a href="tel:4083203288" className="font-bold text-blue-950 hover:underline">(408) 320-3288</a> &bull; Mon–Sat: 7am–7pm (24/7 Emergency Response)
+                Direct Dispatch Hotline: <a href="tel:4083039777" className="font-bold text-blue-950 hover:underline">(408) 303-9777</a> &bull; Mon–Sat: 7am–7pm (24/7 Emergency Response)
               </div>
             </div>
 
@@ -249,7 +250,7 @@ export function Contact() {
                         name="phone"
                         type="tel"
                         required
-                        placeholder="(408) 320-3288"
+                        placeholder="(408) 303-9777"
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         className="w-full px-3.5 sm:px-4 py-2.5 sm:py-3 bg-slate-50 border border-slate-200 rounded-lg text-base sm:text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-950 focus:bg-white transition-all"
@@ -303,8 +304,11 @@ export function Contact() {
                       </button>
                     </div>
 
-                    <p className="text-[10px] sm:text-xs text-slate-500 text-center pt-1">
-                      We respect your privacy. No spam, ever.
+                    <p className="text-[10px] sm:text-[11px] text-slate-500 text-center pt-1.5 leading-relaxed">
+                      By submitting this form, you consent to receive calls and text messages (SMS) from ReamsHVAC regarding your service inquiry, including automated reminders. Consent is not required to purchase goods or services. Msg &amp; data rates may apply. View our{" "}
+                      <Link to="/privacy-policy" className="text-blue-900 underline hover:text-blue-700">Privacy Policy</Link>{" "}
+                      and{" "}
+                      <Link to="/terms-of-service" className="text-blue-900 underline hover:text-blue-700">Terms of Service</Link>.
                     </p>
 
                   </form>

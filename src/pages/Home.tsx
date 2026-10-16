@@ -232,7 +232,7 @@ export function Home() {
       }
     } catch (error) {
       console.error("Free estimate submission error:", error);
-      setEstimateError("Network error. Please call (408) 320-3288 directly.");
+      setEstimateError("Network error. Please call (408) 303-9777 directly.");
     } finally {
       setIsSubmittingEstimate(false);
     }
@@ -276,8 +276,8 @@ export function Home() {
             icon: <Wrench className="w-5 h-5 text-blue-900" />,
           }}
           secondaryCta={{
-            text: "(408) 320-3288",
-            href: "tel:4083203288",
+            text: "(408) 303-9777",
+            href: "tel:4083039777",
             icon: <Phone className="w-5 h-5 text-white" />,
           }}
         />
@@ -394,6 +394,12 @@ export function Home() {
                     >
                       {isSubmittingEstimate ? "SUBMITTING..." : "SUBMIT"}
                     </button>
+                    <p className="text-[10px] text-slate-500 text-center pt-1 leading-snug">
+                      By submitting, you agree to receive call/SMS updates from ReamsHVAC. Consent is not a condition of purchase. Msg &amp; data rates may apply. View{" "}
+                      <Link to="/privacy-policy" className="text-blue-900 underline hover:text-blue-700">Privacy Policy</Link>{" "}
+                      &amp;{" "}
+                      <Link to="/terms-of-service" className="text-blue-900 underline hover:text-blue-700">Terms</Link>.
+                    </p>
                   </form>
                 )}
               </div>

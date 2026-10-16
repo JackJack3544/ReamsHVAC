@@ -56,7 +56,7 @@ export function Gallery() {
     "publisher": {
       "@type": "HVACBusiness",
       "name": "ReamsHVAC",
-      "telephone": "(408) 320-3288",
+      "telephone": "(408) 303-9777",
       "areaServed": "San Jose & San Francisco Bay Area",
       "address": {
         "@type": "PostalAddress",
@@ -91,8 +91,8 @@ export function Gallery() {
           icon: <Wrench className="w-5 h-5 text-blue-900" />
         }}
         secondaryCta={{
-          text: "(408) 320-3288",
-          href: "tel:4083203288",
+          text: "(408) 303-9777",
+          href: "tel:4083039777",
           icon: <Phone className="w-5 h-5 text-white" />
         }}
       />
