@@ -1,20 +1,16 @@
-import { ShieldCheck, Star, Award } from "lucide-react";
+import { ShieldCheck, CheckCircle2, Award, Wrench } from "lucide-react";
 import { Link } from "react-router-dom";
 
 function TrustPoints({ isFrosted }: { isFrosted: boolean }) {
   return (
     <div className="flex items-center gap-7 px-4 shrink-0">
       <div className="flex items-center gap-2 shrink-0">
-        <div className="flex text-yellow-400">
-          <Star className="fill-current w-3 h-3" />
-          <Star className="fill-current w-3 h-3" />
-          <Star className="fill-current w-3 h-3" />
-          <Star className="fill-current w-3 h-3" />
-          <Star className="fill-current w-3 h-3" />
+        <div className={`${isFrosted ? "bg-white/20 text-white" : "bg-blue-100 text-blue-900"} p-1 rounded-full`}>
+          <Wrench className="w-3.5 h-3.5" />
         </div>
         <div>
-          <p className={`text-xs font-bold ${isFrosted ? "text-white" : "text-slate-800"}`}>4.9/5 Average Rating</p>
-          <Link to="/reviews" className={`text-[11px] ${isFrosted ? "text-blue-200 hover:text-white" : "text-blue-600"} hover:underline`}>Read our 500+ reviews</Link>
+          <p className={`text-xs font-bold ${isFrosted ? "text-white" : "text-slate-800"}`}>100% Non-Commissioned</p>
+          <Link to="/why-us" className={`text-[11px] ${isFrosted ? "text-blue-200 hover:text-white" : "text-blue-600"} hover:underline`}>Honest repairs &amp; diagnostics</Link>
         </div>
       </div>
 
@@ -23,8 +19,8 @@ function TrustPoints({ isFrosted }: { isFrosted: boolean }) {
           <Award className="w-3.5 h-3.5" />
         </div>
         <div>
-          <p className={`text-xs font-bold ${isFrosted ? "text-white" : "text-slate-800"}`}>20+ Years in the Trade</p>
-          <p className={`text-[11px] ${isFrosted ? "text-slate-200" : "text-slate-500"}`}>Family owned & operated</p>
+          <p className={`text-xs font-bold ${isFrosted ? "text-white" : "text-slate-800"}`}>ACCA Manual J Sizing</p>
+          <p className={`text-[11px] ${isFrosted ? "text-slate-200" : "text-slate-500"}`}>Scientific load calculations</p>
         </div>
       </div>
 
@@ -33,8 +29,8 @@ function TrustPoints({ isFrosted }: { isFrosted: boolean }) {
           <ShieldCheck className="w-3.5 h-3.5" />
         </div>
         <div>
-          <p className={`text-xs font-bold ${isFrosted ? "text-white" : "text-slate-800"}`}>Licensed, Insured & Guaranteed</p>
-          <Link to="/licensing-insurance-guarantee" className={`text-[11px] ${isFrosted ? "text-blue-200 hover:text-white" : "text-blue-600"} hover:underline`}>View credentials</Link>
+          <p className={`text-xs font-bold ${isFrosted ? "text-white" : "text-slate-800"}`}>Licensed &amp; Insured</p>
+          <Link to="/licensing-insurance-guarantee" className={`text-[11px] ${isFrosted ? "text-blue-200 hover:text-white" : "text-blue-600"} hover:underline`}>California C-20 Contractor</Link>
         </div>
       </div>
 
@@ -72,16 +68,12 @@ export function TrustBar({ variant = "light", className = "" }: { variant?: "lig
         <div className="hidden md:flex flex-row justify-between items-center gap-6 text-left py-1">
           
           <div className="flex items-center gap-2 sm:gap-3 shrink-0">
-            <div className="flex text-yellow-400">
-              <Star className="fill-current w-3.5 h-3.5 sm:w-5 sm:h-5" />
-              <Star className="fill-current w-3.5 h-3.5 sm:w-5 sm:h-5" />
-              <Star className="fill-current w-3.5 h-3.5 sm:w-5 sm:h-5" />
-              <Star className="fill-current w-3.5 h-3.5 sm:w-5 sm:h-5" />
-              <Star className="fill-current w-3.5 h-3.5 sm:w-5 sm:h-5" />
+            <div className={`${isFrosted ? "bg-white/20 text-white" : "bg-blue-100 text-blue-900"} p-1.5 sm:p-2 rounded-full`}>
+              <Wrench className="w-3.5 h-3.5 sm:w-5 sm:h-5" />
             </div>
             <div>
-              <p className={`text-xs sm:text-sm font-bold ${isFrosted ? "text-white" : "text-slate-800"}`}>4.9/5 Average Rating</p>
-              <Link to="/reviews" className={`text-[10px] sm:text-xs ${isFrosted ? "text-blue-200 hover:text-white" : "text-blue-600"} hover:underline`}>Read our 500+ reviews</Link>
+              <p className={`text-xs sm:text-sm font-bold ${isFrosted ? "text-white" : "text-slate-800"}`}>100% Non-Commissioned</p>
+              <Link to="/why-us" className={`text-[10px] sm:text-xs ${isFrosted ? "text-blue-200 hover:text-white" : "text-blue-600"} hover:underline`}>Honest repairs &amp; diagnostics</Link>
             </div>
           </div>
 
@@ -90,8 +82,8 @@ export function TrustBar({ variant = "light", className = "" }: { variant?: "lig
               <Award className="w-3.5 h-3.5 sm:w-5 sm:h-5" />
             </div>
             <div>
-              <p className={`text-xs sm:text-sm font-bold ${isFrosted ? "text-white" : "text-slate-800"}`}>20+ Years in the Trade</p>
-              <p className={`text-[10px] sm:text-xs ${isFrosted ? "text-slate-200" : "text-slate-500"}`}>Family owned & operated</p>
+              <p className={`text-xs sm:text-sm font-bold ${isFrosted ? "text-white" : "text-slate-800"}`}>ACCA Manual J Sizing</p>
+              <p className={`text-[10px] sm:text-xs ${isFrosted ? "text-slate-200" : "text-slate-500"}`}>Scientific load calculations</p>
             </div>
           </div>
 
@@ -100,8 +92,8 @@ export function TrustBar({ variant = "light", className = "" }: { variant?: "lig
               <ShieldCheck className="w-3.5 h-3.5 sm:w-5 sm:h-5" />
             </div>
             <div>
-              <p className={`text-xs sm:text-sm font-bold ${isFrosted ? "text-white" : "text-slate-800"}`}>Licensed, Insured & Guaranteed</p>
-              <Link to="/licensing-insurance-guarantee" className={`text-[10px] sm:text-xs ${isFrosted ? "text-blue-200 hover:text-white" : "text-blue-600"} hover:underline`}>View credentials</Link>
+              <p className={`text-xs sm:text-sm font-bold ${isFrosted ? "text-white" : "text-slate-800"}`}>Licensed &amp; Insured</p>
+              <Link to="/licensing-insurance-guarantee" className={`text-[10px] sm:text-xs ${isFrosted ? "text-blue-200 hover:text-white" : "text-blue-600"} hover:underline`}>California C-20 Contractor</Link>
             </div>
           </div>
 

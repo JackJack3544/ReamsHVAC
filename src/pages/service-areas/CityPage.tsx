@@ -8,7 +8,6 @@ import {
 import { CTABand } from "../../components/CTABand";
 import { TrustBar } from "../../components/TrustBar";
 import { PageHero } from "../../components/PageHero";
-import { ReviewsSection } from "../../components/ReviewsSection";
 import { CITIES_DATA, REGIONS_DATA, CityData } from "../../data/serviceAreaData";
 import { SEO } from "../../components/SEO";
 
@@ -34,16 +33,7 @@ export function CityPage({ citySlug }: CityPageProps) {
  permitNote: `All HVAC system change-outs in ${slug.split("-").map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(" ")} require municipal mechanical building permits and Title 24 HERS duct leakage verification.`,
  rebateNote: `Homeowners qualify for state TECH Clean California heat pump grants and local electrification incentives up to $3,000+.`,
  mapEmbedSrc: `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100000.123456!2d-122.0!3d37.4!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fcae48af93ff5%3A0xb99d8c0aca9f717b!2s${encodeURIComponent(slug.replace(/-/g, " "))}%2C%20CA!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus`,
- reviews: [
- {
- name: "Verified Customer",
- neighborhood: `${slug.split("-").map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(" ")}, CA`,
- date: "2 weeks ago",
- rating: 5,
- source: "Google Review",
- comment: `ReamsHVAC provided prompt, professional service in ${slug.split("-").map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(" ")}. They diagnosed our heating issue quickly and gave us upfront flat-rate options.`
- }
- ],
+ reviews: [],
  faqs: [
  {
  q: `How fast can ReamsHVAC dispatch to ${slug.split("-").map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(" ")}?`,
@@ -208,16 +198,7 @@ export function CityPage({ citySlug }: CityPageProps) {
  </div>
  </section>
 
- {/* 5. Customer Reviews */}
- <div className="home-reviews-wrapper">
- <ReviewsSection 
- title={`${city.name} Homeowner Reviews`}
- subtitle={`Verified 5-Star Reviews in ${city.name}, CA`}
- reviews={city.reviews}
- />
- </div>
-
- {/* 6. Nearby Cities Section */}
+  {/* 5. Nearby Cities Section */}
  <section className="py-8 sm:py-14 bg-slate-50 border-b border-slate-200">
  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
  <p className="text-[10px] sm:text-xs font-bold text-slate-400 uppercase tracking-wider mb-3 sm:mb-4">

@@ -3,70 +3,10 @@ import { Link } from "react-router-dom";
 import { PageHero } from "../components/PageHero";
 import { TrustBar } from "../components/TrustBar";
 import { CTABand } from "../components/CTABand";
-import { ReviewsSection } from "../components/ReviewsSection";
 import { SEO } from "../components/SEO";
 import { getLocalBusinessSchema } from "../utils/seoSchemas";
 import { ArrowRight, ArrowDown, ArrowUpRight, CheckCircle2, Phone, MapPin, Wrench, ShieldCheck, Zap, ThermometerSnowflake, Droplet, Star, AlertTriangle, Award, Shield, Clock, Banknote, Settings, ClipboardCheck, Globe, User, Mail, PenLine, ChevronDown, ChevronUp, Flame, Wind, Sparkles, Check, Quote, ChevronLeft, ChevronRight } from "lucide-react";
 import { galleryItems } from "../data/galleryData";
-
-const REVIEWS = [
-  {
-    name: "Sarah M.",
-    location: "San Jose, CA",
-    source: "Google",
-    sourceColor: "text-blue-700 bg-blue-50 border-blue-100",
-    text: `"Our furnace died right before Thanksgiving. The Reams team came out the same day, gave a fair quote, and installed the new unit beautifully."`
-  },
-  {
-    name: "David & Elena R.",
-    location: "Palo Alto, CA",
-    source: "Yelp",
-    sourceColor: "text-red-600 bg-red-50 border-red-100",
-    text: `"Converted our whole house to Mitsubishi heat pumps. The crew was incredible and the rebate guidance saved us thousands."`
-  },
-  {
-    name: "Michael T.",
-    location: "Oakland, CA",
-    source: "Google",
-    sourceColor: "text-blue-700 bg-blue-50 border-blue-100",
-    text: `"Best HVAC company in the East Bay. Honest, didn't try to upsell me on things I didn't need. Highly recommend their yearly maintenance plan."`
-  },
-  {
-    name: "Jessica K.",
-    location: "Santa Clara, CA",
-    source: "Google",
-    sourceColor: "text-blue-700 bg-blue-50 border-blue-100",
-    text: `"Super fast response time! Our AC went out during the hottest week of the year and they had it fixed the next morning."`
-  },
-  {
-    name: "Robert L.",
-    location: "Sunnyvale, CA",
-    source: "Yelp",
-    sourceColor: "text-red-600 bg-red-50 border-red-100",
-    text: `"Reams replaced all of our old ductwork and installed a smart thermostat. Airflow on the second floor is 100x better now!"`
-  },
-  {
-    name: "Amanda W.",
-    location: "Mountain View, CA",
-    source: "Google",
-    sourceColor: "text-blue-700 bg-blue-50 border-blue-100",
-    text: `"Top tier customer service. Techs wore shoe covers inside, cleaned up everything after install, and explained how to use the system."`
-  },
-  {
-    name: "James & Priya P.",
-    location: "Fremont, CA",
-    source: "Google",
-    sourceColor: "text-blue-700 bg-blue-50 border-blue-100",
-    text: `"Got quotes from 4 contractors. Reams had the best warranty, fair pricing, and highest attention to detail. 10/10 experience."`
-  },
-  {
-    name: "Carlos M.",
-    location: "Cupertino, CA",
-    source: "Yelp",
-    sourceColor: "text-red-600 bg-red-50 border-red-100",
-    text: `"Emergency call on a Sunday afternoon for a leaking condensate line. They had a technician at my door in under 45 minutes!"`
-  }
-];
 
 const STEPS = [
   {
@@ -244,7 +184,7 @@ export function Home() {
     <div id="home-page" className="w-full overflow-x-hidden">
       <SEO
         title="ReamsHVAC - Heating, AC & Heat Pumps in San Jose & Bay Area"
-        description="20 years of trusted HVAC service in San Jose & the Bay Area. Same-day AC repair, furnace maintenance, heat pump installations, and 24/7 emergency service."
+        description="Trusted heating, AC, and high-efficiency heat pump service in San Jose & the Bay Area. Same-day AC repair, furnace maintenance, and 24/7 emergency dispatch."
         canonical="/"
         schema={businessSchema}
       />
@@ -253,11 +193,11 @@ export function Home() {
       <div id="home-hero">
         <PageHero
           breadcrumbs={[{ label: "Home" }]}
-          eyebrow="Proudly serving the Bay Area since 2004"
+          eyebrow="Licensed California C-20 HVAC Contractor"
           title={
             <span className="flex flex-col gap-0.5 sm:gap-1 items-center justify-center">
               <span className="block whitespace-nowrap">San Jose's HVAC Experts.</span>
-              <span className="block whitespace-nowrap">20+ Years and Counting.</span>
+              <span className="block whitespace-nowrap">Engineered Home Comfort.</span>
             </span>
           }
           description={
@@ -298,7 +238,7 @@ export function Home() {
                 San Jose HVAC Repair & Heat Pump Specialists
               </h2>
               <p className="text-sm sm:text-base lg:text-lg text-slate-700 mb-6 md:mb-10 leading-relaxed text-center sm:text-left max-w-xl mx-auto sm:mx-0">
-                Since 2004, our family-owned team has kept Santa Clara County homes comfortable with dependable repairs and honest care. We treat your home like our own—recommending only what your system truly needs, with straightforward pricing and guaranteed workmanship.
+                Our family-owned team keeps Santa Clara County homes comfortable with dependable repairs and honest care. We treat your home like our own—recommending only what your system truly needs, with straightforward pricing and guaranteed workmanship.
               </p>
               <div className="relative rounded-2xl overflow-hidden shadow-lg border border-blue-100 bg-white p-3.5 sm:p-5 md:p-6 flex flex-col aspect-auto md:aspect-video">
                 <h3 className="text-lg sm:text-xl font-bold text-blue-950 mb-3 sm:mb-4">Get a Free Estimate</h3>
@@ -736,12 +676,7 @@ export function Home() {
         </div>
       </section>
 
-      {/* 5. Featured Reviews Section */}
-      <div className="home-reviews-wrapper">
-        <ReviewsSection />
-      </div>
-
-      {/* 6. How It Works Section */}
+      {/* 5. How It Works Section */}
       <section className="py-12 sm:py-16 lg:py-20 bg-white text-blue-950 border-t border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8 sm:mb-12 lg:mb-16">

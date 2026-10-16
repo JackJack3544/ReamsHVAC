@@ -25,10 +25,10 @@ export function LicensingGuarantee() {
  icon: <Award className="w-6 h-6 text-blue-900" />
  },
  {
- title: "$2,000,000 Liability & Worker's Comp",
+ title: "Commercial Liability & Worker's Comp",
  subtitle: "Full Homeowner Indemnity",
  badge: "Fully Insured",
- desc: "We carry comprehensive $2M commercial general liability insurance along with complete California Worker's Compensation coverage for every technician and installer on your property.",
+ desc: "We carry comprehensive commercial general liability insurance along with complete California Worker's Compensation coverage for every technician and installer on your property.",
  icon: <ShieldCheck className="w-6 h-6 text-blue-900" />
  },
  {
@@ -64,7 +64,7 @@ export function LicensingGuarantee() {
  const faqs = [
  {
  q: "How can I verify your California contractor license?",
- a: "You can verify our C-20 license () directly on the California Contractors State License Board (CSLB) official website at cslb.ca.gov. You will find our active status, workers' compensation policy, and commercial bond in full standing."
+ a: "You can verify our C-20 license directly on the California Contractors State License Board (CSLB) official website at cslb.ca.gov. You will find our active status, workers' compensation policy, and commercial bond in full standing."
  },
  {
  q: "Why is hiring an unlicensed contractor dangerous for HVAC work?",
@@ -104,7 +104,7 @@ export function LicensingGuarantee() {
  <div className="bg-slate-50 min-h-screen text-slate-800">
  <SEO
  title="Licensing, Insurance & Guarantee | CSLB C-20 | ReamsHVAC"
- description="Verify ReamsHVAC credentials: California CSLB C-20 Licensed C-20, $2M liability insurance, EPA Universal certification, and 1-year labor guarantee."
+ description="Verify ReamsHVAC credentials: California Licensed C-20 Contractor, commercial liability insurance, EPA Universal certification, and 1-year labor guarantee."
  canonical="/licensing-insurance-guarantee"
  schema={schemaData}
  />
@@ -115,9 +115,9 @@ export function LicensingGuarantee() {
  { label: "Home", href: "/" },
  { label: "Licensing & Insurance" },
  ]}
- eyebrow="California Contractors State License Board "
+ eyebrow="California Contractors State License Board"
  title="Licensing, Insurance & Our Workmanship Guarantee"
- description="Your home is your most valuable investment. We protect it with verified state licensing, $2,000,000 in liability coverage, Title 24 compliance, and our own 1-year written labor guarantee."
+ description="Your home is your most valuable investment. We protect it with verified state licensing, comprehensive liability coverage, Title 24 compliance, and our own 1-year written labor guarantee."
  primaryCta={{
  text: "Schedule Consultation",
  href: "/contact",

@@ -167,7 +167,7 @@ export function Layout() {
  <Logo className="h-8 sm:h-9 w-auto" variant="light" />
  </Link>
  <p className="text-xs sm:text-sm text-slate-300 max-w-md leading-relaxed mt-1">
- San Jose's trusted C-20 licensed HVAC contractor with 20+ years of trade experience. Delivering honest heating, cooling, and heat pump craftsmanship.
+ San Jose's trusted C-20 licensed HVAC contractor. Delivering honest heating, cooling, and heat pump craftsmanship.
  </p>
  </div>
  
@@ -240,10 +240,10 @@ export function Layout() {
  <ul className="space-y-1.5 sm:space-y-2.5 text-xs sm:text-sm">
  <li><Link to="/about" className="text-slate-300 hover:text-white transition-colors">Our Story & Craft</Link></li>
  <li><Link to="/gallery" className="text-slate-300 hover:text-white transition-colors">Project Gallery</Link></li>
- <li><Link to="/reviews" className="text-slate-300 hover:text-white transition-colors">500+ Customer Reviews</Link></li>
+ <li><Link to="/reviews" className="text-slate-300 hover:text-white transition-colors">Client Reviews &amp; Feedback</Link></li>
  <li><Link to="/authorized-dealer" className="text-slate-300 hover:text-white transition-colors">Authorized Dealer</Link></li>
- <li><Link to="/financing-rebates" className="text-slate-300 hover:text-white transition-colors">Rebates & Financing</Link></li>
- <li><Link to="/team" className="text-slate-300 hover:text-white transition-colors">Meet Our Team</Link></li>
+ <li><Link to="/financing-rebates" className="text-slate-300 hover:text-white transition-colors">Rebates &amp; Financing</Link></li>
+ <li><Link to="/team" className="text-slate-300 hover:text-white transition-colors">Technical Standards</Link></li>
  </ul>
  </div>
 

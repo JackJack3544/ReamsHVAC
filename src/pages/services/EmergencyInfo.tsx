@@ -13,7 +13,6 @@ import {
 import { CTABand } from "../../components/CTABand";
 import { TrustBar } from "../../components/TrustBar";
 import { PageHero } from "../../components/PageHero";
-import { ReviewsSection } from "../../components/ReviewsSection";
 import { SEO } from "../../components/SEO";
 
 export function EmergencyInfo() {
@@ -23,32 +22,6 @@ export function EmergencyInfo() {
  setOpenFaq(openFaq === index ? null : index);
  };
 
- const reviews = [
- {
- name: "Mark T.",
- city: "San Jose, CA",
- date: "2 weeks ago",
- rating: 5,
- source: "Google Review",
- comment: "Our AC failed on a Saturday during a 104°F heatwave with our elderly parents staying with us. ReamsHVAC dispatched a technician within 2 hours. He diagnosed a blown capacitor, replaced it from his truck stock, and gave us a flat-rate price upfront."
- },
- {
- name: "Elena R.",
- city: "Santa Clara, CA",
- date: "1 month ago",
- rating: 5,
- source: "Yelp Verified",
- comment: "We smelled electrical burning from our furnace at 9:00 PM on a cold December evening. The emergency technician arrived quickly, found a failed blower motor relay, and safely shut down the circuit until a replacement was installed the next morning."
- },
- {
- name: "David S.",
- city: "Sunnyvale, CA",
- date: "2 months ago",
- rating: 5,
- source: "Google Review",
- comment: "Honest, reliable emergency service. No hidden fees or high-pressure tactics. They fixed our condensate drain line flood before it ruined our hallway ceiling."
- }
- ];
 
  const faqs = [
  {
@@ -570,10 +543,6 @@ export function EmergencyInfo() {
  </div>
  </section>
 
- {/* 9. Verified Customer Reviews */}
- <div className="home-reviews-wrapper">
- <ReviewsSection reviews={reviews} />
- </div>
 
  {/* 10. FAQs Section */}
  <section className="py-8 sm:py-16 lg:py-20 bg-slate-50 border-b border-slate-200">

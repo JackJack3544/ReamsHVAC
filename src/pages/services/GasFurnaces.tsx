@@ -13,7 +13,6 @@ import {
 import { CTABand } from "../../components/CTABand";
 import { TrustBar } from "../../components/TrustBar";
 import { PageHero } from "../../components/PageHero";
-import { ReviewsSection } from "../../components/ReviewsSection";
 import { SEO } from "../../components/SEO";
 
 export function GasFurnaces() {
@@ -23,32 +22,6 @@ export function GasFurnaces() {
  setOpenFaq(openFaq === index ? null : index);
  };
 
- const reviews = [
- {
- name: "Marcus B.",
- city: "San Jose, CA",
- date: "2 weeks ago",
- rating: 5,
- source: "Google Review",
- comment: "Our 20-year-old gas furnace stopped heating right before a cold winter stretch. ReamsHVAC dispatched a tech the same morning. He inspected the heat exchanger for cracks, replaced a dirty flame sensor, and had warm air blowing in 45 minutes."
- },
- {
- name: "Linda P.",
- city: "Campbell, CA",
- date: "1 month ago",
- rating: 5,
- source: "Yelp Verified",
- comment: "We upgraded our old 80% AFUE furnace to a 96% high-efficiency two-stage variable speed furnace. The team pulled all San Jose city permits and arranged the HERS duct leakage inspection. The house is whisper quiet now."
- },
- {
- name: "Steven C.",
- city: "Santa Clara, CA",
- date: "2 months ago",
- rating: 5,
- source: "Google Review",
- comment: "Upfront pricing, zero sales pressure, and outstanding technical expertise. They tested carbon monoxide safety levels and verified chimney venting draft before handing over the system."
- }
- ];
 
  const faqs = [
  {
@@ -571,10 +544,6 @@ export function GasFurnaces() {
  </div>
  </section>
 
- {/* 9. Verified Customer Reviews */}
- <div className="home-reviews-wrapper">
- <ReviewsSection reviews={reviews} />
- </div>
 
  {/* 10. FAQs Section */}
  <section className="py-8 sm:py-16 lg:py-20 bg-slate-50 border-b border-slate-200">

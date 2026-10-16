@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { 
   Users, Award, ShieldCheck, CheckCircle2, Phone, ArrowRight,
-  Wrench, Sparkles, HeartHandshake, FileCheck
+  Wrench, HeartHandshake, FileCheck, Sparkles, Shield
 } from "lucide-react";
 import { PageHero } from "../components/PageHero";
 import { TrustBar } from "../components/TrustBar";
@@ -17,7 +17,7 @@ export function Team() {
     },
     {
       title: "EPA Universal & Factory Certified",
-      desc: "All technicians hold EPA Section 608 Universal credentials and complete over 100 annual hours of direct manufacturer training on inverter heat pumps, VRF, and gas furnaces.",
+      desc: "All technicians hold EPA Section 608 Universal credentials and complete ongoing manufacturer training on inverter heat pumps, VRF, and gas furnaces.",
       icon: <Award className="w-6 h-6 text-blue-900" />
     },
     {
@@ -32,40 +32,37 @@ export function Team() {
     }
   ];
 
-  const leadership = [
+  const roles = [
     {
-      name: "Marcus Reams",
-      role: "Founder & Master Mechanical Contractor",
-      experience: "25+ Years in Trade",
-      bio: "Marcus founded ReamsHVAC in 2004 with a single truck and a firm commitment: restore honest craftsmanship to heating and air conditioning in Silicon Valley. Marcus personally oversees technical training and complex heat pump conversions."
+      title: "Master Diagnostic Technicians",
+      badge: "Diagnostic Truth",
+      desc: "Dedicated to mechanical troubleshooting. Equipped with digital micron gauges, combustion analyzers, and OEM diagnostic interfaces to diagnose and repair your system without sales pressure."
     },
     {
-      name: "David Chen",
-      role: "Lead Installation & Sizing Engineer",
-      experience: "16 Years in Trade",
-      bio: "Specializing in whole-home electrification, duct design, and Title 24 HERS verification. David ensures every Mitsubishi and Carrier inverter system is mathematically matched to home heat loss and airflow requirements."
+      title: "Inverter & Heat Pump Specialists",
+      badge: "Electrification",
+      desc: "Engineered installation specialists trained in variable-speed inverter thermodynamics, nitrogen-swept copper brazing, and deep vacuum evacuations below 500 microns."
     },
     {
-      name: "Anthony Morales",
-      role: "Senior Diagnostic & Service Specialist",
-      experience: "14 Years in Trade",
-      bio: "A master troubleshooter for complex heat pump and furnace failures. Anthony is renowned for diagnosing difficult electrical and refrigerant issues that other contractors fail to resolve."
+      title: "Title 24 & HERS Compliance Team",
+      badge: "Energy Efficiency",
+      desc: "In-house specialists who manage duct leakage testing, Title 24 compliance paperwork, and municipal mechanical permits across all 46 Bay Area cities."
     }
   ];
 
   const schemaData = {
     "@context": "https://schema.org",
     "@type": "AboutPage",
-    "name": "ReamsHVAC Team & Master Technicians",
+    "name": "ReamsHVAC Team & Technical Standards",
     "url": "https://reamshvac.com/team",
-    "description": "Meet the non-commissioned master HVAC technicians and leadership team at ReamsHVAC in San Jose, CA."
+    "description": "Learn about the non-commissioned master HVAC technicians and craftsmanship standards at ReamsHVAC in San Jose, CA."
   };
 
   return (
     <div className="bg-slate-50 min-h-screen text-slate-800">
       <SEO
-        title="Our Team | Non-Commissioned Master HVAC Technicians | ReamsHVAC"
-        description="Meet the experienced master technicians at ReamsHVAC. 20+ years of honest heating, heat pump, and AC service across San Jose and the Bay Area."
+        title="Our Technical Standards & Team | ReamsHVAC San Jose"
+        description="Learn about the master HVAC technicians and mechanical standards at ReamsHVAC. Non-commissioned salaries, EPA Universal certification, and precision Manual J engineering."
         canonical="/team"
         schema={schemaData}
       />
@@ -73,15 +70,15 @@ export function Team() {
       <PageHero
         breadcrumbs={[
           { label: "Home", href: "/" },
-          { label: "Our Team" },
+          { label: "Our Standards" },
         ]}
         eyebrow="San Jose HVAC Craftsmanship"
-        title="Meet Our Master Technicians & Team"
-        description="We believe in technicians as engineers, not salesmen. Meet the skilled professionals dedicated to honest diagnostics and family-first service."
+        title="Technicians as Engineers, Never Salespeople"
+        description="We believe in technicians who solve mechanical problems, not sales quotas. Discover our professional hiring standards and non-commissioned philosophy."
         primaryCta={{
-          text: "Work With Us",
+          text: "Schedule a Walkthrough",
           href: "/contact",
-          icon: <Users className="w-5 h-5 text-blue-900" />,
+          icon: <Wrench className="w-5 h-5 text-blue-900" />,
         }}
         secondaryCta={{
           text: "(408) 303-9777",
@@ -103,7 +100,7 @@ export function Team() {
               Why Our Team is Built Differently
             </h2>
             <p className="text-xs sm:text-base text-slate-600 mt-3 leading-relaxed">
-              In an industry increasingly dominated by private equity conglomerates pushing equipment sales, we remain an independent, family-owned shop focused solely on mechanical excellence.
+              In an industry increasingly dominated by private equity conglomerates pushing equipment sales, we focus strictly on honest diagnostics, fair pricing, and enduring mechanical craftsmanship.
             </p>
           </div>
 
@@ -130,20 +127,20 @@ export function Team() {
         </div>
       </section>
 
-      {/* Leadership & Master Techs */}
+      {/* Field Specialties */}
       <section className="py-8 sm:py-16 bg-slate-50 border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-10">
             <h2 className="text-2xl sm:text-3xl font-extrabold text-blue-950 tracking-tight">
-              Key Team Leaders
+              Our Field Disciplines
             </h2>
             <p className="text-xs sm:text-sm text-slate-600 mt-2">
-              Decades of combined mechanical trade experience in Silicon Valley and the Bay Area.
+              Every service van is staffed by salaried tradesmen dedicated to specific mechanical disciplines.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {leadership.map((leader, i) => (
+            {roles.map((role, i) => (
               <div 
                 key={i}
                 className="bg-white border border-slate-200 rounded-2xl p-6 shadow-xs flex flex-col justify-between"
@@ -151,23 +148,20 @@ export function Team() {
                 <div>
                   <div className="flex items-center justify-between mb-3">
                     <span className="text-[11px] font-bold text-blue-900 bg-blue-50 px-2.5 py-1 rounded border border-blue-100">
-                      {leader.experience}
+                      {role.badge}
                     </span>
                   </div>
-                  <h3 className="text-lg sm:text-xl font-bold text-blue-950">
-                    {leader.name}
+                  <h3 className="text-lg sm:text-xl font-bold text-blue-950 mb-3">
+                    {role.title}
                   </h3>
-                  <p className="text-xs font-semibold text-slate-500 mb-4">
-                    {leader.role}
-                  </p>
                   <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                    {leader.bio}
+                    {role.desc}
                   </p>
                 </div>
 
                 <div className="mt-6 pt-4 border-t border-slate-100 flex items-center gap-1.5 text-xs font-semibold text-blue-950">
                   <CheckCircle2 className="w-4 h-4 text-blue-900" />
-                  <span>CSLB & EPA Certified</span>
+                  <span>EPA Universal &amp; Title 24 Compliant</span>
                 </div>
               </div>
             ))}

@@ -198,9 +198,9 @@ export function About() {
  <div className="mt-10 sm:mt-20 pt-8 sm:pt-12 border-t-2 border-slate-900">
  <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 sm:gap-6">
  <div>
- <h4 className="text-base sm:text-xl font-bold text-blue-950">California C-20 Licensed C-20</h4>
+ <h4 className="text-base sm:text-xl font-bold text-blue-950">California Licensed C-20 Contractor</h4>
  <p className="text-xs sm:text-sm text-slate-600 mt-1">
- EPA Universal Certified • Title 24 Compliant • Fully Bonded &amp; $2M Insured
+ EPA Universal Certified • Title 24 Compliant • Fully Bonded &amp; Insured
  </p>
  </div>
  <Link

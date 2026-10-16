@@ -13,7 +13,6 @@ import {
 import { CTABand } from "../../components/CTABand";
 import { TrustBar } from "../../components/TrustBar";
 import { PageHero } from "../../components/PageHero";
-import { ReviewsSection } from "../../components/ReviewsSection";
 import { SEO } from "../../components/SEO";
 
 export function HeatPumps() {
@@ -23,32 +22,6 @@ export function HeatPumps() {
  setOpenFaq(openFaq === index ? null : index);
  };
 
- const reviews = [
- {
- name: "David M.",
- city: "San Jose, CA",
- date: "2 weeks ago",
- rating: 5,
- source: "Google Review",
- comment: "Switched from an old gas furnace to a 4-ton heat pump with ReamsHVAC. The technician did a full Manual J load calculation first and handled all city permit filings. House cools down in minutes and our summer electric bills dropped significantly!"
- },
- {
- name: "Elena R.",
- city: "Santa Clara, CA",
- date: "1 month ago",
- rating: 5,
- source: "Yelp Verified",
- comment: "Our heat pump stopped heating during a cold stretch. Called ReamsHVAC at 8 AM, tech arrived by noon. Replaced a faulty defrost sensor and checked refrigerant levels. Upfront pricing with zero surprises."
- },
- {
- name: "Marcus K.",
- city: "Sunnyvale, CA",
- date: "2 months ago",
- rating: 5,
- source: "Google Review",
- comment: "The crew spent 2 days replacing our whole system and upgrading our panel. They used nitrogen purging during brazing and pulled a deep vacuum just like they promised in their workflow. Pure engineering craftsmanship."
- }
- ];
 
  const faqs = [
  {
@@ -572,10 +545,6 @@ export function HeatPumps() {
  </div>
  </section>
 
- {/* 14. Verified Customer Reviews */}
- <div className="home-reviews-wrapper">
- <ReviewsSection reviews={reviews} />
- </div>
 
  {/* 15. FAQs Section */}
  <section className="py-8 sm:py-16 lg:py-20 bg-slate-50 border-b border-slate-200">

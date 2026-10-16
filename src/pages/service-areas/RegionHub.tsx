@@ -9,7 +9,6 @@ import {
 import { CTABand } from "../../components/CTABand";
 import { TrustBar } from "../../components/TrustBar";
 import { PageHero } from "../../components/PageHero";
-import { ReviewsSection } from "../../components/ReviewsSection";
 import { REGIONS_DATA } from "../../data/serviceAreaData";
 import { SEO } from "../../components/SEO";
 
@@ -344,16 +343,7 @@ export function RegionHub({ regionKey }: RegionHubProps) {
  </div>
  </section>
 
- {/* 5. Reviews Section */}
- <div className="home-reviews-wrapper">
- <ReviewsSection 
- title={`${region.name} Customer Reviews`}
- subtitle={`Verified 5-Star Service across ${region.name} Homes`}
- reviews={region.reviews}
- />
- </div>
-
- {/* 6. FAQs Section */}
+ {/* 5. FAQs Section */}
  <section className="py-8 sm:py-16 lg:py-20 bg-slate-50 border-b border-slate-200">
  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
  <div className="max-w-3xl mx-auto">

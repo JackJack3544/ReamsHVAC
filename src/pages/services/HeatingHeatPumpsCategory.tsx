@@ -13,7 +13,6 @@ import {
 import { CTABand } from "../../components/CTABand";
 import { TrustBar } from "../../components/TrustBar";
 import { PageHero } from "../../components/PageHero";
-import { ReviewsSection } from "../../components/ReviewsSection";
 import { SEO } from "../../components/SEO";
 
 export function HeatingHeatPumpsCategory() {
@@ -23,32 +22,6 @@ export function HeatingHeatPumpsCategory() {
  setOpenFaq(openFaq === index ? null : index);
  };
 
- const reviews = [
- {
- name: "Daniel S.",
- city: "San Jose, CA",
- date: "2 weeks ago",
- rating: 5,
- source: "Google Review",
- comment: "ReamsHVAC helped us convert our 20-year-old gas furnace to a Bosch 20 SEER inverter heat pump. Our winter heating is whisper-quiet, and we love eliminating gas combustion from our home."
- },
- {
- name: "Megan T.",
- city: "Santa Clara, CA",
- date: "1 month ago",
- rating: 5,
- source: "Yelp Verified",
- comment: "We replaced our cracked furnace heat exchanger with a high-efficiency Carrier gas unit. ReamsHVAC satisfied Title 24 HERS duct testing, pulled permits, and finished in a single day."
- },
- {
- name: "Carlos V.",
- city: "Sunnyvale, CA",
- date: "2 months ago",
- rating: 5,
- source: "Google Review",
- comment: "Installed a dual-fuel hybrid system pairing a gas furnace with an electric heat pump. Our energy bills drop significantly during mild fall/spring months when the heat pump runs."
- }
- ];
 
  const faqs = [
  {
@@ -577,10 +550,6 @@ export function HeatingHeatPumpsCategory() {
  </div>
  </section>
 
- {/* 9. Verified Customer Reviews */}
- <div className="home-reviews-wrapper">
- <ReviewsSection reviews={reviews} />
- </div>
 
  {/* 10. FAQs Section */}
  <section className="py-8 sm:py-16 lg:py-20 bg-slate-50 border-b border-slate-200">

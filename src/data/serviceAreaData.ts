@@ -77,32 +77,7 @@ export const REGIONS_DATA: Record<string, RegionData> = {
       { slug: "morgan-hill", name: "Morgan Hill", tagline: "Inland AC & Gas Furnace Services", isPrimary: false },
       { slug: "gilroy", name: "Gilroy", tagline: "High-Capacity Cooling & Heating Systems", isPrimary: false }
     ],
-    reviews: [
-      {
-        name: "Jessica W.",
-        city: "San Jose, CA",
-        date: "2 weeks ago",
-        rating: 5,
-        source: "Google Review",
-        comment: "ReamsHVAC replaced our 20-year-old AC and furnace in Almaden with a Bosch inverter heat pump. The crew was punctual, passed San Jose Title 24 HERS duct testing instantly, and lowered our monthly bill significantly."
-      },
-      {
-        name: "Michael T.",
-        city: "Santa Clara, CA",
-        date: "1 month ago",
-        rating: 5,
-        source: "Yelp Verified",
-        comment: "Excellent service! They installed a multi-zone Mitsubishi mini split system in our home addition. Clean installation, upfront flat-rate pricing, and great follow-up."
-      },
-      {
-        name: "Arun P.",
-        city: "Sunnyvale, CA",
-        date: "2 months ago",
-        rating: 5,
-        source: "Google Review",
-        comment: "Our AC stopped blowing cold air on a 100° Saturday. ReamsHVAC dispatched a tech within 2 hours who replaced a bad capacitor and restored cold air right away."
-      }
-    ],
+    reviews: [],
     faqs: [
       {
         q: "What is the average emergency dispatch time in the South Bay?",
@@ -134,24 +109,7 @@ export const REGIONS_DATA: Record<string, RegionData> = {
       { slug: "san-bruno", name: "San Bruno", tagline: "Gas Furnace Repair & Heat Pump Retrofits", isPrimary: false },
       { slug: "south-san-francisco", name: "South San Francisco", tagline: "Commercial & Residential HVAC", isPrimary: false }
     ],
-    reviews: [
-      {
-        name: "Claire T.",
-        city: "Palo Alto, CA",
-        date: "3 weeks ago",
-        rating: 5,
-        source: "Yelp Verified",
-        comment: "ReamsHVAC converted our gas heating to an all-electric Mitsubishi heat pump. They managed all Palo Alto municipal permits and maximum rebate paperwork."
-      },
-      {
-        name: "Brian S.",
-        city: "San Mateo, CA",
-        date: "1 month ago",
-        rating: 5,
-        source: "Google Review",
-        comment: "Great experience with duct replacement and smart thermostat installation. Airflow is much better and temperature is consistent room to room."
-      }
-    ],
+    reviews: [],
     faqs: [
       {
         q: "Why are Peninsula homeowners switching to heat pumps?",
@@ -179,16 +137,7 @@ export const REGIONS_DATA: Record<string, RegionData> = {
       { slug: "san-ramon", name: "San Ramon", tagline: "Tri-Valley AC & Duct Sealing", isPrimary: false },
       { slug: "dublin", name: "Dublin", tagline: "Modern Smart HVAC & Inverters", isPrimary: false }
     ],
-    reviews: [
-      {
-        name: "Kenneth R.",
-        city: "Fremont, CA",
-        date: "1 month ago",
-        rating: 5,
-        source: "Google Review",
-        comment: "Outstanding service in Fremont! They installed a multi-zone ductless mini split system in our home addition. Very clean work and great communication."
-      }
-    ],
+    reviews: [],
     faqs: [
       {
         q: "Do you serve both coastal and inland East Bay cities?",
@@ -209,16 +158,7 @@ export const REGIONS_DATA: Record<string, RegionData> = {
     cities: [
       { slug: "san-francisco", name: "San Francisco", tagline: "Full City & County HVAC Coverage", isPrimary: true }
     ],
-    reviews: [
-      {
-        name: "Marcus V.",
-        city: "San Francisco, CA",
-        date: "1 month ago",
-        rating: 5,
-        source: "Yelp Verified",
-        comment: "ReamsHVAC installed a quiet 3-zone Mitsubishi mini split in our Noe Valley Victorian. Zero disruption to plaster walls and super quiet operation."
-      }
-    ],
+    reviews: [],
     faqs: [
       {
         q: "Can you install HVAC in historic San Francisco homes without ductwork?",
@@ -243,16 +183,7 @@ export const REGIONS_DATA: Record<string, RegionData> = {
       { slug: "novato", name: "Novato", tagline: "Inverter Heat Pumps & Duct Cleaning", isPrimary: false },
       { slug: "petaluma", name: "Petaluma", tagline: "Residential Energy Efficiency", isPrimary: false }
     ],
-    reviews: [
-      {
-        name: "Elena M.",
-        city: "San Rafael, CA",
-        date: "2 weeks ago",
-        rating: 5,
-        source: "Google Review",
-        comment: "Installed an ERV air exchanger and MERV 13 filtration system before fire season. Our indoor air quality in San Rafael is noticeably cleaner and fresh."
-      }
-    ],
+    reviews: [],
     faqs: [
       {
         q: "What indoor air quality solutions do you recommend for North Bay wildfire smoke?",
@@ -275,24 +206,7 @@ export const CITIES_DATA: Record<string, CityData> = {
     permitNote: "All HVAC change-outs in the City of San Jose require a mechanical permit from the San Jose Building Division and mandatory independent HERS duct leakage testing under California Title 24 regulations.",
     rebateNote: "San Jose homeowners qualify for TECH Clean California heat pump rebates, San Jose Clean Energy incentives, and federal Inflation Reduction Act 25C tax credits up to $2,000.",
     mapEmbedSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d202844.7578783451!2d-122.0468307223067!3d37.29701552528151!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fcae48af93ff5%3A0xb99d8c0aca9f717b!2sSan%20Jose%2C%20CA!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus",
-    reviews: [
-      {
-        name: "Jessica W.",
-        neighborhood: "Almaden Valley, San Jose",
-        date: "2 weeks ago",
-        rating: 5,
-        source: "Google Review",
-        comment: "Our AC died during a brutal September heatwave in San Jose. ReamsHVAC arrived within 2 hours, diagnosed a failed capacitor, and got cold air running immediately. Amazing emergency response!"
-      },
-      {
-        name: "Robert M.",
-        neighborhood: "Willow Glen, San Jose",
-        date: "1 month ago",
-        rating: 5,
-        source: "Yelp Verified",
-        comment: "ReamsHVAC replaced our 20-year-old furnace with a Bosch inverter heat pump. The crew pulled San Jose permits, passed HERS duct testing, and protected our hardwood floors. 10/10."
-      }
-    ],
+    reviews: [],
     faqs: [
       {
         q: "How fast can ReamsHVAC dispatch to my San Jose neighborhood?",
@@ -316,16 +230,7 @@ export const CITIES_DATA: Record<string, CityData> = {
     permitNote: "City of Santa Clara Community Development Department requires mechanical permits and HERS duct leakage testing for all central heating and cooling upgrades.",
     rebateNote: "Santa Clara residents benefit from Silicon Valley Power rebates alongside state TECH Clean California electrification incentives.",
     mapEmbedSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50711.234567!2d-121.97!3d37.35!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fcb0a3219460b%3A0x8684d092d6e382d5!2sSanta%20Clara%2C%20CA!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus",
-    reviews: [
-      {
-        name: "Michael T.",
-        neighborhood: "Rivermark, Santa Clara",
-        date: "1 month ago",
-        rating: 5,
-        source: "Yelp Verified",
-        comment: "Installed a multi-zone Mitsubishi mini split in our Santa Clara home addition. Extremely quiet, neat wiring, and handled all SVP permit paperwork."
-      }
-    ],
+    reviews: [],
     faqs: [
       {
         q: "Does Silicon Valley Power offer rebates for heat pump upgrades in Santa Clara?",
@@ -345,16 +250,7 @@ export const CITIES_DATA: Record<string, CityData> = {
     permitNote: "City of Sunnyvale Building Division requires mechanical permits and Title 24 duct testing for furnace and AC replacements.",
     rebateNote: "Sunnyvale homeowners can access state TECH Clean California incentives and BayREN home energy efficiency grants.",
     mapEmbedSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50690.123456!2d-122.03!3d37.37!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb616870020d5%3A0x7d0a273b06db232b!2sSunnyvale%2C%20CA!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus",
-    reviews: [
-      {
-        name: "Arun P.",
-        neighborhood: "Cherry Chase, Sunnyvale",
-        date: "2 months ago",
-        rating: 5,
-        source: "Google Review",
-        comment: "ReamsHVAC diagnosed our AC airflow problem in Sunnyvale. They repaired leaking attic ducts and installed a Nest smart thermostat. System works great now."
-      }
-    ],
+    reviews: [],
     faqs: [
       {
         q: "Are heat pumps recommended for Sunnyvale homes?",
@@ -374,16 +270,7 @@ export const CITIES_DATA: Record<string, CityData> = {
     permitNote: "City of Palo Alto Development Services requires electronic mechanical permit filings, panel capacity checks, and sound compliance for outdoor heat pump condensers.",
     rebateNote: "City of Palo Alto Utilities (CPAU) offers significant heat pump rebates stacking with state incentives for up to $3,500+ in savings.",
     mapEmbedSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50650.123456!2d-122.14!3d37.44!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb07b9260e1d5%3A0xe543597d3ef2825!2sPalo%20Alto%2C%20CA!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus",
-    reviews: [
-      {
-        name: "Claire T.",
-        neighborhood: "Midtown, Palo Alto",
-        date: "3 weeks ago",
-        rating: 5,
-        source: "Yelp Verified",
-        comment: "ReamsHVAC converted our gas furnace to a Mitsubishi hyper-heat inverter heat pump. They handled all CPAU rebate paperwork and Palo Alto permits expertly."
-      }
-    ],
+    reviews: [],
     faqs: [
       {
         q: "What CPAU rebates apply to Palo Alto heat pump installations?",
@@ -403,16 +290,7 @@ export const CITIES_DATA: Record<string, CityData> = {
     permitNote: "City of Fremont Building Division requires mechanical permits and HERS duct leakage verification for all central heating and AC replacements.",
     rebateNote: "Fremont residents qualify for BayREN energy efficiency grants and state electrification rebates.",
     mapEmbedSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50670.123456!2d-121.98!3d37.54!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fc47e246e7f8b%3A0x6b758b98e1f0e42a!2sFremont%2C%20CA!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus",
-    reviews: [
-      {
-        name: "Kenneth R.",
-        neighborhood: "Mission San Jose, Fremont",
-        date: "1 month ago",
-        rating: 5,
-        source: "Google Review",
-        comment: "Installed a multi-zone ductless system in our Fremont home. ReamsHVAC was super professional, clean, and delivered great airflow throughout."
-      }
-    ],
+    reviews: [],
     faqs: [
       {
         q: "How quickly can you dispatch an HVAC technician in Fremont?",
@@ -432,16 +310,7 @@ export const CITIES_DATA: Record<string, CityData> = {
     permitNote: "San Francisco Department of Building Inspection (DBI) mechanical permits require careful property line set-back and decibel compliance for exterior condensers.",
     rebateNote: "San Francisco homeowners qualify for TECH Clean California heat pump rebates and BayREN electrification funds.",
     mapEmbedSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100900.123456!2d-122.44!3d37.77!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80859a6d00690021%3A0x4a501367f076adff!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus",
-    reviews: [
-      {
-        name: "Marcus V.",
-        neighborhood: "Noe Valley, San Francisco",
-        date: "1 month ago",
-        rating: 5,
-        source: "Yelp Verified",
-        comment: "Installed a 3-zone Mitsubishi mini split in our Noe Valley home. Clean installation, preserved plaster walls, and operates silently."
-      }
-    ],
+    reviews: [],
     faqs: [
       {
         q: "What HVAC system works best for San Francisco flats and Victorians?",

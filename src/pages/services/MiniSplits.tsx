@@ -13,7 +13,6 @@ import {
 import { CTABand } from "../../components/CTABand";
 import { TrustBar } from "../../components/TrustBar";
 import { PageHero } from "../../components/PageHero";
-import { ReviewsSection } from "../../components/ReviewsSection";
 import { SEO } from "../../components/SEO";
 
 export function MiniSplits() {
@@ -23,32 +22,6 @@ export function MiniSplits() {
  setOpenFaq(openFaq === index ? null : index);
  };
 
- const reviews = [
- {
- name: "Dmitri K.",
- city: "San Jose, CA",
- date: "2 weeks ago",
- rating: 5,
- source: "Google Review",
- comment: "Installed a 3-zone Mitsubishi mini split for our home office, primary bedroom, and new backyard ADU. ReamsHVAC ran pristine line hide conduit along the exterior stucco. The indoor units operate so quietly you can barely tell they are running."
- },
- {
- name: "Sarah W.",
- city: "Santa Clara, CA",
- date: "1 month ago",
- rating: 5,
- source: "Yelp Verified",
- comment: "Our garage conversion needed heating and cooling without connecting to our main house furnace. ReamsHVAC recommended a single-zone hyper-heating mini split. Upfront estimate, zero unexpected fees, and finished in a single day."
- },
- {
- name: "Andrew T.",
- city: "Sunnyvale, CA",
- date: "2 months ago",
- rating: 5,
- source: "Google Review",
- comment: "We replaced noisy window AC units in our ranch home with a 4-zone mini split system. Room-by-room temperature control is a game changer, and our monthly electric bills dropped by 35%."
- }
- ];
 
  const faqs = [
  {
@@ -571,10 +544,6 @@ export function MiniSplits() {
  </div>
  </section>
 
- {/* 9. Verified Customer Reviews */}
- <div className="home-reviews-wrapper">
- <ReviewsSection reviews={reviews} />
- </div>
 
  {/* 10. FAQs Section */}
  <section className="py-8 sm:py-16 lg:py-20 bg-slate-50 border-b border-slate-200">

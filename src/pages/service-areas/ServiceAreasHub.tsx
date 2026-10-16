@@ -199,7 +199,7 @@ export function ServiceAreasHub() {
  },
  {
  q: "Are your technicians licensed for commercial and residential work?",
- a: "Yes. ReamsHVAC is a licensed California C-20 Warm-Air Heating, Ventilating, and AC contractor () with full workers' compensation and $2M commercial general liability insurance covering both homes and commercial properties."
+ a: "Yes. ReamsHVAC is a licensed California C-20 Warm-Air Heating, Ventilating, and AC contractor with full workers' compensation and commercial general liability insurance covering both homes and commercial properties."
  }
  ];
 

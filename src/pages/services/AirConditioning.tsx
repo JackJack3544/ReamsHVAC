@@ -13,7 +13,6 @@ import {
 import { CTABand } from "../../components/CTABand";
 import { TrustBar } from "../../components/TrustBar";
 import { PageHero } from "../../components/PageHero";
-import { ReviewsSection } from "../../components/ReviewsSection";
 import { SEO } from "../../components/SEO";
 
 export function AirConditioning() {
@@ -23,32 +22,6 @@ export function AirConditioning() {
  setOpenFaq(openFaq === index ? null : index);
  };
 
- const reviews = [
- {
- name: "Robert T.",
- city: "San Jose, CA",
- date: "3 weeks ago",
- rating: 5,
- source: "Google Review",
- comment: "Our AC went out right on a 98-degree afternoon in San Jose. ReamsHVAC sent out a technician within 2 hours. He diagnosed a failed dual start capacitor, replaced it on the spot, and checked our subcooling levels. Fast, honest, and reasonable pricing."
- },
- {
- name: "Karen S.",
- city: "Santa Clara, CA",
- date: "1 month ago",
- rating: 5,
- source: "Yelp Verified",
- comment: "Replaced our 18-year-old single-stage unit with a 18 SEER2 two-stage AC system. The installation team was punctual, protected our flooring, and handled all HERS duct testing and San Jose city permits seamlessly."
- },
- {
- name: "Jason L.",
- city: "Sunnyvale, CA",
- date: "2 months ago",
- rating: 5,
- source: "Google Review",
- comment: "They performed a full Manual J load calculation before installing our variable-speed inverter air conditioner. The temperature inside stays perfectly consistent, and our PG&E bills dropped drastically."
- }
- ];
 
  const faqs = [
  {
@@ -571,10 +544,6 @@ export function AirConditioning() {
  </div>
  </section>
 
- {/* 9. Verified Customer Reviews */}
- <div className="home-reviews-wrapper">
- <ReviewsSection reviews={reviews} />
- </div>
 
  {/* 10. FAQs Section */}
  <section className="py-8 sm:py-16 lg:py-20 bg-slate-50 border-b border-slate-200">

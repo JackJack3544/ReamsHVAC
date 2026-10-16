@@ -10,7 +10,6 @@ import {
 import { CTABand } from "../../components/CTABand";
 import { TrustBar } from "../../components/TrustBar";
 import { PageHero } from "../../components/PageHero";
-import { ReviewsSection } from "../../components/ReviewsSection";
 import { SEO } from "../../components/SEO";
 
 export function ServicesHub() {
@@ -224,32 +223,6 @@ export function ServicesHub() {
  }
  ];
 
- const reviews = [
- {
- name: "Robert M.",
- city: "San Jose, CA",
- date: "2 weeks ago",
- rating: 5,
- source: "Google Review",
- comment: "ReamsHVAC replaced our 20-year-old furnace and AC with a Bosch inverter heat pump. The crew was punctual, protected our hardwood floors, pulled San Jose permits, and passed HERS duct testing on the first try."
- },
- {
- name: "Sandra K.",
- city: "Santa Clara, CA",
- date: "1 month ago",
- rating: 5,
- source: "Yelp Verified",
- comment: "We used ReamsHVAC for both our home duct cleaning and installing a smart thermostat. Upfront flat-rate pricing with zero hidden fees. Highly recommend them for any HVAC work in the South Bay."
- },
- {
- name: "Marcus L.",
- city: "Sunnyvale, CA",
- date: "2 months ago",
- rating: 5,
- source: "Google Review",
- comment: "Our AC stopped working on a 100°F afternoon. ReamsHVAC dispatched an emergency technician within 2 hours who replaced a blown capacitor and restored cold air immediately. Fantastic service."
- }
- ];
 
  const faqs = [
  {
@@ -258,7 +231,7 @@ export function ServicesHub() {
  },
  {
  q: "Are ReamsHVAC technicians licensed and insured in California?",
- a: "Yes. ReamsHVAC holds a valid California C-20 Warm-Air Heating, Ventilating and Air-Conditioning license () and carries comprehensive commercial liability and workers' compensation insurance for your total protection."
+ a: "Yes. ReamsHVAC holds a valid California C-20 Warm-Air Heating, Ventilating and Air-Conditioning license and carries comprehensive commercial liability and workers' compensation insurance for your total protection."
  },
  {
  q: "What is California Title 24 compliance and why does it matter?",
@@ -385,7 +358,7 @@ export function ServicesHub() {
  From 100°F summer heatwaves to winter chills, Santa Clara County homes require mechanical systems built for local microclimates.
  </p>
  <p>
- With 20+ years of licensed experience (Licensed California C-20 Contractor), Reams HVAC specializes in heat pumps, gas furnaces, and Mitsubishi mini splits—all backed by Title 24 permits, HERS testing, upfront pricing, and our 100% Workmanship Guarantee.
+ As a licensed contractor (Licensed California C-20 Contractor), Reams HVAC specializes in heat pumps, gas furnaces, and Mitsubishi mini splits—all backed by Title 24 permits, HERS testing, upfront pricing, and our 100% Workmanship Guarantee.
  </p>
  </div>
 
@@ -574,10 +547,6 @@ export function ServicesHub() {
  </div>
  </section>
 
- {/* 8. Verified Customer Reviews */}
- <div className="home-reviews-wrapper">
- <ReviewsSection />
- </div>
 
  {/* 9. Authorized Dealer Status & Certification Banner */}
  <section className="py-10 sm:py-16 bg-slate-50 border-b border-slate-200">
